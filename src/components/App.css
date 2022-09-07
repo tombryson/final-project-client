@@ -10,6 +10,14 @@
 
 body {
   background-color: #E5E5E5;
+  background-image: URL('http://localhost:3001/static/media/background-plane.c05805f26a3bdca94bfc.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position-y: bottom;
+  background-position-y: 118%;
 }
 
 .reminder {
@@ -55,6 +63,14 @@ input {
 #flight-icons {
   padding: 1px;
   margin: 0px 14px 0px 0px;
+}
+
+.header {
+  width: 100%;
+  border: white;
+  background-color: white;
+  display: block;
+  position: fixed;
 }
 
 .label {
@@ -106,10 +122,9 @@ input {
 }
 
 .title-img {
-  box-shadow: 6px 5px 7px 1px #00000052;
-  padding: 16px;
-  border-radius: 10px;
+  padding: 20px;
   width: 160px;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .headerStyle {
@@ -164,22 +179,29 @@ input {
 
 .filler {
   width: 102%;
-  background-color: #6897b9;
+  background-color: #e9ecef;
   position: fixed;
   min-height: -webkit-fill-available;
   top: 80%;
-  border: solid darkgray 1px;
-  box-shadow: inset -2px 0px 3px 0px black;
+  border: solid #141414d4 1px;
+  box-shadow: -1.5px 0px 2.5px 0px black;
   z-index: 20000;
+  background-image: linear-gradient(to bottom right, #e9ecef, #398bd1);
 }
 
 .search-form {
-  height: 300px;
+  height: 450px;
   display: flex;
   align-items: center;
   flex-direction: column;
   align-content: center;
   justify-content: center;
+}
+
+#btn {
+    color: #000;  
+    background-color: #e9ecef;
+    border-color: #2f83c9;
 }
 
 #form-control:focus {

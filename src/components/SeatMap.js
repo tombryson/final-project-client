@@ -5,6 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SeatMap = () => {
 
+  return (
+    
+    <h1>SeatMap</h1>
+  )
 }
 
 export default SeatMap;

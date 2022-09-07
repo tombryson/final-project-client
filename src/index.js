@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import './components/index.css';
-import App from './components/App';
 import Auth from './components/Auth'
 import Home from './components/Home'
 import Profile from './components/Profile'
@@ -11,6 +10,7 @@ import MyTrips from './components/MyTrips'
 import NavBar from './components/NavBar'
 import axios from 'axios'
 import SeatMap from './components/SeatMap'
+import SiteHead from './components/SiteHead';
 
 // Access value associated with the key
 var item_value = sessionStorage.getItem("item_key");
@@ -23,7 +23,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <BrowserRouter>
   <Routes>
-    <Route path="/" element={<NavBar />}>
+    <Route path="/" element={<><SiteHead /><NavBar /></>}>
       <Route index element={<Home />} />
       <Route path="auth" element={<Auth />} />
       <Route path="profile" element={<Profile />} />

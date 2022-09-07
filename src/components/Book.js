@@ -11,6 +11,7 @@ const Book = () => {
   const [to, setTo] = useState('');
   const [flights, setFlights] = useState([{}]);
 
+
   const _handleSubmit = (event) => {
     console.log('submitting')
     event.preventDefault();
@@ -25,15 +26,18 @@ const Book = () => {
   };
 
   const _handleFrom = (form) => {
-    console.log("handling")
     setFrom(form.target.value);
   };
 
-  const flight = flights.map(item => {
-	console.log(item.flight_id) 
-	console.log(item.id);
-	return (<FlightTable key={item.flight_id} flights={item}/>)
-  })
+  const flight = flights.map(item => (
+	item.flight_id !== undefined ?
+	(<FlightTable key={item.flight_id} flights={item}/>) : ''
+  	)
+  	)
+	
+	
+
+  
 
 
   return (
@@ -73,7 +77,7 @@ const Book = () => {
 				placeholder="eg. SYD"
 			/>
 			</div>
-			<button type="submit" className="btn btn-primary mb-2">Submit</button>
+			<button type="submit" className="btn btn-secondary mb-2" id='btn'>Search</button>
 			</div>
 		</div>
 		</form>
@@ -84,13 +88,14 @@ const Book = () => {
 
 const FlightTable = (props) => {
 	console.log('rendering the flighttable')
-	console.log(props);
+	console.log(props.id);
 	return (
 		<div>
-			<a href={`http://localhost:3000/flights/${props.flights.id}`}>
+			<a href={`http://localhost:3001/flights/${props.flights.id}`}>
 			Flight: from {props.flights.from} to {props.flights.to} departing on {props.flights.date}
 			</a>
 		</div>
+		
 	)
 
 }
