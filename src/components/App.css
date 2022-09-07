@@ -10,28 +10,65 @@
 
 body {
   background-color: #E5E5E5;
-  background-image: URL('http://localhost:3001/static/media/background-plane.c05805f26a3bdca94bfc.jpeg');
+  background-image: url('../images/background-plane.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position-y: 112%;
+}
+
+.display {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
   background-size: cover;
   background-position-y: bottom;
-  background-position-y: 118%;
+}
+
+.greeting {
+  padding-top: 28vh;
+  margin-left: 4%;
+  color: #1f1f1fdb;
+}
+
+.sr-only {
+  font-size: 22px;
+  padding: 2px;
+  -webkit-text-stroke-width: thin;
+}
+
+.w-100 {
+  min-width: 500px
+}
+
+@media only screen and (min-width: 600px) {
+  .sign-up {
+    color: black;
+    background-color: #ffffffa1;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    padding: 2px;
+  }
 }
 
 .reminder {
   font-size: 8px;
 }
 
-.greeting {
-  padding-top: 20%;
+.form-info {
+  color: white;
+  padding-right: 5px;
 }
 
 .auth {
-  width: 55%;
-  border: solid blue 2px;
-  border-radius: 4px;
+  width: 75%;
+  border: solid #bedbf4 4px;
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -40,6 +77,15 @@ body {
   text-align: center;
   position: absolute;
   top: 6%;
+  margin: 13vh;
+}
+
+.flights {
+    position: absolute;
+    top: 26rem;
+    color: white;
+    text-align: center;
+    margin-left: 25%;
 }
 
 input {
@@ -128,14 +174,14 @@ input {
 }
 
 .headerStyle {
-  background: #6897b9;
   display: flex;
-  height: 15vh;
+  height: 6vh;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
   align-items: center;
   align-content: center;
   justify-content: space-evenly;
+  margin-bottom: 14px;
 }
 
 .ui-button {
@@ -143,6 +189,22 @@ input {
     margin: 10px;
     width: 80px;
     box-shadow: 2px 2px 8px 0px black;
+}
+
+.carousel {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: -10;
+    position: fixed !important;
+    display: block;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
 }
 
 .logo img {
@@ -167,6 +229,12 @@ input {
 
 #my-trips {
   margin: -3px 0px 0px 3px;
+}
+
+.my-trips {
+    position: absolute;
+    margin-top: 20vh;
+    padding-left: 25px;
 }
 
 #log-in {

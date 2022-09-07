@@ -57,26 +57,26 @@ function SignUpForm(props) { ///////////////////All Props
     
     return(
         <div style={formDivStyle}>
-            <h1>Sign Up</h1>
+            <h1 className='sign-up'>Sign Up</h1>
             <form className="ui form" onSubmit={handleSubmit}>
             <div className="field">
-                    <label>First Name</label>
+                    <label className='form-info'>First Name</label>
                     <input value={first_name} onChange={handleFirstNameChange} type="text" placeholder="eg. John"/>
                 </div>
                 <div className="field">
-                    <label>Last Name</label>
+                    <label className='form-info'>Last Name</label>
                     <input value={last_name} onChange={handleLastNameChange} type="text" placeholder="eg. Smith"/>
                 </div>
                 <div className="field">
-                    <label>Email*</label>
+                    <label className='form-info'>Email*</label>
                     <input value={email} onChange={handleEmailChange} type="text" placeholder="john.smith@email.com" required/>
                 </div>
                 <div className="field">
-                    <label>Password*</label>
+                    <label className='form-info'>Password*</label>
                     <input value={password} onChange={handlePasswordChange} type="password" placeholder="password" required/>
                 </div>
 
-                <span className="reminder">*required fields</span>
+                <span className="reminder form-info">*required fields</span>
                 
                 <button className="ui button" type="submit">Submit</button>
             </form>

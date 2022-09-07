@@ -91,7 +91,7 @@ const FlightTable = (props) => {
 	console.log(props.id);
 	return (
 		<div>
-			<a href={`http://localhost:3001/flights/${props.flights.id}`}>
+			<a href={`http://localhost:3001/flights/${props.flights.id}`} className='flights'>
 			Flight: from {props.flights.from} to {props.flights.to} departing on {props.flights.date}
 			</a>
 		</div>
