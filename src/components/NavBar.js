@@ -27,7 +27,7 @@ const NavBar = () => {
                     <Link to="/auth">
                     <img className="nav-icon" src={myProfile} alt="a portrait" width="50px"></img>
                     </Link>
-                    <div className='icon-text'>Log in</div>
+                    <div className='icon-text'id='log-in'>Log in</div>
                     </div>
                 </ul>
                 <ul>
@@ -35,7 +35,7 @@ const NavBar = () => {
                     <Link to="/book">
                     <img className="nav-icon" src={book2} alt="a plane" width="50px"></img>
                     </Link>
-                    <div className='icon-text'>Book</div>
+                    <div className='icon-text' id='book'>Book</div>
                     </div>
                 </ul>
                 <ul>
@@ -43,7 +43,7 @@ const NavBar = () => {
                     <Link to="/mytrips">
                     <img className="nav-icon" src={myTrips} alt="luggage" width="50px"></img>
                     </Link>
-                    <div className='icon-text'>My Trips</div>
+                    <div className='icon-text' id='my-trips'>My Trips</div>
                     </div>
                 </ul>
             </div>

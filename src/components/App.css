@@ -42,14 +42,30 @@ input {
 .nav-icon {
   margin: 50% 0% -16% -34%;
   box-sizing: content-box;
-  padding: 8px;
+  padding: 15px;
+}
+
+#input-group {
+  width: fit-content;
+  margin: 5px 0px 10px 0px;
+  border: solid black;
+  border-radius: 10px;
+}
+
+#flight-icons {
+  padding: 1px;
+  margin: 0px 14px 0px 0px;
+}
+
+.label {
+  font-weight: 800;
 }
 
 .icon-text {
   font-size: 12px;
   color: black;
   text-align: center;
-  margin: 0px 0px 0px 5px;
+  margin: -4px 0px 0px 10px;
 }
 
 .icon-div {
@@ -86,22 +102,32 @@ input {
   align-content: center;
   justify-content: space-around;
   flex-direction: row-reverse;
-  border: solid;
   align-items: center;
 }
 
 .title-img {
-  box-shadow: 8px 3px 10px 2px #00000052;
-    padding: 25px;
-    border-radius: 20px;
-    margin: 20px;
-    width: 140px;
-    margin-right: 40%;
+  box-shadow: 6px 5px 7px 1px #00000052;
+  padding: 16px;
+  border-radius: 10px;
+  width: 160px;
 }
 
 .headerStyle {
-  background: #ed4730;
+  background: #6897b9;
+  display: flex;
   height: 15vh;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.ui-button {
+  border-radius: 10px;
+    margin: 10px;
+    width: 80px;
+    box-shadow: 2px 2px 8px 0px black;
 }
 
 .logo img {
@@ -119,9 +145,21 @@ input {
 .buttons-nav {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+
+#my-trips {
+  margin: -3px 0px 0px 3px;
+}
+
+#log-in {
+  margin: -4px 0px 0px 9px;
+}
+
+#book {
+  margin: -5px 0px 0px 11px;
 }
 
 .filler {
@@ -136,7 +174,6 @@ input {
 }
 
 .search-form {
-  width: 200px;
   height: 300px;
   display: flex;
   align-items: center;
@@ -145,10 +182,12 @@ input {
   justify-content: center;
 }
 
-.book-form {
-    display: flex;
-    align-content: flex-end;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+#form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #6897b9;
+  outline-color: #6897b9;
+  outline: 0;
+  border-radius: 4px;
+  box-shadow: inset 0 0 1px 0.5rem rgb(104 151 185 / 17%);
 }

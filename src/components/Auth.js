@@ -66,7 +66,6 @@ function Auth() {
         {
           renderForm()
         }
-        <button onClick={handleAuthClick} className="ui button btn btn-outline-danger">Access Authorized Route</button>
     </div>
     </div>
   );
