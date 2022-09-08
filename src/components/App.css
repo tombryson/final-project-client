@@ -19,6 +19,10 @@ body {
   background-position-y: 112%;
 }
 
+.log-out {
+  margin-left: -1vh
+}
+
 .display {
   background-position: center;
   background-repeat: no-repeat;

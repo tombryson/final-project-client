@@ -13,6 +13,8 @@ const Book = () => {
   const [toField, setToField] = useState('');
   const [message, setMessage] = useState('');
 
+  let currentUserId = sessionStorage.getItem('currentUserId'); 
+  console.log(currentUserId)
 
   const _handleSubmit = (event) => {
     event.preventDefault();

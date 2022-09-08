@@ -29,8 +29,9 @@ function Auth() {
 
   const handleLogin = (user) => {
     setUser(user)
-    console.log('getting to login');
+    sessionStorage.setItem('currentUserId', user.id.toString());
     navigate(`/`);
+    window.location.reload();
   }
 
   const handleFormSwitch = (input) => {
