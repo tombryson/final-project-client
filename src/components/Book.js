@@ -98,11 +98,12 @@ const Book = () => {
 };
 
 const FlightTable = (props) => {
+	const path = (`/flights/${props.flights.id}`)	
 	return (
 		<div className='searched-flight'>
-			<a href={`http://localhost:3001/flights/${props.flights.id}`} className='flights'>
+			<Link to={path} state={{}} className='flights'>
 			Flight: from {props.flights.from} to {props.flights.to} departing on {props.flights.date}
-			</a>
+			</Link>
 		</div>
 	)
 }

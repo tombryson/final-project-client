@@ -11,11 +11,16 @@ import NavBar from './components/NavBar'
 import SeatMap from './components/SeatMap'
 import SiteHead from './components/SiteHead';
 
-// Access value associated with the key
-var item_value = sessionStorage.getItem("item_key");
-
-// Assign value to a key
-sessionStorage.setItem("item_key", item_value);
+const handleAuth = () => {
+  const token = localStorage.getItem("token")
+  fetch(`http://localhost:3000/user_is_authed`, {
+    headers: {
+      "Authorization": `Bearer ${token}`
+    }
+  })
+  .then(resp => resp.json())
+  .then(data => console.log(data))
+}
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

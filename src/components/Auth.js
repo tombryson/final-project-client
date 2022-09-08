@@ -37,18 +37,16 @@ function Auth() {
     setForm(input)
   }
 
-  const handleAuthClick = () => {
-    const token = localStorage.getItem("token")
-    fetch(`http://localhost:3000/user_is_authed`, {
-      headers: {
-        "Authorization": `Bearer ${token}`
-      }
-    })
-    .then(resp => resp.json())
-    .then(data => console.log(data))
-  }
-
-  console.log(user)
+//   const handleAuthClick = () => {
+//     const token = localStorage.getItem("token")
+//     fetch(`http://localhost:3000/user_is_authed`, {
+//       headers: {
+//         "Authorization": `Bearer ${token}`
+//       }
+//     })
+//     .then(resp => resp.json())
+//     .then(data => console.log(data))
+//   }
 
   const renderForm = () => {
     switch(form){

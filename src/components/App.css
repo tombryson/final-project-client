@@ -64,6 +64,10 @@ body {
     background-color: #ffffffa1;
     border-radius: 10px;
   }
+
+  .header {
+    height: 13vh;
+  }
 }
 
 .logo-mid {
@@ -148,6 +152,8 @@ input {
   background-color: white;
   display: block;
   position: fixed;
+  height: 7.5rem;
+  bottom: 88vh;
 }
 
 .label {
@@ -199,9 +205,10 @@ input {
 }
 
 .title-img {
-  padding: 18px;
+  padding: 22px;
   margin: -4px;
   width: 160px;
+  margin-top: 2rem;
   image-rendering: -webkit-optimize-contrast;
 }
 
