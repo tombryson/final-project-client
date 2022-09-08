@@ -146,6 +146,14 @@ input {
   margin: 0px 14px 0px 0px;
 }
 
+.flight-model {
+    display: inline-block;
+    position: absolute;
+    margin: 22%;
+    color: white;
+    font-size: 30px;
+}
+
 .header {
   width: 100%;
   border: white;
@@ -158,6 +166,17 @@ input {
 
 .label {
   font-weight: 800;
+}
+
+.seats {
+  width: 40px;
+  height: 40px;
+}
+
+.seat-container {
+    margin-top: 100px;
+    margin-bottom: 200px;
+    text-align: center;
 }
 
 .icon-text {

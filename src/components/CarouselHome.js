@@ -1,5 +1,4 @@
 import React from 'react';
-import plane1 from '../images/plane-img1.jpeg'
 import plane2 from '../images/plane-img2.png'
 import plane3 from '../images/plane-img3.jpeg'
 import plane4 from '../images/plane-img4.jpeg'
