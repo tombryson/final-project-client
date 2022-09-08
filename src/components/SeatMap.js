@@ -4,10 +4,6 @@ import bootstrap from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
-
-
-
 const SeatMap = () => {
 
 const [flightData, setFlightData] = useState([]);
@@ -19,7 +15,6 @@ useEffect(() => {
     })
   }, [flightData] 
 )
-
 
 
   return (

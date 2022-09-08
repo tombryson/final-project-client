@@ -38,6 +38,7 @@ body {
   font-size: 22px;
   padding: 2px;
   -webkit-text-stroke-width: thin;
+  margin-top: 10vh;
 }
 
 .w-100 {
@@ -47,13 +48,39 @@ body {
 @media only screen and (min-width: 600px) {
   .sign-up {
     color: black;
-    background-color: #ffffffa1;
     width: fit-content;
     margin: 0 auto;
     border-radius: 10px;
     margin-bottom: 14px;
     padding: 2px;
   }
+
+  .logo-mid {
+    background-color: #ffffffa1;
+    border-radius: 10px;
+  }
+
+  .sr-only {
+    background-color: #ffffffa1;
+    border-radius: 10px;
+  }
+}
+
+.logo-mid {
+  max-width: 150px;
+  border-radius: 6px;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #212529e3;
+    border-color: #2125299e;
+    border-radius: 40px !important;
+    padding: 2px;
+}
+
+button.ui-button {
+  margin: 1vh;
 }
 
 .reminder {
@@ -61,7 +88,7 @@ body {
 }
 
 .form-info {
-  color: white;
+  color: black;
   padding-right: 5px;
 }
 
@@ -78,14 +105,18 @@ body {
   position: absolute;
   top: 6%;
   margin: 13vh;
+  background-color: #bfdcf08f;
 }
 
 .flights {
-    position: absolute;
-    top: 26rem;
-    color: white;
-    text-align: center;
-    margin-left: 25%;
+  top: 26rem;
+  color: white;
+  text-align: center;
+  background-color: #1c1a21e3;
+  text-decoration: none;
+  padding: 0 7vh 0px 7vh;
+  display: flow-root;
+  margin: 1vh 0vh 1vh 0vh;
 }
 
 input {
@@ -168,7 +199,8 @@ input {
 }
 
 .title-img {
-  padding: 20px;
+  padding: 18px;
+  margin: -4px;
   width: 160px;
   image-rendering: -webkit-optimize-contrast;
 }
@@ -246,7 +278,7 @@ input {
 }
 
 .filler {
-  width: 102%;
+  width: 104%;
   background-color: #e9ecef;
   position: fixed;
   min-height: -webkit-fill-available;
@@ -255,10 +287,11 @@ input {
   box-shadow: -1.5px 0px 2.5px 0px black;
   z-index: 20000;
   background-image: linear-gradient(to bottom right, #e9ecef, #398bd1);
+  margin-left: -3%;
 }
 
 .search-form {
-  height: 450px;
+  height: 425px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -272,6 +305,19 @@ input {
     border-color: #2f83c9;
 }
 
+.search-flight {
+  display: block;
+}
+
+.no-flight {
+  color: red;
+  margin-left: 20%;
+  background-color: #ffffffc9;
+  border-radius: 7px;
+  padding: 4px;
+  width: fit-content;
+}
+
 #form-control:focus {
   color: #212529;
   background-color: #fff;
@@ -281,3 +327,4 @@ input {
   border-radius: 4px;
   box-shadow: inset 0 0 1px 0.5rem rgb(104 151 185 / 17%);
 }
+

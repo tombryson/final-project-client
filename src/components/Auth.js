@@ -3,7 +3,6 @@ import './App.css';
 import Header from './Header'
 import SignUpForm from './SignUpForm';
 import LoginForm from './LoginForm'
-import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
 function Auth() {

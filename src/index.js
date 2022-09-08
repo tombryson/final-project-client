@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './components/index.css';
 import Auth from './components/Auth'
 import Home from './components/Home'
@@ -8,7 +8,6 @@ import Profile from './components/Profile'
 import Book from './components/Book'
 import MyTrips from './components/MyTrips'
 import NavBar from './components/NavBar'
-import axios from 'axios'
 import SeatMap from './components/SeatMap'
 import SiteHead from './components/SiteHead';
 

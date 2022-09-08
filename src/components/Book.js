@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import bootstrap from 'react-bootstrap';
 import { Link, Outlet } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import departure from '../images/book-icon.png'
@@ -10,39 +9,46 @@ const Book = () => {
   const [from, setFrom] = useState('');
   const [to, setTo] = useState('');
   const [flights, setFlights] = useState([{}]);
+  const [fromField, setFromField] = useState('');
+  const [toField, setToField] = useState('');
+  const [message, setMessage] = useState('');
 
 
   const _handleSubmit = (event) => {
-    console.log('submitting')
     event.preventDefault();
     axios(`http://localhost:3000/search/${from}/${to}.json`).then((response) => {
       setFlights(response.data);
-	  console.log(response.data)
     })
 	};
 
   const _handleTo = (form) => {
-    setTo(form.target.value);
+	const result = form.target.value.replace(/[^a-z]/gi, '').toUpperCase();
+	setToField(result);
+    setTo(result);
   };
 
   const _handleFrom = (form) => {
-    setFrom(form.target.value);
+	const result = form.target.value.replace(/[^a-z]/gi, '').toUpperCase();
+	setFromField(result);
+    setFrom(result);
   };
 
-  const flight = flights.map(item => (
-	item.flight_id !== undefined ?
-	(<FlightTable key={item.flight_id} flights={item}/>) : ''
+  const flight = flights.map(item => {
+		return (item.flight_id !== undefined ? (<FlightTable key={item.flight_id} flights={item}/>) : [])
+		}
   	)
-  	)
-	
-	
-
   
-
-
+	useEffect(() => {
+		if (flights.length === 0 ) {
+			setMessage((<div className='no-flight'>Sorry, there are no flights available to your selected cities</div>))
+		} else {
+			setMessage('');
+		}
+		setTimeout(() => {setMessage('')}, 12000);
+	}, [flights])
+	
   return (
     <>
-		<h3 className="book">Search for an existing flight</h3>
 		<form className="book-form" onSubmit={_handleSubmit}>
 		<div className="search-form">
 			<div className="col-sm-3 my-1">
@@ -55,10 +61,12 @@ const Book = () => {
 				</div>
 				<input
 				type="text"
+				maxLength={3}
 				className="form-control"
 				id='form-control'
 				required
 				onChange={_handleFrom}
+				value={fromField}
 				placeholder="eg. MEL"
 				/>
 			</div>
@@ -70,10 +78,12 @@ const Book = () => {
 			</div>
 			<input
 				type="text"
+				maxLength={3}
 				className="form-control"
 				id='form-control'
 				required
 				onChange={_handleTo}
+				value={toField}
 				placeholder="eg. SYD"
 			/>
 			</div>
@@ -82,22 +92,19 @@ const Book = () => {
 		</div>
 		</form>
 		{flight}
+		{message}
     </>
   );
 };
 
 const FlightTable = (props) => {
-	console.log('rendering the flighttable')
-	console.log(props.id);
 	return (
-		<div>
+		<div className='searched-flight'>
 			<a href={`http://localhost:3001/flights/${props.flights.id}`} className='flights'>
 			Flight: from {props.flights.from} to {props.flights.to} departing on {props.flights.date}
 			</a>
 		</div>
-		
 	)
-
 }
 
 export default Book;
