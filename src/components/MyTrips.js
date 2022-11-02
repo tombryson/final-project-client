@@ -4,7 +4,6 @@ import axios from 'axios'
 
 const MyTrips = () => {
     const [trips, setTrips] = useState([]);
-    const [user, setUser] = useState([]);
     const [flight, setFlight] = useState([]);
 
     useEffect(() => { showTrips() }, [trips.length]);

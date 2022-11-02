@@ -1,6 +1,4 @@
 import React from "react";
-import { Navbar } from "react-bootstrap";
-import Home from "./Home";
 import { Link, Outlet } from 'react-router-dom';
 import iconHome from '../images/home-icon.png'
 import myTrips from '../images/trips-icon.png'

@@ -1,7 +1,4 @@
 import React from "react"
-import { Carousel } from "react-bootstrap";
-import logo from "../images/BA-transp.png"
-import NavBar from "./NavBar"
 import CarouselHome from "./CarouselHome";
 
 
