@@ -5,12 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const SeatMap = (props) => {
+// eslint-disable-next-line no-unused-vars
+const [seat, setSeat] = useState('');
 const [flightData, setFlightData] = useState([]);
 const [planeData, setPlaneData] = useState([]);
 const location = useLocation()
 
 const _handleOnClick = (seat) => {
-  console.log(seat.user_id)
+  setSeat(seat);
   axios.post(`https://burning-airlines-143.herokuapp.com/bookings/`, {
     booking: {
     cols: seat.col,
@@ -20,8 +22,8 @@ const _handleOnClick = (seat) => {
     }
   }
   ).then((reponse) => {
-    const seat = document.getElementById(seat.name)
-    seat.style.visibility.setProperty('visibility', 'hidden');
+    const seatProp = document.getElementById(seat.name)
+    seatProp.style.visibility.setProperty('visibility', 'hidden');
   })
 };
 
