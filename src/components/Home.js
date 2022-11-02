@@ -1,5 +1,5 @@
 import React from "react"
-import CarouselHome from "./CarouselHome";
+// import CarouselHome from "./CarouselHome";
 
 
 function Home(props){
@@ -7,7 +7,7 @@ function Home(props){
         <><div>
             <h1 className="greeting"> Welcome </h1>
         </div>
-        <CarouselHome />
+        {/* <CarouselHome /> */}
         </>
     )
 }
