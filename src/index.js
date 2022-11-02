@@ -22,7 +22,6 @@ const handleAuth = () => {
   .then(data => console.log(data))
 }
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <BrowserRouter>

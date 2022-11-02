@@ -10,21 +10,25 @@ const [planeData, setPlaneData] = useState([]);
 const location = useLocation()
 
 const _handleOnClick = (seat) => {
-  console.log(seat)
-  axios.post(`http://localhost:3000/bookings/`, {
-    col: seat.col,
+  console.log(seat.user_id)
+  axios.post(`https://burning-airlines-143.herokuapp.com/bookings/`, {
+    booking: {
+    cols: seat.col,
     flight_id: seat.flight_id,
-    row: seat.row,
+    rows: seat.row,
     user_id: seat.user_id,
+    }
   }
-  ).then((response) => {
-    console.log(response.data);
-})
-}
+  ).then((reponse) => {
+    const seat = document.getElementById(seat.name)
+    seat.style.visibility.setProperty('visibility', 'hidden');
+  })
+};
+
 
 useEffect(() => {
   if (flightData.length === 0)
-  axios.get(`http://localhost:3000${location.pathname}`).then((response) => {
+  axios.get(`https://burning-airlines-143.herokuapp.com${location.pathname}`).then((response) => {
     setFlightData(response.data[1]);
     setPlaneData(response.data[0]);
     })
@@ -38,7 +42,7 @@ const Seat = ({col, row}) => {
   const flight_id = flightData.id
   const user_id = sessionStorage.getItem('currentUserId');
   return (
-    <button id={name} onClick={() => _handleOnClick({col, row, user_id, flight_id})} className='seats'>{name}</button>
+    <button id={name} onClick={() => _handleOnClick({col, row, user_id, flight_id, name})} className='seats'>{name}</button>
   )
 }
 

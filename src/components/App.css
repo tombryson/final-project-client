@@ -228,10 +228,9 @@ input {
 }
 
 .title-img {
-  padding: 22px;
-  margin: -4px;
+  padding: 25px;
   width: 160px;
-  margin-top: 2rem;
+  margin-top: 1.6em;
   image-rendering: -webkit-optimize-contrast;
 }
 
@@ -294,9 +293,8 @@ input {
 }
 
 .my-trips {
-    position: absolute;
-    margin-top: 20vh;
-    padding-left: 25px;
+  margin-top: 17vh;
+  padding-left: 25px;
 }
 
 #log-in {

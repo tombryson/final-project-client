@@ -3,10 +3,8 @@ import { Navbar } from "react-bootstrap";
 import Home from "./Home";
 import { Link, Outlet } from 'react-router-dom';
 import iconHome from '../images/home-icon.png'
-import bookIcon from '../images/book-icon.png'
 import myTrips from '../images/trips-icon.png'
 import myProfile from '../images/profile-icon.png'
-import book1 from '../images/book-icon1.png'
 import book2 from '../images/book-icon2.png'
 
 
