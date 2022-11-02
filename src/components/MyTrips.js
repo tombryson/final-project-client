@@ -3,6 +3,8 @@ import axios from 'axios'
 
 
 const MyTrips = () => {
+      // eslint-disable-next-line no-unused-vars
+    const [user, setUser] = useState([]);
     const [trips, setTrips] = useState([]);
     const [flight, setFlight] = useState([]);
 
