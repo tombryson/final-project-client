@@ -159,13 +159,10 @@ input {
 }
 
 .header {
-  width: 100%;
   border: white;
   background-color: white;
-  display: block;
-  position: fixed;
   height: 7.5rem;
-  bottom: 88vh;
+  box-shadow: 1px 3px 10px 0px #1a1a1aa1;
 }
 
 .label {
