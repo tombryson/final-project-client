@@ -1,4 +1,3 @@
-import react from 'react'
 import logo from "../images/BA-transp.png"
 
 const SiteHead = () => {

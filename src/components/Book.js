@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import departure from '../images/book-icon.png';
 import arrival from '../images/icon-arrival.png';
@@ -13,7 +13,7 @@ const Book = () => {
   const [toField, setToField] = useState('');
   const [message, setMessage] = useState('');
 
-  let currentUserId = sessionStorage.getItem('currentUserId');
+  // let currentUserId = sessionStorage.getItem('currentUserId');
 
   const _handleSubmit = (event) => {
     event.preventDefault();

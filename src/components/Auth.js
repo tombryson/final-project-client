@@ -6,6 +6,7 @@ import LoginForm from './LoginForm'
 import { useNavigate } from 'react-router-dom';
 
 function Auth() {
+  // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useState({})
   const [form, setForm] = useState("")
 
