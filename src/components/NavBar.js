@@ -9,7 +9,9 @@ import book2 from '../images/book-icon2.png'
 const logOut = () => {
     sessionStorage.removeItem('currentUserId');
     window.location.reload();
-    <Link to="/"></Link>
+    return (
+        <Link to="/"></Link>
+    )
 }
 
 const NavBar = () => {
@@ -55,8 +57,8 @@ const NavBar = () => {
                     </ul>
                     <ul>
                         <div className='icon-div'>
-                        <img onClick={() => logOut()} className="nav-icon" src={myProfile} alt="a portrait" width="50px"></img>
-                        <div className='icon-text'id='log-out'>Log out</div>
+                            <img onClick={() => logOut()} className="nav-icon" src={myProfile} alt="a portrait" width="50px"></img>
+                            <div className='icon-text'id='log-out'>Log out</div>
                         </div>
                     </ul>
                     <ul>

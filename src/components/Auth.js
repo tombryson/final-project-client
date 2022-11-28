@@ -48,12 +48,12 @@ function Auth() {
   }
   return (
     <div className="auth-form">
-    <div className="auth">
+      <div className="auth">
         <Header handleFormSwitch={handleFormSwitch}/>
         {
           renderForm()
         }
-    </div>
+      </div>
     </div>
   );
 }

@@ -56,7 +56,7 @@ body {
     margin: 0 auto;
     border-radius: 10px;
     margin-bottom: 14px;
-    padding: 2px;
+    padding: 10px;
   }
 
   .logo-mid {
@@ -80,11 +80,15 @@ body {
 }
 
 .btn-dark {
-    color: #fff;
-    background-color: #212529e3;
-    border-color: #2125299e;
-    border-radius: 40px !important;
-    padding: 2px;
+  color: #fff;
+  background-color: #212529e3;
+  border-color: #3785d39e;
+  padding: 8px;
+  width: 100%;
+}
+
+.btn-dark:hover {
+  box-shadow: inset 1px 1px 5px 2px #1c1c1cc9;
 }
 
 button.ui-button {
@@ -98,22 +102,16 @@ button.ui-button {
 .form-info {
   color: black;
   padding-right: 5px;
+  font-size: 12px;
 }
 
 .auth {
-  width: 75%;
-  border: solid #bedbf4 4px;
-  border-radius: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: stretch;
-  align-content: center;
-  text-align: center;
-  position: absolute;
-  top: 6%;
-  margin: 13vh;
-  background-color: #bfdcf08f;
+  background-color: #feffff;
+  box-shadow: 0 14px 28px rgb(0 0 0 / 30%), 0 10px 10px rgb(0 0 0 / 38%);
+  width: 32rem;
+  max-width: 86%;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .flights {
@@ -128,8 +126,12 @@ button.ui-button {
 }
 
 input {
-  width: -webkit-fill-available;
-    max-width: 180px;
+  max-width: 180px;
+  padding: 6px 15px;
+  margin: 8px 0px!important;
+  border: #b5b5b5 1.5px solid;
+  background-color: #eee;
+  width: 100%;
 }
 
 .nav-icon {
@@ -215,13 +217,11 @@ input {
 
 .auth-form {
   width: 100%;
-  height: 529px;
   display: flex;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: space-around;
-  flex-direction: row-reverse;
-  align-items: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .title-img {
@@ -235,13 +235,6 @@ input {
 
 .headerStyle {
   display: flex;
-  height: 6vh;
-  flex-direction: row-reverse;
-  flex-wrap: nowrap;
-  align-items: center;
-  align-content: center;
-  justify-content: space-evenly;
-  margin-bottom: 14px;
 }
 
 .ui-button {
@@ -267,8 +260,14 @@ input {
     height: 100vh;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo img {
-  min-width: 100px;
+  min-width: 186px;
 }
 
 .App {
@@ -308,13 +307,15 @@ input {
   width: 104%;
   background-color: #e9ecef;
   position: fixed;
+  min-height: 20%;
   min-height: -webkit-fill-available;
   top: 80%;
   border: solid #141414d4 1px;
   box-shadow: -1.5px 0px 2.5px 0px black;
   z-index: 20000;
-  background-image: linear-gradient(to bottom right, #e9ecef, #398bd1);
+  background-image: linear-gradient(174deg, #ffffff 5%, #ffffff 10%, #3a88ce 75%);
   margin-left: -3%;
+  padding: 50px;
 }
 
 .search-form {
@@ -324,6 +325,14 @@ input {
   flex-direction: column;
   align-content: center;
   justify-content: center;
+}
+
+.sign-up-form {
+  padding: 20px;
+  width: 45%;
+  max-width: 60%;
+  min-width: 140px;
+  margin: 10px auto;
 }
 
 #btn {

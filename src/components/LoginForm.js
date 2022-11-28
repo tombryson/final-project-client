@@ -33,28 +33,21 @@ function LoginForm(props){
         setEmail("")
         setPassword("")
     }
-    const formDivStyle = {
-        margin: "auto",
-        padding: "20px",
-        width: "80%"
-    }
     return(
         <div>
-            <div style={formDivStyle}>
-            <h1 className='sign-up'>Log In</h1>
-            <form className="ui form" onSubmit={handleSubmit}>
-                <div className="field">
-                    <label>Email</label>
-                    <input value={email} onChange={handleEmailChange} type="text" placeholder="john.smith@email.com"/>
-                </div>
-                <div className="field">
-                    <label>Password</label>
-                    <input value={password} onChange={handlePasswordChange} type="password" placeholder="password"/>
-                </div>
-                
-                <button className="ui button" type="submit">Submit</button>
-            </form>
-        </div>
+            <div className='sign-up-form'>
+                <h1 className='sign-up'>Sign In</h1>
+                <form className="ui form" onSubmit={handleSubmit}>
+                    <div className="field">
+                        <input value={email} onChange={handleEmailChange} type="text" placeholder="Email"/>
+                    </div>
+                    <div className="field">
+                        <input value={password} onChange={handlePasswordChange} type="password" placeholder="Password"/>
+                    </div>
+                    
+                    <button className="ui button" type="submit">Submit</button>
+                </form>
+            </div>
         </div>
     )
 } 

@@ -35,7 +35,7 @@ function SignUpForm(props) { ///////////////////All Props
                 last_name,
                 email,
                 password,
-                admin
+                admin,
                 })
         })
         .then(resp => resp.json())
@@ -49,35 +49,24 @@ function SignUpForm(props) { ///////////////////All Props
         setPassword("")
         setAdmin(false)
     }
-    const formDivStyle = {
-        margin: "auto",
-        padding: "20px",
-        width: "80%"
-    }
     
     return(
-        <div style={formDivStyle}>
+        <div className='sign-up-form'>
             <h1 className='sign-up'>Sign Up</h1>
             <form className="ui form" onSubmit={handleSubmit}>
-            <div className="field">
-                    <label className='form-info'>First Name</label>
-                    <input value={first_name} onChange={handleFirstNameChange} type="text" placeholder="eg. John"/>
+                <div className="field">
+                    <input value={first_name} onChange={handleFirstNameChange} type="text" placeholder="First Name"/>
                 </div>
                 <div className="field">
-                    <label className='form-info'>Last Name</label>
-                    <input value={last_name} onChange={handleLastNameChange} type="text" placeholder="eg. Smith"/>
+                    <input value={last_name} onChange={handleLastNameChange} type="text" placeholder="Last Name"/>
                 </div>
                 <div className="field">
-                    <label className='form-info'>Email*</label>
-                    <input value={email} onChange={handleEmailChange} type="text" placeholder="john.smith@email.com" required/>
+                    <input value={email} onChange={handleEmailChange} type="text" placeholder="Email*" required/>
                 </div>
                 <div className="field">
-                    <label className='form-info'>Password*</label>
-                    <input value={password} onChange={handlePasswordChange} type="password" placeholder="password" required/>
+                    <input value={password} onChange={handlePasswordChange} type="password" placeholder="Password*" required/>
                 </div>
-
                 <span className="reminder form-info">*required fields</span>
-                
                 <button className="ui button" type="submit">Submit</button>
             </form>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import plane2 from '../images/plane-img2.png'
-import plane3 from '../images/plane-img3.jpeg'
+import plane3 from '../images/plane4.jpg'
 import plane4 from '../images/plane-img4.jpeg'
 import {
   MDBCarousel,
