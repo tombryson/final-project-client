@@ -84,11 +84,12 @@ body {
   background-color: #212529e3;
   border-color: #3785d39e;
   padding: 8px;
+  z-index: 3;
   width: 100%;
 }
 
 .btn-dark:hover {
-  box-shadow: inset 1px 1px 5px 2px #1c1c1cc9;
+  box-shadow: inset 1px 1px 5px 2px #0e0e0ec9, 0px 1px 3px 1px #111111c7;
 }
 
 button.ui-button {
@@ -132,6 +133,7 @@ input {
   border: #b5b5b5 1.5px solid;
   background-color: #eee;
   width: 100%;
+  border-radius: 2px;
 }
 
 .nav-icon {
@@ -268,6 +270,7 @@ input {
 
 .logo img {
   min-width: 186px;
+  z-index: 2;
 }
 
 .App {
