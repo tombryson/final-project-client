@@ -56,7 +56,6 @@ body {
     margin: 0 auto;
     border-radius: 10px;
     margin-bottom: 14px;
-    padding: 10px;
   }
 
   .logo-mid {
@@ -137,9 +136,7 @@ input {
 }
 
 .nav-icon {
-  margin: 50% 0% -16% -34%;
-  box-sizing: content-box;
-  padding: 15px;
+
 }
 
 #input-group {
@@ -188,19 +185,10 @@ input {
   font-size: 12px;
   color: black;
   text-align: center;
-  margin: -4px 0px 0px 10px;
 }
 
 .icon-div {
-  display: flex;
-  height: 100px;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: space-between;
-  justify-content: flex-end;
-  align-items: flex-start;
-  text-align: center;
-  -webkit-text-stroke: thin;
+
 }
 
 .nav-icon:hover {
@@ -269,7 +257,7 @@ input {
 }
 
 .logo img {
-  min-width: 186px;
+  min-width: 166px;
   z-index: 2;
 }
 
@@ -289,21 +277,9 @@ input {
   flex-direction: row;
 }
 
-#my-trips {
-  margin: -3px 0px 0px 3px;
-}
-
 .my-trips {
   margin-top: 17vh;
   padding-left: 25px;
-}
-
-#log-in {
-  margin: -4px 0px 0px 9px;
-}
-
-#book {
-  margin: -5px 0px 0px 11px;
 }
 
 .filler {
@@ -312,7 +288,7 @@ input {
   position: fixed;
   min-height: 20%;
   min-height: -webkit-fill-available;
-  top: 80%;
+  top: 82%;
   border: solid #141414d4 1px;
   box-shadow: -1.5px 0px 2.5px 0px black;
   z-index: 20000;
