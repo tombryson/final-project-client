@@ -34,6 +34,7 @@ useEffect(() => {
     setFlightData(response.data[1]);
     setPlaneData(response.data[0]);
     })
+    // eslint-disable-next-line
   }, [flightData] 
 )
 
