@@ -24,7 +24,7 @@ function SignUpForm(props) { ///////////////////All Props
     //////
     const handleSubmit = (evt) => {
         evt.preventDefault()
-        fetch(`https://burning-airlines-143.herokuapp.com/users`, {
+        fetch(`https://burning-airlines.fly.dev/users`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

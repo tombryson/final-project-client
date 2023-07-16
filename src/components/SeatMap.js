@@ -13,7 +13,7 @@ const location = useLocation()
 
 const _handleOnClick = (seat) => {
   setSeat(seat);
-  axios.post(`https://burning-airlines-143.herokuapp.com/bookings/`, {
+  axios.post(`https://burning-airlines.fly.dev/bookings/`, {
     booking: {
     cols: seat.col,
     flight_id: seat.flight_id,
@@ -30,7 +30,7 @@ const _handleOnClick = (seat) => {
 
 useEffect(() => {
   if (flightData.length === 0)
-  axios.get(`https://burning-airlines-143.herokuapp.com${location.pathname}`).then((response) => {
+  axios.get(`https://burning-airlines.fly.dev${location.pathname}`).then((response) => {
     setFlightData(response.data[1]);
     setPlaneData(response.data[0]);
     })

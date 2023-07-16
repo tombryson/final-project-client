@@ -173,6 +173,12 @@ input {
 .seats {
   width: 40px;
   height: 40px;
+  border-radius: 140px 140px 150px 150px/120px 120px 56px 56px;
+  transition: 0.1s ease;
+}
+
+.seats:hover {
+  background-color: darkgrey;
 }
 
 .seat-container {

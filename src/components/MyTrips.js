@@ -12,14 +12,14 @@ const MyTrips = () => {
 
     const showTrips = () => {
         let currentUserId = sessionStorage.getItem('currentUserId'); 
-        axios.get(`https://burning-airlines-143.herokuapp.com/users/${currentUserId}`).then((response) => {
+        axios.get(`https://burning-airlines.fly.dev/users/${currentUserId}`).then((response) => {
           setTrips(response.data[1]);
           setUser(response.data[0]);
         })
         };
 
     const getFlight = (flight_id) => {
-        axios.get(`https://burning-airlines-143.herokuapp.com/flights/${flight_id}`).then((response) => {
+        axios.get(`https://burning-airlines.fly.dev/flights/${flight_id}`).then((response) => {
           setFlight(response.data[1]);
         })
         };

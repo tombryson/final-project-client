@@ -15,7 +15,7 @@ function Auth() {
   useEffect(() => {
     const token = localStorage.getItem("token")
     if(token){
-      fetch(`https://burning-airlines-143.herokuapp.com/auto_login`, {
+      fetch(`https://burning-airlines.fly.dev/auto_login`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
