@@ -1,88 +1,90 @@
-import React from "react";
-import { Link, Outlet } from 'react-router-dom';
-import iconHome from '../images/home-icon.png'
-import myTrips from '../images/trips-icon.png'
-import myProfile from '../images/profile-icon.png'
-import book2 from '../images/book-icon2.png'
-
-
-const logOut = () => {
-    sessionStorage.removeItem('currentUserId');
-    window.location.reload();
-    return (
-        <Link to="/"></Link>
-    )
-}
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import iconHome from '../images/home-icon.png';
+import myTrips from '../images/trips-icon.png';
+import myProfile from '../images/profile-icon.png';
+import book2 from '../images/book-icon2.png';
 
 const NavBar = () => {
-    let currentUserId = sessionStorage.getItem('currentUserId'); 
-    if (currentUserId === null) {
-    return (
-    <><div className="filler">
-            <div className="buttons-nav">
-                <ul>
-                    <div className='icon-div'>
-                    <Link to="/">
-                        <img className="nav-icon" src={iconHome} alt="a house" width="50px"></img>
-                    </Link>
-                    <div className='icon-text'>Home</div>
-                    </div>
-                </ul>
-                <ul>
-                    <div className='icon-div'>
-                    <Link to="/auth">
-                    <img className="nav-icon" src={myProfile} alt="a portrait" width="50px"></img>
-                    </Link>
-                    <div className='icon-text'id='log-in'>Log in</div>
-                    </div>
-                </ul>
-            </div>
-        </div>
-            <div>
-                <Outlet />
-            </div></>
-    )
+  const navigate = useNavigate();
+  const currentUserId = sessionStorage.getItem('currentUserId');
 
-    } else {
-    return (
-        <><div className="filler">
-                <div className="buttons-nav">
-                    <ul>
-                        <div className='icon-div'>
-                        <Link to="/">
-                            <img className="nav-icon" src={iconHome} alt="a house" width="50px"></img>
-                        </Link>
-                        <div className='icon-text'>Home</div>
-                        </div>
-                    </ul>
-                    <ul>
-                        <div className='icon-div'>
-                            <img onClick={() => logOut()} className="nav-icon" src={myProfile} alt="a portrait" width="50px"></img>
-                            <div className='icon-text'id='log-out'>Log out</div>
-                        </div>
-                    </ul>
-                    <ul>
-                        <div className='icon-div'>
-                        <Link to="/book">
-                        <img className="nav-icon" src={book2} alt="a plane" width="50px"></img>
-                        </Link>
-                        <div className='icon-text' id='book'>Book</div>
-                        </div>
-                    </ul>
-                    <ul>
-                        <div className='icon-div'>
-                        <Link to="/mytrips">
-                        <img className="nav-icon" src={myTrips} alt="luggage" width="50px"></img>
-                        </Link>
-                        <div className='icon-text' id='my-trips'>My Trips</div>
-                        </div>
-                    </ul>
+  const logOut = () => {
+    sessionStorage.removeItem('currentUserId');
+    navigate('/');
+  };
+
+  return (
+    <div className="nav-bar">
+      <div className="buttons-nav">
+        <ul>
+          <li className="icon-div">
+            <Link to="/">
+              <img
+                className="nav-icon"
+                src={iconHome}
+                alt="a house"
+                width="50px"
+              />
+            </Link>
+            <div className="icon-text">Home</div>
+          </li>
+          {currentUserId ? (
+            <>
+              <li className="icon-div" onClick={logOut}>
+                <img
+                  className="nav-icon"
+                  src={myProfile}
+                  alt="a portrait"
+                  width="50px"
+                />
+                <div className="icon-text" id="log-out">
+                  Log out
                 </div>
-            </div>
-                <div>
-                    <Outlet />
-                </div></>
-    )}
+              </li>
+              <li className="icon-div">
+                <Link to="/book">
+                  <img
+                    className="nav-icon"
+                    src={book2}
+                    alt="a plane"
+                    width="50px"
+                  />
+                </Link>
+                <div className="icon-text" id="book">
+                  Book
+                </div>
+              </li>
+              <li className="icon-div">
+                <Link to="/mytrips">
+                  <img
+                    className="nav-icon"
+                    src={myTrips}
+                    alt="luggage"
+                    width="50px"
+                  />
+                </Link>
+                <div className="icon-text" id="my-trips">
+                  My Trips
+                </div>
+              </li>
+            </>
+          ) : (
+            <li className="icon-div">
+              <Link to="/auth">
+                <img
+                  className="nav-icon"
+                  src={myProfile}
+                  alt="a portrait"
+                  width="50px"
+                />
+              </Link>
+            </li>
+          )}
+        </ul>
+      </div>
+    </div>
+  );
 };
 
 export default NavBar;

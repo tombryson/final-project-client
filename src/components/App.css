@@ -16,7 +16,7 @@ body {
   min-height: 100vh;
   width: 100%;
   background-size: cover;
-  background-position-y: 112%;
+  background-position-y: 102%;
 }
 
 .log-out {
@@ -35,7 +35,16 @@ body {
 .greeting {
   padding-top: 28vh;
   margin-left: 4%;
-  color: #1f1f1fdb;
+  position: absolute;
+  z-index: 3;
+  color: #000000;
+  background-color: #941d18f0;
+  border-radius: 2px;
+  color: #e5e5e5;
+  font-weight: 300;
+  border-bottom: double #555555a3 6px;
+  border-right: groove darkgrey 4px;
+  filter: drop-shadow(2px 2px 4px black) opacity(0.7);
 }
 
 .sr-only {
@@ -109,6 +118,7 @@ button.ui-button {
   background-color: #feffff;
   box-shadow: 0 14px 28px rgb(0 0 0 / 30%), 0 10px 10px rgb(0 0 0 / 38%);
   width: 32rem;
+  margin-top: 13vh;
   max-width: 86%;
   overflow: hidden;
   border-radius: 10px;
@@ -126,17 +136,11 @@ button.ui-button {
 }
 
 input {
-  max-width: 180px;
   padding: 6px 15px;
   margin: 8px 0px!important;
   border: #b5b5b5 1.5px solid;
   background-color: #eee;
   width: 100%;
-  border-radius: 2px;
-}
-
-.nav-icon {
-
 }
 
 #input-group {
@@ -160,10 +164,14 @@ input {
 }
 
 .header {
-  border: white;
-  background-color: white;
-  height: 7.5rem;
-  box-shadow: 1px 3px 10px 0px #1a1a1aa1;
+  border-bottom: #090f1559 solid 1.5px;
+  box-shadow: 0px -2px 8px 1px #1a1a1ac2;
+  border-right-width: 0px;
+  background-image: linear-gradient(25deg, transparent -14%, #f1f1f1ba 10%, transparent 60%);
+  z-index: 5000;
+  position: absolute;
+  width: 100%;
+  border-bottom-style: ridge;
 }
 
 .label {
@@ -193,16 +201,12 @@ input {
   text-align: center;
 }
 
-.icon-div {
-
-}
-
 .nav-icon:hover {
   border-radius: 50%;
-  animation: glow 1.5s linear infinite alternate;
-  background: radial-gradient(#ffffff7a 12px, #ffffff5c 40%, #f8f8f80f 70%);
-  box-shadow: 0 0 0px 0px #2e2e2eb3;
-  transition: box-shadow 3s linear;
+  animation: glow 0.5s linear infinite alternate;
+  outline-color: darkred;
+  box-shadow: 0 0 0px 4px #954a43;
+  transition: box-shadow 0.3s linear;
 }
 
 @keyframes glow{
@@ -213,20 +217,21 @@ input {
 
 .auth-form {
   width: 100%;
+  height: 85vh;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   flex-direction: row;
   justify-content: center;
+  min-width: 250px;
 }
 
 .title-img {
-  padding: 25px;
-  width: 160px;
-  margin-top: 1.6em;
-  image-rendering: -webkit-optimize-contrast;
-  position: absolute;
-  top: -10px;
+  padding: calc(0.5rem + 0.2vw + 10px);
+  height: -webkit-fill-available;
+  max-width: calc(20vw - 2rem);
+  object-fit: contain;
+  min-width: 100px;
 }
 
 .headerStyle {
@@ -242,18 +247,15 @@ input {
 
 .carousel {
     width: 100%;
-    height: 100vh;
-    top: 0;
-    z-index: -10;
-    position: fixed !important;
-    display: block;
+    position: fixed;
 }
 
 .carousel-inner {
     position: relative;
     width: 100%;
+    height: 85vh;
     overflow: hidden;
-    height: 100vh;
+    height: 85vh;
 }
 
 .logo {
@@ -280,7 +282,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  background-color: azure;
 }
 
 .my-trips {
@@ -288,19 +290,11 @@ input {
   padding-left: 25px;
 }
 
-.filler {
-  width: 104%;
-  background-color: #e9ecef;
-  position: fixed;
-  min-height: 20%;
-  min-height: -webkit-fill-available;
-  top: 82%;
-  border: solid #141414d4 1px;
-  box-shadow: -1.5px 0px 2.5px 0px black;
-  z-index: 20000;
-  background-image: linear-gradient(174deg, #ffffff 5%, #ffffff 10%, #3a88ce 75%);
-  margin-left: -3%;
-  padding: 50px;
+.nav-bar {
+  height: 15vh;
+  display: flex;
+  background-image: repeating-linear-gradient(0deg, transparent 2%, white 50%, transparent 150px);
+  border-top: 1.2px solid darkgrey;
 }
 
 .search-form {
@@ -313,7 +307,6 @@ input {
 }
 
 .sign-up-form {
-  padding: 20px;
   width: 45%;
   max-width: 60%;
   min-width: 140px;
@@ -349,3 +342,7 @@ input {
   box-shadow: inset 0 0 1px 0.5rem rgb(104 151 185 / 17%);
 }
 
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}

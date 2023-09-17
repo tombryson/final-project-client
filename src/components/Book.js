@@ -15,13 +15,13 @@ const Book = () => {
 
   // let currentUserId = sessionStorage.getItem('currentUserId');
 
+  const siteURL = 'http://localhost:3000/';
+
   const _handleSubmit = (event) => {
     event.preventDefault();
-    axios(`https://burning-airlines-143.herokuapp.com/search/${from}/${to}.json`).then(
-      (response) => {
-        setFlights(response.data);
-      },
-    );
+    axios(`${siteURL}/search/${from}/${to}.json`).then((response) => {
+      setFlights(response.data);
+    });
   };
 
   const _handleTo = (form) => {
