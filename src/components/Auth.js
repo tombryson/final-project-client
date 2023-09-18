@@ -52,7 +52,7 @@ function Auth() {
     <div className="auth-form">
       <div className="auth">
         <Header handleFormSwitch={handleFormSwitch} />
-        {renderForm()}
+        <div className="auth-container">{renderForm()}</div>
       </div>
     </div>
   );

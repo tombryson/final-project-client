@@ -91,7 +91,6 @@ function SignUpForm(props) {
             required
           />
         </div>
-        <span className="reminder form-info">*required fields</span>
         <button className="ui button" type="submit">
           Submit
         </button>

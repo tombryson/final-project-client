@@ -11,16 +11,14 @@ import NavBar from './components/NavBar.js';
 import SeatMap from './components/SeatMap.js';
 import SiteHead from './components/SiteHead.js';
 import CarouselHome from './components/CarouselHome.js';
-import ReactCarousel from './components/ReactCarousel.js';
 
-const AppWrapper = ({ children }) => (
-  <>
+const AppWrapper = () => (
+  <div className="app-container">
     <SiteHead />
-    {/* <ReactCarousel /> */}
-    <Outlet />
+    <Home />
     <NavBar />
-    {children}
-  </>
+    <Outlet />
+  </div>
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,12 +26,12 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<AppWrapper />}>
-        <Route index element={<Home />} />
+        <Route index element={<></>} />
         <Route path="auth" element={<Auth />} />
         <Route path="profile" element={<Profile />} />
         <Route path="book" element={<Book />} />
         <Route path="mytrips" element={<MyTrips />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<></>} />
         <Route path="flights/:id" element={<SeatMap />} />
       </Route>
     </Routes>

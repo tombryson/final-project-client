@@ -45,6 +45,7 @@ body {
   border-bottom: double #555555a3 6px;
   border-right: groove darkgrey 4px;
   filter: drop-shadow(2px 2px 4px black) opacity(0.7);
+  font-size: 3.5rem;
 }
 
 .sr-only {
@@ -82,21 +83,28 @@ body {
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .greeting {
+    visibility: hidden;
+  }
+}
+
 .logo-mid {
-  max-width: 150px;
   border-radius: 6px;
 }
 
-.btn-dark {
+.headerStyle > .btn-dark {
   color: #fff;
   background-color: #212529e3;
-  border-color: #3785d39e;
+  border-color: #0811145c;
   padding: 8px;
+  border-radius: 4px 4px 0px 0px;
   z-index: 3;
   width: 100%;
+  height: clamp(3rem, 3vw, 6rem);
 }
 
-.btn-dark:hover {
+.headerStyle > .btn-dark:hover {
   box-shadow: inset 1px 1px 5px 2px #0e0e0ec9, 0px 1px 3px 1px #111111c7;
 }
 
@@ -114,14 +122,34 @@ button.ui-button {
   font-size: 12px;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .auth {
-  background-color: #feffff;
-  box-shadow: 0 14px 28px rgb(0 0 0 / 30%), 0 10px 10px rgb(0 0 0 / 38%);
-  width: 32rem;
-  margin-top: 13vh;
-  max-width: 86%;
-  overflow: hidden;
+  background-image: linear-gradient(180deg, transparent 4%, #fdffff 8%);
+  box-shadow: 7px 5px 12px 0px rgb(0 0 0 / 14%), -6px 8px 7px 1px rgb(0 0 0 / 22%);
+  width: calc(25rem + 14vw);
+  max-width: 80%;
   border-radius: 10px;
+  text-align-last: center;
+  font-size: clamp(1.2rem,1.2vw,1.6rem);
+}
+
+.auth-container {
+  height: clamp(22rem, 24vw, 32rem);
 }
 
 .flights {
@@ -203,9 +231,7 @@ input {
 
 .nav-icon:hover {
   border-radius: 50%;
-  animation: glow 0.5s linear infinite alternate;
-  outline-color: darkred;
-  box-shadow: 0 0 0px 4px #954a43;
+  box-shadow: 0 0 0px 4px #54545485;
   transition: box-shadow 0.3s linear;
 }
 
@@ -213,17 +239,6 @@ input {
   to {
     box-shadow: 0px 0px 12px 6px #66666673;
   }
-}
-
-.auth-form {
-  width: 100%;
-  height: 85vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  flex-direction: row;
-  justify-content: center;
-  min-width: 250px;
 }
 
 .title-img {
@@ -247,7 +262,7 @@ input {
 
 .carousel {
     width: 100%;
-    position: fixed;
+    position: relative;
 }
 
 .carousel-inner {
@@ -265,7 +280,7 @@ input {
 }
 
 .logo img {
-  min-width: 166px;
+  width: clamp(12rem, 16vw, 20rem);
   z-index: 2;
 }
 
@@ -292,6 +307,7 @@ input {
 
 .nav-bar {
   height: 15vh;
+  z-index: 2;
   display: flex;
   background-image: repeating-linear-gradient(0deg, transparent 2%, white 50%, transparent 150px);
   border-top: 1.2px solid darkgrey;
@@ -307,10 +323,17 @@ input {
 }
 
 .sign-up-form {
-  width: 45%;
+  width: 20rem;
   max-width: 60%;
-  min-width: 140px;
-  margin: 10px auto;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up {
+  font-size: clamp(2rem, 3vw, 3rem);
 }
 
 #btn {

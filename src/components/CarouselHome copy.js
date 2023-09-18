@@ -19,24 +19,24 @@ export default function CarouselHome() {
 }
 
 const deployCarousel = () => (
-  <MDBCarousel fade delay={200}>
-    <MDBCarouselItem
-      className="w-100 d-block display"
-      itemId={1}
-      src={plane2}
-      alt="..."
-    />
-    <MDBCarouselItem
-      className="w-100 d-block display"
-      itemId={2}
-      src={plane4}
-      alt="..."
-    />
-    <MDBCarouselItem
-      className="w-100 d-block display"
-      itemId={3}
-      src={plane3}
-      alt="..."
-    />
-  </MDBCarousel>
+  // <MDBCarousel fade delay={200}>
+  //   <MDBCarouselItem
+  //     className="w-100 d-block display"
+  //     itemId={1}
+  //     src={plane2}
+  //     alt="..."
+  //   />
+  //   <MDBCarouselItem
+  //     className="w-100 d-block display"
+  //     itemId={2}
+  //     src={plane4}
+  //     alt="..."
+  //   />
+  //   <MDBCarouselItem
+  //     className="w-100 d-block display"
+  //     itemId={3}
+  //     src={plane3}
+  //     alt="..."
+  //   />
+  // </MDBCarousel>
 );
