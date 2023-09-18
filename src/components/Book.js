@@ -61,62 +61,78 @@ const Book = () => {
 
   return (
     <>
-      <form className="book-form" onSubmit={_handleSubmit}>
+      <form className="auth-form" onSubmit={_handleSubmit}>
         <div className="search-form">
-          <div className="col-sm-3 my-1">
-            <label className="sr-only">Search</label>
-            <div id="input-group">
-              <div className="input-group-prepend">
-                <div className="input-group-text">
-                  <img
-                    src={departure}
-                    id="flight-icons"
-                    alt="plane taking off"
-                    width="30px"
-                  ></img>
-                  Departing
-                </div>
+          <label className="sr-only">Search</label>
+          <div id="input-group">
+            <div className="input-group-prepend">
+              <div className="input-group-text">
+                <img
+                  src={departure}
+                  id="flight-icons"
+                  alt="plane taking off"
+                  width="30px"
+                ></img>
+                Departing
               </div>
-              <input
-                type="text"
-                maxLength={3}
-                className="form-control"
-                id="form-control"
-                required
-                onChange={_handleFrom}
-                value={fromField}
-                placeholder="eg. MEL"
-              />
             </div>
-            <div id="input-group">
-              <div className="input-group-prepend">
-                <div className="input-group-text">
-                  <img
-                    src={arrival}
-                    id="flight-icons"
-                    alt="plane landing"
-                    width="30px"
-                  ></img>
-                  Arriving
-                </div>
-              </div>
-              <input
-                type="text"
-                maxLength={3}
-                className="form-control"
-                id="form-control"
-                required
-                onChange={_handleTo}
-                value={toField}
-                placeholder="eg. SYD"
-              />
-            </div>
-            <button type="submit" className="btn btn-secondary mb-2" id="btn">
-              Search
-            </button>
+            <input
+              type="text"
+              maxLength={3}
+              className="form-control"
+              id="form-control"
+              required
+              onChange={_handleFrom}
+              value={fromField}
+              placeholder="eg. MEL"
+            />
           </div>
+          <div id="input-group">
+            <div className="input-group-prepend">
+              <div className="input-group-text">
+                <img
+                  src={arrival}
+                  id="flight-icons"
+                  alt="plane landing"
+                  width="30px"
+                ></img>
+                Arriving
+              </div>
+            </div>
+            <input
+              type="text"
+              maxLength={3}
+              className="form-control"
+              id="form-control"
+              required
+              onChange={_handleTo}
+              value={toField}
+              placeholder="eg. SYD"
+            />
+          </div>
+          <button type="submit" className="btn btn-secondary mb-2" id="btn">
+            Search
+          </button>
         </div>
       </form>
+      <ul>
+        {flights.map((flight, index) => (
+          <>
+            <li className="flight-list" key={index}>
+              {flight.date}
+            </li>
+            <li className="flight-list" key={index}>
+              {flight.from}
+            </li>
+            <li className="flight-list" key={index}>
+              {flight.to}
+            </li>
+            <li className="flight-list" key={index}>
+              {flight.plane_id}
+            </li>
+          </>
+        ))}
+      </ul>
       {flight}
       {message}
     </>

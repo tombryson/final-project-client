@@ -16,8 +16,8 @@ const AppWrapper = () => (
   <div className="app-container">
     <SiteHead />
     <Home />
-    <NavBar />
     <Outlet />
+    <NavBar />
   </div>
 );
 
