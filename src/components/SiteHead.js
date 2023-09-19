@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../images/BA-transp.png';
+import { Outlet } from 'react-router-dom';
 
 const SiteHead = () => {
   const [matrixValues, setMatrixValues] = useState({
@@ -102,6 +103,7 @@ const SiteHead = () => {
         alt="plane flying over logo"
         style={logoStyle}
       />
+      <Outlet />
     </div>
   );
 };

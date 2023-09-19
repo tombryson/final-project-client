@@ -61,7 +61,7 @@ const Book = () => {
 
   return (
     <>
-      <form className="auth-form" onSubmit={_handleSubmit}>
+      <form className="book-form" onSubmit={_handleSubmit}>
         <div className="search-form">
           <label className="sr-only">Search</label>
           <div id="input-group">
