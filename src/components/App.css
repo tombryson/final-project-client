@@ -3,6 +3,8 @@
 @tailwind utilities;
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +48,8 @@ body {
   border-right: groove darkgrey 4px;
   filter: drop-shadow(2px 2px 4px black) opacity(0.7);
   font-size: min(calc(3.5rem + 0.5vw), 4vh);
+  width: min(calc(9.5rem + 4vw), 20vh);
+  text-align: center;
 }
 
 .sr-only {
@@ -141,12 +145,12 @@ button.ui-button {
 .auth-form {
   position: fixed;
   z-index: 1!important;
+  padding: clamp(1rem, 1vw, 2rem);
   width: 100%;
-  height: 94vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  align-content: space-between;
+  justify-items: center;
 }
 
 .book-form {
@@ -157,15 +161,14 @@ button.ui-button {
 .auth {
   background-image: linear-gradient(180deg, transparent 4%, #fdffff 8%);
   box-shadow: 7px 5px 12px 0px rgb(0 0 0 / 14%), -6px 8px 7px 1px rgb(0 0 0 / 22%);
-  width: calc(25rem + 14vw);
-  max-width: 80%;
+  width: calc(10rem + 25vw);
   border-radius: 10px;
   text-align-last: center;
-  font-size: clamp(1.2rem,1.2vw,1.6rem);
+  font-size: clamp(1.0rem,1.2vw,1.6rem);
 }
 
 .auth-container {
-  height: clamp(22rem, 24vw, 32rem);
+  height: clamp(22rem, 40vw, 28rem);
 }
 
 .flights {
@@ -259,12 +262,27 @@ input {
 }
 
 .title-img {
-  padding: clamp(0.5rem, 1.2vw, 1.8vh);
-  margin-left: calc(2% + 1rem);
+  padding: clamp(0.5rem, 1.2vw, 1.4vh);
+  margin-left: calc(1vw + 2rem + 3px);
   height: -webkit-fill-available;
   max-width: calc((8vw + 8vh) - 3rem);
   object-fit: contain;
   min-width: 100px;
+}
+
+.greeting-welcome {
+  font-style: oblique;
+  font-size: revert;
+  font-family: auto;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
 }
 
 .headerStyle {
@@ -298,7 +316,7 @@ input {
 }
 
 .logo img {
-  width: clamp(12rem, 16vw, 20rem);
+  width: clamp(6rem, 15vw, 20rem);
   z-index: 2;
 }
 
@@ -343,6 +361,7 @@ input {
 
 .sign-up {
   font-size: clamp(2rem, 3vw, 3rem);
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .search-form {

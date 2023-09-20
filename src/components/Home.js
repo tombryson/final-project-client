@@ -4,8 +4,8 @@ import CarouselHome from './CarouselHome.js';
 function Home(props) {
   return (
     <>
-      <div>
-        <h1 className="greeting"> Welcome </h1>
+      <div className="greeting">
+        <h1 className="greeting-welcome"> Welcome </h1>
       </div>
       <CarouselHome />
     </>

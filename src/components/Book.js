@@ -12,8 +12,13 @@ const Book = () => {
   const [fromField, setFromField] = useState('');
   const [toField, setToField] = useState('');
   const [message, setMessage] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
 
   // let currentUserId = sessionStorage.getItem('currentUserId');
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const siteURL = 'http://localhost:3000/';
 
@@ -60,7 +65,7 @@ const Book = () => {
   }, [flights]);
 
   return (
-    <>
+    <div className={`fade-in ${isVisible ? 'show' : ''}`}>
       <form className="book-form" onSubmit={_handleSubmit}>
         <div className="search-form">
           <label className="sr-only">Search</label>
@@ -135,7 +140,7 @@ const Book = () => {
       </ul>
       {flight}
       {message}
-    </>
+    </div>
   );
 };
 

@@ -9,11 +9,18 @@ function Auth() {
   // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useState({});
   const [form, setForm] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
 
   const navigate = useNavigate();
 
   const siteURL = 'http://localhost:3000/';
 
+  ///Fade In
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  ///Authentication
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
@@ -49,7 +56,7 @@ function Auth() {
     }
   };
   return (
-    <div className="auth-form">
+    <div className={`auth-form fade-in ${isVisible ? 'show' : ''}`}>
       <div className="auth">
         <Header handleFormSwitch={handleFormSwitch} />
         <div className="auth-container">{renderForm()}</div>
