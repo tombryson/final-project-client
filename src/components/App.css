@@ -140,6 +140,7 @@ button.ui-button {
 .app-container {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .auth-form {
@@ -246,6 +247,7 @@ input {
 .icon-text {
   font-size: 12px;
   color: black;
+  display: grid;
   text-align: center;
 }
 
@@ -334,6 +336,18 @@ input {
   justify-content: center;
   align-items: center;
   background-color: azure;
+  filter: drop-shadow(2px 4px 5px black);
+}
+
+.nav-bar-icons {
+  width: 100%;
+  display: flex;
+  background-color: azure;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .my-trips {
