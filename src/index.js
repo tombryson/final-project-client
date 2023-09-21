@@ -15,7 +15,7 @@ import CarouselHome from './components/CarouselHome.js';
 const AppWrapper = () => (
   <div className="app-container">
     <SiteHead />
-    <Home />
+    <Home page={'Welcome'} />
     <NavBar />
   </div>
 );

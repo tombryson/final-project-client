@@ -54,7 +54,6 @@ const MyTrips = () => {
 
   return (
     <>
-      <h1 className="my-trips">My Trips</h1>
       <div className="flights">{booking}</div>
     </>
   );

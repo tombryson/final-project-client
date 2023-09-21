@@ -280,6 +280,8 @@ input {
   font-style: oblique;
   font-size: revert;
   font-family: auto;
+  text-wrap: nowrap;
+  padding: 1rem;
 }
 
 .fade-in {
