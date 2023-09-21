@@ -5,12 +5,14 @@ import { Outlet } from 'react-router-dom';
 const SiteHead = () => {
   return (
     <div className="header">
-      <img
-        className="title-img"
-        src={logo}
-        width="350"
-        alt="plane flying over logo"
-      />
+      <div className="logo-container">
+        <img
+          className="title-img"
+          src={logo}
+          width="350"
+          alt="plane flying over logo"
+        />
+      </div>
       <Outlet />
     </div>
   );

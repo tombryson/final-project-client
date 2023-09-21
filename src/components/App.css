@@ -11,14 +11,6 @@
 }
 
 body {
-  /* background-color: #E5E5E5;
-  background-image: url('../images/background-plane.jpeg');
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position-y: 102%; */
 }
 
 .log-out {
@@ -87,9 +79,15 @@ body {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media (width <= 1200px) {
   .greeting {
     visibility: hidden;
+  }
+}
+
+@media (width >= 1200px) {
+  .title-img {
+    filter: drop-shadow(6px 6px 1px #ccadb5);
   }
 }
 
@@ -220,8 +218,16 @@ input {
   position: fixed;
   width: 100%;
   border-bottom-style: ridge;
-  padding: clamp(1rem, 1vw, 2rem);
+  /* padding: clamp(1rem, 1vw, 2rem); */
 }
+
+.logo-container {
+  margin-left: 4%;
+  width: min(calc(9.5rem + 4vw), 20vh);
+  height: 100%;
+  display: flex;
+}
+
 
 .label {
   font-weight: 800;
@@ -264,11 +270,9 @@ input {
 }
 
 .title-img {
-  padding: clamp(0.5rem, 1.2vw, 1.4vh);
-  margin-left: calc(1vw + 2rem + 3px);
-  height: -webkit-fill-available;
-  max-width: calc((8vw + 8vh) - 3rem);
+  padding: clamp(1rem, 1.4vw + 0.1vh, (1.4vh + 0.1vw));
   object-fit: contain;
+  width: 100%;
   min-width: 100px;
 }
 

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import departure from '../images/book-icon.png';
 import arrival from '../images/icon-arrival.png';
+import './App2.css';
 
 const Book = () => {
   const [from, setFrom] = useState('');
@@ -13,8 +14,18 @@ const Book = () => {
   const [toField, setToField] = useState('');
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   // let currentUserId = sessionStorage.getItem('currentUserId');
+
+  const handleOnClick = (i) => {
+    selectedItem === null ? setSelectedItem(i) : setSelectedItem(null);
+  };
+
+  const duration = 800;
+  const delay = 100;
+  const animStr = (i) =>
+    `fadeIn ${duration}ms ease-out ${delay * i}ms forwards`;
 
   useEffect(() => {
     setIsVisible(true);
@@ -48,6 +59,27 @@ const Book = () => {
       []
     );
   });
+
+  const getItems = (flights) => {
+    return flights.length === 0 ? (
+      <p>No items found</p>
+    ) : (
+      <ul className="list-group">
+        {flights.map((flight, i) => (
+          <li
+            key={i}
+            style={{ animation: animStr(i) }}
+            className={
+              i === selectedItem ? 'list-group-item active' : 'list-group-item'
+            }
+            onClick={() => handleOnClick(i)}
+          >
+            {flight.from} to {flight.to} - {flight.date}
+          </li>
+        ))}
+      </ul>
+    );
+  };
 
   useEffect(() => {
     if (flights.length === 0) {
@@ -120,24 +152,7 @@ const Book = () => {
           </button>
         </div>
       </form>
-      <ul>
-        {flights.map((flight, index) => (
-          <>
-            <li className="flight-list" key={index}>
-              {flight.date}
-            </li>
-            <li className="flight-list" key={index}>
-              {flight.from}
-            </li>
-            <li className="flight-list" key={index}>
-              {flight.to}
-            </li>
-            <li className="flight-list" key={index}>
-              {flight.plane_id}
-            </li>
-          </>
-        ))}
-      </ul>
+      {getItems(flights)}
       {flight}
       {message}
     </div>
