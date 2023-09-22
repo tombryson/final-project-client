@@ -2,6 +2,10 @@
     --padding-pixels: 4px;
 }
 
+.list-group {
+    padding-left: 22vw;
+}
+
 .list-group-item {
     opacity: 0;
     cursor: pointer;
@@ -9,8 +13,7 @@
     filter: drop-shadow(rgba(128, 128, 128, 0.648) 0.4px 1.4px 1.2px);
     border-radius: 4px 4px;
     transition: 0.3s ease;
-    margin: 1.1px;
-    width: 50%;
+    margin: 0.5px;
 }
 
 .list-group-item.active {
@@ -20,6 +23,10 @@
     margin: calc(var(--padding-pixels) * 4);
     transition: 0.3s ease color;
     transition-property: all;
+}
+
+.list-group-item.active:first-child {
+    margin: 2px;
 }
 
 .list-group-item:hover {
@@ -33,5 +40,26 @@
     
     100% {
         opacity: 1;
+    }
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    position: static;
+    color: blue;
+    padding: 2px;
+}
+  
+.marquee-content {
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }

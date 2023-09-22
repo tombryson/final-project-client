@@ -4,6 +4,7 @@ import CarouselHome from './CarouselHome.js';
 
 function Home() {
   const location = useLocation();
+  const showCarousel = location.pathname !== '/book';
   let message = 'Welcome';
 
   if (location.pathname === '/auth') {
@@ -21,7 +22,9 @@ function Home() {
       <div className="greeting">
         <h1 className="greeting-welcome">{message}</h1>
       </div>
-      <CarouselHome />
+      <container className="carousel__container">
+        {showCarousel && <CarouselHome />}
+      </container>
     </>
   );
 }

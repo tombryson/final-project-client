@@ -34,12 +34,16 @@ const Book = () => {
 
   const siteURL = 'http://localhost:3000/';
 
-  const _handleSubmit = (event) => {
+  const _handleSubmit = async (event) => {
     event.preventDefault();
-    setHasSearched(true);
-    axios(`${siteURL}/search/${from}/${to}.json`).then((response) => {
-      setFlights(response.data);
-    });
+    try {
+      axios.get(`${siteURL}/search/${from}/${to}.json`).then((response) => {
+        setFlights(response.data);
+        setHasSearched(true);
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const _handleTo = (form) => {
@@ -88,65 +92,70 @@ const Book = () => {
   };
 
   return (
-    <div className={`fade-in ${isVisible ? 'show' : ''}`}>
-      <form onSubmit={_handleSubmit}>
-        <div className="form__search">
-          <div id="input-group">
-            <div className="input-group-prepend">
-              <div className="input-group-text">
-                <img
-                  src={departure}
-                  id="flight-icons"
-                  alt="plane taking off"
-                  width="30px"
-                ></img>
-                Departing
+    <>
+      <div class="marquee">
+        <p class="marquee-content">Flights departing:</p>
+      </div>
+      <div className={`fade-in ${isVisible ? 'show' : ''}`}>
+        <form onSubmit={_handleSubmit}>
+          <div className="form__search">
+            <div id="input-group">
+              <div className="input-group-prepend">
+                <div className="input-group-text">
+                  <img
+                    src={departure}
+                    id="flight-icons"
+                    alt="plane taking off"
+                    width="30px"
+                  ></img>
+                  Departing
+                </div>
               </div>
+              <input
+                type="text"
+                maxLength={3}
+                className="form-control"
+                id="form-control"
+                required
+                onChange={_handleFrom}
+                value={fromField}
+                placeholder="eg. MEL"
+              />
             </div>
-            <input
-              type="text"
-              maxLength={3}
-              className="form-control"
-              id="form-control"
-              required
-              onChange={_handleFrom}
-              value={fromField}
-              placeholder="eg. MEL"
-            />
-          </div>
-          <div id="input-group">
-            <div className="input-group-prepend">
-              <div className="input-group-text">
-                <img
-                  src={arrival}
-                  id="flight-icons"
-                  alt="plane landing"
-                  width="30px"
-                ></img>
-                Arriving
+            <div id="input-group">
+              <div className="input-group-prepend">
+                <div className="input-group-text">
+                  <img
+                    src={arrival}
+                    id="flight-icons"
+                    alt="plane landing"
+                    width="30px"
+                  ></img>
+                  Arriving
+                </div>
               </div>
+              <input
+                type="text"
+                maxLength={3}
+                className="form-control"
+                id="form-control"
+                required
+                onChange={_handleTo}
+                value={toField}
+                placeholder="eg. SYD"
+              />
             </div>
-            <input
-              type="text"
-              maxLength={3}
-              className="form-control"
-              id="form-control"
-              required
-              onChange={_handleTo}
-              value={toField}
-              placeholder="eg. SYD"
-            />
           </div>
           <button type="submit" className="btn btn-secondary mb-2" id="btn">
             {' '}
             Search
           </button>
-        </div>
-      </form>
-      {hasSearched && getItems(flights)}
-      {flight}
-      {message}
-    </div>
+        </form>
+        {hasSearched && getItems(flights)}
+        {flight}
+        {message}
+      </div>
+    </>
   );
 };
 
