@@ -97,7 +97,7 @@ const Book = () => {
         <p class="marquee-content">Flights departing:</p>
       </div>
       <div className={`fade-in ${isVisible ? 'show' : ''}`}>
-        <form onSubmit={_handleSubmit}>
+        <form className="form__container" onSubmit={_handleSubmit}>
           <div className="form__search">
             <div id="input-group">
               <div className="input-group-prepend">
@@ -146,7 +146,11 @@ const Book = () => {
               />
             </div>
           </div>
-          <button type="submit" className="btn btn-secondary mb-2" id="btn">
+          <button
+            type="submit"
+            className="btn btn-secondary mb-2 button__search--booking"
+            id="btn"
+          >
             {' '}
             Search
           </button>
