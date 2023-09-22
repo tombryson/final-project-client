@@ -11,7 +11,7 @@ function Home() {
   } else if (location.pathname === '/profile') {
     message = 'My Profile';
   } else if (location.pathname === '/book') {
-    message = 'Book';
+    message = 'Search';
   } else if (location.pathname === '/mytrips') {
     message = 'My Trips';
   }

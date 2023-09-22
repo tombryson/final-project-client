@@ -44,13 +44,6 @@ body {
   text-align: center;
 }
 
-.sr-only {
-  font-size: 22px;
-  padding: 2px;
-  -webkit-text-stroke-width: thin;
-  margin-top: 10vh;
-}
-
 .w-100 {
   min-width: 500px
 }
@@ -65,11 +58,6 @@ body {
   }
 
   .logo-mid {
-    background-color: #ffffffa1;
-    border-radius: 10px;
-  }
-
-  .sr-only {
     background-color: #ffffffa1;
     border-radius: 10px;
   }
@@ -152,11 +140,6 @@ button.ui-button {
   justify-items: center;
 }
 
-.book-form {
-    border: 2px red solid;
-    margin: clamp(1rem, 1vw, 2rem);
-}
-
 .auth {
   background-image: linear-gradient(180deg, transparent 4%, #fdffff 8%);
   box-shadow: 7px 5px 12px 0px rgb(0 0 0 / 14%), -6px 8px 7px 1px rgb(0 0 0 / 22%);
@@ -190,10 +173,9 @@ input {
 }
 
 #input-group {
-  width: fit-content;
-  margin: 5px 0px 10px 0px;
   border: solid black;
   border-radius: 10px;
+  width: 100%;
 }
 
 #flight-icons {
@@ -384,18 +366,20 @@ input {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
-.search-form {
-  background-color: ghostwhite;
-  border: solid 2px grey;
+.form__search {
+  background-color: #d7dcefe0;
   border-radius: 10px;
-  flex-direction: column;
-  width: 450px;
+  flex-direction: row;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   align-content: center;
-  justify-content: space-between;
   align-items: stretch;
-  padding-bottom: 2rem;
+}
+
+@media (width <= 600px) {
+  .form__search {
+    flex-wrap: wrap;
+  }
 }
 
 #btn {

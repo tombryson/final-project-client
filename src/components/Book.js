@@ -15,6 +15,7 @@ const Book = () => {
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [hasSearched, setHasSearched] = useState(false);
 
   // let currentUserId = sessionStorage.getItem('currentUserId');
 
@@ -35,6 +36,7 @@ const Book = () => {
 
   const _handleSubmit = (event) => {
     event.preventDefault();
+    setHasSearched(true);
     axios(`${siteURL}/search/${from}/${to}.json`).then((response) => {
       setFlights(response.data);
     });
@@ -61,8 +63,11 @@ const Book = () => {
   });
 
   const getItems = (flights) => {
-    return flights.length === 0 ? (
-      <p>No items found</p>
+    return flights.length === 0 ||
+      (flights.length === 1 && Object.keys(flights[0]).length === 0) ? (
+      <p className="no-flight">
+        Sorry, there are no flights available to your selected cities
+      </p>
     ) : (
       <ul className="list-group">
         {flights.map((flight, i) => (
@@ -74,6 +79,7 @@ const Book = () => {
             }
             onClick={() => handleOnClick(i)}
           >
+            {console.log(JSON.stringify(flights))}
             {flight.from} to {flight.to} - {flight.date}
           </li>
         ))}
@@ -81,26 +87,10 @@ const Book = () => {
     );
   };
 
-  useEffect(() => {
-    if (flights.length === 0) {
-      setMessage(
-        <div className="no-flight">
-          Sorry, there are no flights available to your selected cities
-        </div>,
-      );
-    } else {
-      setMessage('');
-    }
-    setTimeout(() => {
-      setMessage('');
-    }, 12000);
-  }, [flights]);
-
   return (
     <div className={`fade-in ${isVisible ? 'show' : ''}`}>
-      <form className="book-form" onSubmit={_handleSubmit}>
-        <div className="search-form">
-          <label className="sr-only">Search</label>
+      <form onSubmit={_handleSubmit}>
+        <div className="form__search">
           <div id="input-group">
             <div className="input-group-prepend">
               <div className="input-group-text">
@@ -148,11 +138,12 @@ const Book = () => {
             />
           </div>
           <button type="submit" className="btn btn-secondary mb-2" id="btn">
+            {' '}
             Search
           </button>
         </div>
       </form>
-      {getItems(flights)}
+      {hasSearched && getItems(flights)}
       {flight}
       {message}
     </div>
