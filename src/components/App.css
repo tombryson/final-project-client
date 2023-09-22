@@ -330,7 +330,9 @@ input {
 .button__search--booking {
   width: 80%;
   margin: 0 auto;
+  margin-top: 4px;
   display: block!important;
+  width: -webkit-fill-available;
 }
 
 @media (width >= 1200px) {
