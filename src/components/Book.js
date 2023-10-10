@@ -73,9 +73,9 @@ const Book = () => {
         Sorry, there are no flights available to your selected cities
       </p>
     ) : (
-      <ul className="list-group">
+      <tbody className="list-group">
         {flights.map((flight, i) => (
-          <li
+          <tr
             key={i}
             style={{ animation: animStr(i) }}
             className={
@@ -83,19 +83,17 @@ const Book = () => {
             }
             onClick={() => handleOnClick(i)}
           >
-            {console.log(JSON.stringify(flights))}
-            {flight.from} to {flight.to} - {flight.date}
-          </li>
+            <td>{flight.from}</td>
+            <td>{flight.to}</td>
+            <td>{flight.date}</td>
+          </tr>
         ))}
-      </ul>
+      </tbody>
     );
   };
 
   return (
     <>
-      <div class="marquee">
-        <p class="marquee-content">Flights departing:</p>
-      </div>
       <div className={`fade-in ${isVisible ? 'show' : ''}`}>
         <form className="form__container" onSubmit={_handleSubmit}>
           <div className="form__search">
