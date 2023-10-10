@@ -10,9 +10,6 @@
   padding: 0;
 }
 
-body {
-}
-
 .log-out {
   margin-left: -1vh
 }
@@ -123,10 +120,32 @@ button.ui-button {
   font-size: 12px;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  scroll-snap-type: y mandatory;
+  outline: red 1px solid;
+}
+
+.test-container {
+  display: flex;
+  flex-direction: column!important;
+  overflow-y: scroll!important;
+}
+
+.test-section {
+  height: 100vh!important;
+}
+
+.header-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  outline: red 1px solid;
+  scroll-snap-stop: always;
 }
 
 .auth-form {
@@ -200,7 +219,6 @@ input {
   position: fixed;
   width: 100%;
   border-bottom-style: ridge;
-  /* padding: clamp(1rem, 1vw, 2rem); */
 }
 
 .logo-container {
@@ -408,6 +426,12 @@ input {
 @media (width >= 1200px) {
   .form__search {
     margin-left: 22vw;
+  }
+}
+
+@media (width >= 650px) {
+  .nav-bar {
+    visibility: hidden;
   }
 }
 
