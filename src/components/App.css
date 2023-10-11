@@ -1,7 +1,7 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
- */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
@@ -141,11 +141,31 @@ html {
   height: 100vh!important;
 }
 
-.header-section {
+.scroll-section {
   scroll-snap-align: start;
   height: 100vh;
   outline: red 1px solid;
   scroll-snap-stop: always;
+}
+
+.home-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media (width <= 1400px) {
+  .home-content {
+    justify-content: center;
+  }
+}
+
+.home-text {
+  display: inline-grid;
+  height: 100%;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
 }
 
 .auth-form {
@@ -219,6 +239,19 @@ input {
   position: fixed;
   width: 100%;
   border-bottom-style: ridge;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 100%;
+  width: 45%;
+  justify-content: space-evenly;
 }
 
 .logo-container {
@@ -295,6 +328,8 @@ input {
 
 .fade-in.show {
   opacity: 1;
+  position: fixed;
+  width: 100%;
 }
 
 .headerStyle {
@@ -341,8 +376,8 @@ input {
 }
 
 .form__container {
-  width: 80%;
-  margin: auto;
+  padding: 4rem;
+  margin-top: 13vh;
 }
 
 .button__search--booking {
@@ -390,6 +425,9 @@ input {
   display: flex;
   background-image: repeating-linear-gradient(0deg, transparent 2%, white 50%, transparent 150px);
   border-top: 1.2px solid darkgrey;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
 }
 
 .sign-up-form {
@@ -470,7 +508,7 @@ dl, ol, ul {
 }
 
 .carousel__container {
-  min-height: 85vh;
+  height: inherit;
   background: 
     linear-gradient(180deg, rgba(248, 184, 139,0) 20%, rgba(248, 184, 139,.1) 20%, rgba(248, 184, 139,.1) 40%, rgba(248, 184, 139,.2) 40%, rgba(248, 184, 139,.2) 60%, rgba(248, 184, 139,.4) 60%, rgba(248, 184, 139,.4) 80%, rgba(248, 184, 139,.5) 80%),
     linear-gradient(45deg, rgba(250, 248, 132,.3) 20%, rgba(250, 248, 132,.4) 20%, rgba(250, 248, 132,.4) 40%, rgba(250, 248, 132,.5) 40%, rgba(250, 248, 132,.5) 60%, rgba(250, 248, 132,.6) 60%, rgba(250, 248, 132,.6) 80%, rgba(250, 248, 132,.7) 80%),
@@ -480,6 +518,5 @@ dl, ol, ul {
     linear-gradient(180deg, rgba(254, 163, 170,0) 20%, rgba(254, 163, 170,.4) 20%, rgba(254, 163, 170,.4) 40%, rgba(254, 163, 170,.6) 40%, rgba(254, 163, 170,.6) 60%, rgba(254, 163, 170,.8) 60%, rgba(254, 163, 170,.8) 80%, rgba(254, 163, 170,.9) 80%);
   background-color: azure;
   background-size: 100% 100%;
-  /* min-height: 100%; */
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import './components/index.css';
 import Auth from './components/Auth.js';
 import Home from './components/Home.js';
@@ -15,8 +15,9 @@ import TestComponent from './components/TestComponent.js';
 
 const AppWrapper = () => (
   <div className="app-container">
-    <div className="header-section">
+    <div className="scroll-section">
       <SiteHead />
+      <Outlet />
       <Home page={'Welcome'} />
       <NavBar />
     </div>

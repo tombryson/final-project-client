@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../images/BA-transp.png';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const SiteHead = () => {
+  const navigate = useNavigate();
+  const currentUserId = sessionStorage.getItem('currentUserId');
+
+  const logOut = () => {
+    sessionStorage.removeItem('currentUserId');
+    navigate('/');
+  };
+
   return (
     <div className="header">
       <div className="logo-container">
@@ -13,7 +21,18 @@ const SiteHead = () => {
           alt="plane flying over logo"
         />
       </div>
-      <Outlet />
+      <div className="button-container">
+        <button>Home</button>
+        {currentUserId ? (
+          <>
+            <button>Sign Out</button>
+            <button>My Trips</button>
+          </>
+        ) : (
+          <button>Sign In</button>
+        )}
+        <button>Contact</button>
+      </div>
     </div>
   );
 };
