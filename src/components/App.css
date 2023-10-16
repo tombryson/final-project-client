@@ -8,6 +8,7 @@
 * {
   margin: 0;
   padding: 0;
+  overscroll-behavior: none;
 }
 
 .log-out {
@@ -39,6 +40,7 @@
   font-size: min(calc(3.5rem + 0.5vw), 4vh);
   width: min(calc(9.5rem + 4vw), 20vh);
   text-align: center;
+  min-width: 6.4rem;
 }
 
 .w-100 {
@@ -232,7 +234,7 @@ input {
 
 .header {
   border-bottom: #090f1559 solid 1.5px;
-  box-shadow: 0px -2px 8px 1px #1a1a1ac2;
+  box-shadow: 0px -0.3px 0.9px 0.2px #1a1a1aad;
   border-right-width: 0px;
   background-image: linear-gradient(25deg, transparent -14%, #f1f1f1ba 10%, transparent 60%);
   z-index: 5000;
@@ -241,6 +243,7 @@ input {
   border-bottom-style: ridge;
   display: flex;
   justify-content: space-between;
+  min-height: 6rem;
 }
 
 .button-container {
@@ -455,7 +458,7 @@ input {
   align-items: stretch;
 }
 
-@media (width <= 600px) {
+@media (width <= 650px) {
   .form__search {
     flex-wrap: wrap;
   }
@@ -469,6 +472,15 @@ input {
 
 @media (width >= 650px) {
   .nav-bar {
+    visibility: hidden;
+  }
+  .button-container {
+    visibility: visible;
+  }
+}
+
+@media (width <= 650px) {
+  .button-container {
     visibility: hidden;
   }
 }
@@ -510,13 +522,59 @@ dl, ol, ul {
 .carousel__container {
   height: inherit;
   background: 
-    linear-gradient(180deg, rgba(248, 184, 139,0) 20%, rgba(248, 184, 139,.1) 20%, rgba(248, 184, 139,.1) 40%, rgba(248, 184, 139,.2) 40%, rgba(248, 184, 139,.2) 60%, rgba(248, 184, 139,.4) 60%, rgba(248, 184, 139,.4) 80%, rgba(248, 184, 139,.5) 80%),
-    linear-gradient(45deg, rgba(250, 248, 132,.3) 20%, rgba(250, 248, 132,.4) 20%, rgba(250, 248, 132,.4) 40%, rgba(250, 248, 132,.5) 40%, rgba(250, 248, 132,.5) 60%, rgba(250, 248, 132,.6) 60%, rgba(250, 248, 132,.6) 80%, rgba(250, 248, 132,.7) 80%),
-    linear-gradient(-45deg, rgba(186, 237, 145,0) 20%, rgba(186, 237, 145,.1) 20%, rgba(186, 237, 145,.1) 40%, rgba(186, 237, 145,.2) 40%, rgba(186, 237, 145,.2) 60%, rgba(186, 237, 145,.4) 60%, rgba(186, 237, 145,.4) 80%, rgba(186, 237, 145,.6) 80%),
-    linear-gradient(90deg, rgba(178, 206, 254,0) 20%, rgba(178, 206, 254,.3) 20%, rgba(178, 206, 254,.3) 40%, rgba(178, 206, 254,.5) 40%, rgba(178, 206, 254,.5) 60%, rgba(178, 206, 254,.7) 60%, rgba(178, 206, 254,.7) 80%, rgba(178, 206, 254,.8) 80%),
-    linear-gradient(-90deg, rgba(242, 162, 232,0) 20%, rgba(242, 162, 232,.4) 20%, rgba(242, 162, 232,.4) 40%, rgba(242, 162, 232,.5) 40%, rgba(242, 162, 232,.5) 60%, rgba(242, 162, 232,.6) 60%, rgba(242, 162, 232,.6) 80%, rgba(242, 162, 232,.8) 80%),
-    linear-gradient(180deg, rgba(254, 163, 170,0) 20%, rgba(254, 163, 170,.4) 20%, rgba(254, 163, 170,.4) 40%, rgba(254, 163, 170,.6) 40%, rgba(254, 163, 170,.6) 60%, rgba(254, 163, 170,.8) 60%, rgba(254, 163, 170,.8) 80%, rgba(254, 163, 170,.9) 80%);
-  background-color: azure;
+  linear-gradient(180deg, azure 20%, azure 20%, azure 40%, azure 40%, azure 60%, azure 60%, azure 80%, azure 80%),
+  linear-gradient(45deg, azure 20%, azure 20%, azure 40%, azure 40%, azure 60%, azure 60%, azure 80%, azure 80%),
+  linear-gradient(-45deg, rgba(186, 237, 145,0) 20%, rgba(186, 237, 145,.1) 20%, rgba(186, 237, 145,.1) 40%, rgba(186, 237, 145,.2) 40%, rgba(186, 237, 145,.2) 60%, rgba(186, 237, 145,.4) 60%, rgba(186, 237, 145,.4) 80%, rgba(186, 237, 145,.6) 80%),
+  linear-gradient(90deg, rgba(178, 206, 254,0) 20%, rgba(178, 206, 254,.3) 20%, rgba(178, 206, 254,.3) 40%, rgba(178, 206, 254,.5) 40%, rgba(178, 206, 254,.5) 60%, rgba(178, 206, 254,.7) 60%, rgba(178, 206, 254,.7) 80%, rgba(178, 206, 254,.8) 80%),
+  linear-gradient(-90deg, rgba(242, 162, 232,0) 20%, rgba(242, 162, 232,.4) 20%, rgba(242, 162, 232,.4) 40%, rgba(242, 162, 232,.5) 40%, rgba(242, 162, 232,.5) 60%, rgba(242, 162, 232,.6) 60%, rgba(242, 162, 232,.6) 80%, rgba(242, 162, 232,.8) 80%),
+  linear-gradient(180deg, rgba(254, 163, 170,0) 20%, rgba(254, 163, 170,.4) 20%, rgba(254, 163, 170,.4) 40%, rgba(254, 163, 170,.6) 40%, rgba(254, 163, 170,.6) 60%, rgba(254, 163, 170,.8) 60%, rgba(254, 163, 170,.8) 80%, rgba(254, 163, 170,.9) 80%);
+  background-color: #f0ffff73;
   background-size: 100% 100%;
 }
 
+.button-container > button {
+  border: none;
+  background-color: transparent;
+  padding: 0.4rem;
+  width: 100%;
+  color: aliceblue;
+  font-weight: 300;
+  height: 102%;
+  font-family: inherit;
+  filter: drop-shadow(0px -4px 3px#1616167a) opacity(0.91);
+  text-shadow: 0px 0px 5px #5e5555;
+  font-size: 1.5rem;
+  background-image: linear-gradient(180deg, #ad211a 90%, #ee5a5ad4 98% 8px, #404040 116% 3px);
+  position: relative;
+  overflow: hidden;
+}
+
+.button-container > button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background: #eceaeaed;
+  transition: width 0.3s;
+}
+
+.button-container > button.left-to-right::before {
+  left: 0;
+}
+
+.button-container > button.right-to-left::before {
+  right: 0;
+}
+
+.button-container > button:hover::before {
+  width: 100%;
+}
+
+.button-container > button:hover {
+  filter: opacity(0.92) drop-shadow(0px -1px 3px #1616167a);
+}
+
+.button:first-child {
+  border-radius: 16px 3px 0px 80px/14px 0px 0px 120px;
+}
