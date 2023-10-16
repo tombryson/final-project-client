@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../images/BA-transp.png';
 import { Outlet, useNavigate } from 'react-router-dom';
+import buttonStyles from './buttonStyles.css';
 
 const SiteHead = () => {
   const navigate = useNavigate();
