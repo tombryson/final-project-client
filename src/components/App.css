@@ -94,11 +94,11 @@
 }
 
 .headerStyle > .btn-dark:hover {
-  box-shadow: inset 1px 1px 5px 2px #0e0e0ec9, 0px 1px 3px 1px #111111c7;
+  filter: brightness(1.2);
 }
 
-button.ui-button {
-  margin: 1vh;
+.headerStyle > .btn-dark:active {
+  box-shadow: inset 2px 2px 18px 0px #3232323f;
 }
 
 .reminder {
@@ -171,14 +171,9 @@ html {
 }
 
 .auth-form {
-  position: fixed;
-  z-index: 1!important;
+  height: 100%;
+  z-index: 2;
   padding: clamp(1rem, 1vw, 2rem);
-  width: 100%;
-  display: grid;
-  justify-content: center;
-  align-content: space-between;
-  justify-items: center;
 }
 
 .auth {
@@ -187,11 +182,11 @@ html {
   width: calc(10rem + 25vw);
   border-radius: 10px;
   text-align-last: center;
-  font-size: clamp(1.0rem,1.2vw,1.6rem);
+  font-size: clamp(1.0rem,1.1vw,1.5rem);
 }
 
 .auth-container {
-  height: clamp(22rem, 40vw, 28rem);
+  
 }
 
 .flights {
@@ -206,11 +201,11 @@ html {
 }
 
 input {
-  padding: 6px 15px;
-  margin: 8px 0px!important;
-  border: #b5b5b5 1.5px solid;
-  background-color: #eee;
-  width: 100%;
+  padding: 5px 15px;
+  margin: 0.2rem 0px!important;
+  border: #595959 1px solid;
+  background-color: #e9eded8c;
+  border-radius: 2px;
 }
 
 #input-group {
@@ -334,6 +329,11 @@ input {
   opacity: 1;
   position: fixed;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+  margin-top: calc(11vh + 1vw);
 }
 
 .headerStyle {
@@ -342,9 +342,9 @@ input {
 
 .ui-button {
   border-radius: 10px;
-    margin: 10px;
-    width: 80px;
-    box-shadow: 2px 2px 8px 0px black;
+  margin: 0.4rem;
+  padding: 0.3rem;
+  width: 6rem;
 }
 
 .carousel {
@@ -367,16 +367,12 @@ input {
 }
 
 .logo img {
-  width: clamp(6rem, 15vw, 20rem);
+  width: clamp(7rem, 14vw, 18rem);
   z-index: 2;
 }
 
 .App {
   display: inline-block;
-}
-
-.ui-button {
-  display: flex;
 }
 
 .form__container {
@@ -445,8 +441,10 @@ input {
 }
 
 .sign-up {
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-family: 'Nanum Gothic', sans-serif;
+  font-size: clamp(2.5rem, 3vw, 3.2rem);
+  font-family: revert;
+  font-weight: 300;
+  padding: 4px;
 }
 
 .form__search {

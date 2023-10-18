@@ -38,7 +38,7 @@ function LoginForm(props) {
   return (
     <div className="sign-up-form">
       <h1 className="sign-up">Sign In</h1>
-      <form className="ui form" onSubmit={handleSubmit}>
+      <form className="ui-form" onSubmit={handleSubmit}>
         <div className="field">
           <input
             value={email}
@@ -56,7 +56,7 @@ function LoginForm(props) {
           />
         </div>
 
-        <button className="ui button" type="submit">
+        <button className="ui-button" type="submit">
           Submit
         </button>
       </form>
