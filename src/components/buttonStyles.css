@@ -50,5 +50,5 @@
 }
 
 .button-container > .button:active::before {
-  background: hsl(42.47deg 60.88% 46.68% / 81%) 2px;
+  background: hsl(42deg 60% 50% / 84%) 2px;
 }
