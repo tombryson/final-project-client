@@ -10,7 +10,6 @@
   overscroll-behavior: none;
 }
 
-
 .log-out {
   margin-left: -1vh
 }
@@ -287,11 +286,12 @@ input {
   text-align: center;
 }
 
-.icon-text {
+.icon-text, a > .icon-text > span {
   font-size: 12px;
   color: black;
   display: grid;
   text-align: center;
+  text-decoration: none!important;
 }
 
 .nav-icon {

@@ -1,0 +1,19 @@
+.icon-text {
+    perspective: 500px;
+    padding: 0.5rem;
+  }
+  
+  .icon-text span {
+    position: absolute;
+    transform-origin: center bottom;
+    transform: rotateX(0deg) translateZ(100px);
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .icon-text span:nth-child(1) { transform:   rotateY(2deg) rotateX(352deg) rotateZ(-12deg) translateZ(86px) }
+  .icon-text span:nth-child(2) { transform: rotateY(9deg) rotateX(-2deg) translateZ(100px); }
+  .icon-text span:nth-child(3) { transform: rotateY(18deg) rotateX(-3deg) rotateZ(11deg) translateZ(96px); }
+  .icon-text span:nth-child(4) { transform: rotateY(26deg) rotateX(-8deg) rotateZ(18deg) translateZ(98px) }
+  .icon-text span:nth-child(5) { transform: rotateY(27deg) rotateX(-4deg) translateZ(100px); }
+  
