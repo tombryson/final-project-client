@@ -12,6 +12,9 @@ const WelcomePage = () => {
         <p>
           <strong>Book your next holiday, blazingly fast!</strong>
         </p>
+        <div>
+          <button className="p-2 rounded sm:w-6">Book</button>
+        </div>
       </div>
       <div className="home-image">
         <img src="http://www.placekitten.com/500/500" alt="young cat" />

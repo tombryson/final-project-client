@@ -1,11 +1,11 @@
-.button-container > button {
+.nav-button {
   border: none;
   background-color: transparent;
   padding: 0.4rem;
   width: 100%;
   color: aliceblue;
   font-weight: 300;
-  height: 102%;
+  height: 100%;
   font-family: inherit;
   filter: drop-shadow(0px -4px 3px#1616167a) opacity(0.91);
   text-shadow: 0px 0px 5px #5e5555;
@@ -14,8 +14,15 @@
   position: relative;
   overflow: hidden;
 }
+
+.header-button {
+  background-color: transparent;
+  width: 100%;
+  color: aliceblue;
+  height: 100%;
+}
   
-.button-container > button::before {
+.nav-button::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -25,30 +32,34 @@
   transition: width 0.3s;
 }
   
-.button-container > button.left-to-right::before {
+.nav-button.left-to-right::before {
   left: 0;
 }
   
-.button-container > button.right-to-left::before {
+.nav-button.right-to-left::before {
   right: 0;
 }
   
-.button-container > button:hover::before {
+.nav-button:hover::before {
   width: 100%;
 }
 
-.button-container > button:hover {
+.nav-button:hover {
   filter: opacity(0.92) drop-shadow(0px -1px 3px #1616167a);
 }
 
-.button-container > .button:first-child {
+#leftmost-button {
   border-radius: 16px 3px 0px 80px/14px 0px 0px 120px;
 }
   
-.button-container > .button:active {
+.nav-button:active {
   box-shadow: inset #14141436 -1px 1px 8px 4px;
 }
 
-.button-container > .button:active::before {
+.nav-button:active::before {
   background: hsl(42deg 60% 50% / 84%) 2px;
+}
+
+.profile-img {
+  width: 50%;
 }

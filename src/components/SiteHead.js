@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../images/BA-transp.png';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate, Link } from 'react-router-dom';
 import buttonStyles from './buttonStyles.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SiteHead = () => {
   const navigate = useNavigate();
@@ -56,34 +57,51 @@ const SiteHead = () => {
         />
       </div>
       <div className="button-container">
-        <button
-          className={`button ${directions['home']}`}
-          onMouseOver={(e) => handleMouseEnter(e, 'home')}
-          onMouseOut={(e) => handleMouseLeave(e, 'home')}
-        >
-          Home
-        </button>
+        <Link className="header-button" to="/">
+          <button
+            id="leftmost-button"
+            className={`nav-button ${directions['home']}`}
+            onMouseOver={(e) => handleMouseEnter(e, 'home')}
+            onMouseOut={(e) => handleMouseLeave(e, 'home')}
+          >
+            Home
+          </button>
+        </Link>
+
         {currentUserId ? (
           <>
             <button>Sign Out</button>
             <button>My Trips</button>
           </>
         ) : (
-          <button
-            className={`button ${directions['sign-in']}`}
-            onMouseOver={(e) => handleMouseEnter(e, 'sign-in')}
-            onMouseOut={(e) => handleMouseLeave(e, 'sign-in')}
-          >
-            Sign In
-          </button>
+          <Link className="header-button" to="auth">
+            <button
+              className={`nav-button ${directions['sign-in']}`}
+              onMouseOver={(e) => handleMouseEnter(e, 'sign-in')}
+              onMouseOut={(e) => handleMouseLeave(e, 'sign-in')}
+            >
+              Sign In
+            </button>
+          </Link>
         )}
-        <button
-          className={`button ${directions['contact']}`}
-          onMouseOver={(e) => handleMouseEnter(e, 'contact')}
-          onMouseOut={(e) => handleMouseLeave(e, 'contact')}
-        >
-          Contact
-        </button>
+        <Link className="header-button" to="/">
+          <button
+            className={`nav-button ${directions['contact']}`}
+            onMouseOver={(e) => handleMouseEnter(e, 'contact')}
+            onMouseOut={(e) => handleMouseLeave(e, 'contact')}
+          >
+            Contact
+          </button>
+        </Link>
+        <Link className="header-button profile-img" to="/">
+          <button
+            className={`nav-button ${directions['O']}`}
+            onMouseOver={(e) => handleMouseEnter(e, 'O')}
+            onMouseOut={(e) => handleMouseLeave(e, 'O')}
+          >
+            <FontAwesomeIcon />
+          </button>
+        </Link>
       </div>
     </div>
   );
