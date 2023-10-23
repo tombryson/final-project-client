@@ -3,6 +3,7 @@ import logo from '../images/BA-transp.png';
 import { Outlet, useNavigate, Link } from 'react-router-dom';
 import buttonStyles from './buttonStyles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const SiteHead = () => {
   const navigate = useNavigate();
@@ -74,13 +75,13 @@ const SiteHead = () => {
             <button>My Trips</button>
           </>
         ) : (
-          <Link className="header-button" to="auth">
+          <Link className="header-button" to="book">
             <button
               className={`nav-button ${directions['sign-in']}`}
               onMouseOver={(e) => handleMouseEnter(e, 'sign-in')}
               onMouseOut={(e) => handleMouseLeave(e, 'sign-in')}
             >
-              Sign In
+              Book
             </button>
           </Link>
         )}
@@ -93,13 +94,13 @@ const SiteHead = () => {
             Contact
           </button>
         </Link>
-        <Link className="header-button profile-img" to="/">
+        <Link className="header-button profile-img" to="auth">
           <button
             className={`nav-button ${directions['O']}`}
             onMouseOver={(e) => handleMouseEnter(e, 'O')}
             onMouseOut={(e) => handleMouseLeave(e, 'O')}
           >
-            <FontAwesomeIcon />
+            <FontAwesomeIcon icon={faUser} />
           </button>
         </Link>
       </div>
