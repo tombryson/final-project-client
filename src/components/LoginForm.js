@@ -37,23 +37,27 @@ function LoginForm(props) {
   };
   return (
     <div className="sign-up-form">
-      <h1 className="sign-up">Sign In</h1>
+      <h1 className="sign-up">Sign in</h1>
       <form className="ui-form" onSubmit={handleSubmit}>
         <div className="field">
           <input
+            id="emailInput"
             value={email}
             onChange={handleEmailChange}
             type="text"
-            placeholder="Email"
+            placeholder="yours@example.com"
           />
+          <label htmlFor="emailInput">Email address</label>
         </div>
         <div className="field">
           <input
+            id="passwordInput"
             value={password}
             onChange={handlePasswordChange}
             type="password"
-            placeholder="Password"
+            placeholder=" "
           />
+          <label htmlFor="passwordInput">Password</label>
         </div>
 
         <button className="ui-button" type="submit">

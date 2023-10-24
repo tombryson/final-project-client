@@ -55,42 +55,51 @@ function SignUpForm(props) {
 
   return (
     <div className="sign-up-form">
-      <h1 className="sign-up">Sign Up</h1>
+      <h1 className="sign-up">Sign up</h1>
       <form className="ui-form" onSubmit={handleSubmit}>
         <div className="field">
           <input
-            value={first_name}
-            onChange={handleFirstNameChange}
-            type="text"
-            placeholder="First Name"
-          />
-        </div>
-        <div className="field">
-          <input
-            value={last_name}
-            onChange={handleLastNameChange}
-            type="text"
-            placeholder="Last Name"
-          />
-        </div>
-        <div className="field">
-          <input
+            id="emailInput"
             value={email}
             onChange={handleEmailChange}
             type="text"
-            placeholder="Email*"
+            placeholder="yours@example.com"
             required
           />
+          <label htmlFor="lastName">Email address</label>
         </div>
         <div className="field">
           <input
+            id="firstName"
+            value={first_name}
+            onChange={handleFirstNameChange}
+            type="text"
+            placeholder="adam"
+          />
+          <label htmlFor="firstName">First Name</label>
+        </div>
+        <div className="field">
+          <input
+            id="lastName"
+            value={last_name}
+            onChange={handleLastNameChange}
+            type="text"
+            placeholder="smith"
+          />
+          <label htmlFor="lastName">Last Name</label>
+        </div>
+        <div className="field">
+          <input
+            id="password"
             value={password}
             onChange={handlePasswordChange}
             type="password"
-            placeholder="Password*"
+            placeholder="******"
             required
           />
+          <label htmlFor="lastName">Password</label>
         </div>
+
         <button className="ui-button" type="submit">
           Submit
         </button>
