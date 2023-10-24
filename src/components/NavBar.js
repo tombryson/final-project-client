@@ -23,8 +23,11 @@ const NavBar = () => {
             <Link to="/">
               <div className="icon-text">
                 <span>H</span>
+                <span></span>
                 <span>o</span>
+                <span></span>
                 <span>m</span>
+                <span></span>
                 <span>e</span>
               </div>
               <img
@@ -83,7 +86,7 @@ const NavBar = () => {
                 <div className="icon-text">
                   <span>S</span>
                   <span>i</span>
-                  <span>h</span>
+                  <span>g</span>
                   <span>n</span>
                   <span> </span>
                   <span>i</span>
