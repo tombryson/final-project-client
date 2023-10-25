@@ -16,11 +16,11 @@ const WelcomePage = () => {
         <p>
           <strong>Book your next holiday, blazingly fast!</strong>
         </p>
-        <Link to="book">
-          <div>
+        <div>
+          <Link to="book">
             <button className="p-2 rounded w-4">Book now</button>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
       <div className="home-image">
         <img src={boraBora} alt="desert oasis" />

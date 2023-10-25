@@ -47,7 +47,9 @@ function LoginForm(props) {
             type="text"
             placeholder="yours@example.com"
           />
-          <label htmlFor="emailInput">Email address</label>
+          <label id="emailInput" htmlFor="emailInput">
+            Email address
+          </label>
         </div>
         <div className="field">
           <input
@@ -55,13 +57,12 @@ function LoginForm(props) {
             value={password}
             onChange={handlePasswordChange}
             type="password"
-            placeholder=" "
+            placeholder="******"
           />
           <label htmlFor="passwordInput">Password</label>
         </div>
-
         <button className="ui-button" type="submit">
-          Submit
+          Sign In
         </button>
       </form>
     </div>

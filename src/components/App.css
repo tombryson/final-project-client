@@ -83,7 +83,7 @@
 
 .headerStyle > .btn-dark {
   color: #fff;
-  background-color: #212529e3;
+  background-color: #30353afc;
   border-color: #0811145c;
   padding: 8px;
   border-radius: 4px 4px 0px 0px;
@@ -182,8 +182,8 @@ html {
 
 .auth {
   background-image: linear-gradient(180deg, transparent 4%, #fdffff 8%);
-  box-shadow: 7px 5px 12px 0px rgb(0 0 0 / 14%), -6px 8px 7px 1px rgb(0 0 0 / 22%);
-  width: clamp(16rem, calc(10rem + 25vw), 24rem);
+  box-shadow: 5px 6px 16px 1px #0e0e0f87, -4px 2px 9px 1px rgb(0 0 0 / 32%);
+  width: clamp(18rem, calc(10rem + 25vw), calc(25rem + 1vw));
   border-radius: 10px;
   font-size: clamp(1.0rem,1.1vw,1.5rem);
   max-height: 30rem;
@@ -285,7 +285,7 @@ html {
 
 .nav-icon:hover {
   border-radius: 50%;
-  box-shadow: 0 0 0px 4px #54545485;
+  /* box-shadow: 0 0 0px 4px #54545485; */
   transition: box-shadow 0.3s linear;
   filter: contrast(0.5);
 }
@@ -333,9 +333,15 @@ html {
 }
 
 .ui-button {
-  border-radius: 10px;
   margin: 0.4rem;
   padding: 0.3rem;
+  border: none;
+  background-color: #d42f29;
+  color: white;
+  font-weight: 700;
+  padding: 8px;
+  width: 66%;
+  border-radius: 1.2rem;
 }
 
 .carousel {
@@ -358,7 +364,7 @@ html {
 }
 
 .logo img {
-  width: clamp(7rem, 14vw, 18rem);
+  width: clamp(7rem, 13vw, 10rem);
   z-index: 2;
   border: 4px ridge dimgrey;
   border-radius: 30% 100% 40% 40%/ 0% 0% 50% 50%;
@@ -428,9 +434,7 @@ html {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
   min-height: 20rem;
   padding: 0px 24px;
 }
@@ -438,9 +442,10 @@ html {
 .sign-up {
   font-size: clamp(2.2rem, 2.2vw, 3rem);
   font-family: revert;
-  padding: 6px;
+  font-weight: 400;
+  padding: 4px 0px 0px 0px;
   text-align: center;
-  color: #e53c36;
+  color: #d42f29;
   text-decoration: underline;
   text-decoration-color: black;
 }
@@ -462,8 +467,8 @@ input {
 
 .field {
   position: relative;
-  border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.87);
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.46);
   padding: 4px 12px;
   margin: 5px 0px;
   width: 66%;
@@ -479,7 +484,7 @@ input {
 }
 
 .field label {
-  font-size: 10px;
+  font-size: 11px;
   color: rgba(0, 0, 0, 0.87);
   position: absolute;
   top: 0%;
@@ -488,12 +493,17 @@ input {
   background-color: white;
   padding: 0 2px;
   visibility: hidden;
+  top: -1px;
   /* transition: top 0.2s, font-size 0.2s; */
+}
+
+#emailInput {
+  visibility: visible!important;
 }
 
 .field input:focus + label, 
 .field input:not(:placeholder-shown) + label {
-  top: -2px;
+  top: -1px;
   font-size: 11px;
   visibility: visible;
 }

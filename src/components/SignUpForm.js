@@ -66,7 +66,9 @@ function SignUpForm(props) {
             placeholder="yours@example.com"
             required
           />
-          <label htmlFor="lastName">Email address</label>
+          <label id="emailInput" htmlFor="lastName">
+            Email address
+          </label>
         </div>
         <div className="field">
           <input
@@ -74,7 +76,7 @@ function SignUpForm(props) {
             value={first_name}
             onChange={handleFirstNameChange}
             type="text"
-            placeholder="adam"
+            placeholder="Enter your First Name"
           />
           <label htmlFor="firstName">First Name</label>
         </div>
@@ -84,7 +86,7 @@ function SignUpForm(props) {
             value={last_name}
             onChange={handleLastNameChange}
             type="text"
-            placeholder="smith"
+            placeholder="Enter your Last Name"
           />
           <label htmlFor="lastName">Last Name</label>
         </div>
@@ -94,14 +96,14 @@ function SignUpForm(props) {
             value={password}
             onChange={handlePasswordChange}
             type="password"
-            placeholder="******"
+            placeholder="Your Password"
             required
           />
           <label htmlFor="lastName">Password</label>
         </div>
 
         <button className="ui-button" type="submit">
-          Submit
+          Create Account
         </button>
       </form>
     </div>
