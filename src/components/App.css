@@ -61,19 +61,13 @@
   }
 
   .header {
-    height: 13vh;
+    max-height: 11vh;
   }
 }
 
 @media (width <= 1200px) {
   .greeting {
     visibility: hidden;
-  }
-}
-
-@media (width >= 1200px) {
-  .title-img {
-    filter: drop-shadow(6px 6px 1px #ccadb5);
   }
 }
 
@@ -158,6 +152,7 @@ html {
   height: 100%;
   width: 100%;
   border-radius: 20px 0px 0px 20px/400px;
+  object-fit: cover;
 }
 
 @media (width <= 1400px) {
@@ -186,7 +181,7 @@ html {
   width: clamp(18rem, calc(10rem + 25vw), calc(25rem + 1vw));
   border-radius: 10px;
   font-size: clamp(1.0rem,1.1vw,1.5rem);
-  max-height: 30rem;
+  min-width: 175px;
 }
 
 .ui-form {
@@ -237,7 +232,6 @@ html {
   align-content: flex-end;
   flex-wrap: nowrap;
   flex-direction: row;
-  height: 100%;
   width: 45%;
   justify-content: space-evenly;
 }
@@ -245,7 +239,6 @@ html {
 .logo-container {
   margin-left: 4%;
   width: min(calc(9.5rem + 4vw), 20vh);
-  height: 100%;
   display: flex;
 }
 
@@ -297,7 +290,7 @@ html {
 }
 
 .title-img {
-  padding: clamp(1rem, 1.4vw + 0.1vh, (1.4vh + 0.1vw));
+  padding: clamp(1.1rem, 1.4vw + 0.1vh, (1.4vh + 0.1vw));
   object-fit: contain;
   width: 100%;
   min-width: 100px;
@@ -334,13 +327,13 @@ html {
 
 .ui-button {
   margin: 0.4rem;
-  padding: 0.3rem;
   border: none;
   background-color: #d42f29;
   color: white;
   font-weight: 700;
   padding: 8px;
-  width: 66%;
+  font-size: 1rem;
+  width: max(66%, 11rem);
   border-radius: 1.2rem;
 }
 
@@ -527,6 +520,12 @@ input {
 @media (width >= 1200px) {
   .form__search {
     margin-left: 22vw;
+  }
+}
+
+@media (width >= 1200px) and (width <= 2000px) {
+  .home-image > img {
+      object-fit: initial;
   }
 }
 

@@ -46,6 +46,7 @@ function LoginForm(props) {
             onChange={handleEmailChange}
             type="text"
             placeholder="yours@example.com"
+            required
           />
           <label id="emailInput" htmlFor="emailInput">
             Email address
@@ -58,6 +59,7 @@ function LoginForm(props) {
             onChange={handlePasswordChange}
             type="password"
             placeholder="******"
+            required
           />
           <label htmlFor="passwordInput">Password</label>
         </div>
