@@ -101,7 +101,6 @@ function SignUpForm(props) {
           />
           <label htmlFor="lastName">Password</label>
         </div>
-
         <button className="ui-button" type="submit">
           Create Account
         </button>

@@ -298,9 +298,10 @@ html {
 }
 
 .greeting-welcome {
-  font-style: oblique;
+  font-style: italic;
   font-size: revert;
-  font-family: auto;
+  font-family: inherit;
+  font-weight: 200;
   text-wrap: nowrap;
   padding: 1rem;
 }
