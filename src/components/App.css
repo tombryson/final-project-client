@@ -24,6 +24,7 @@
 }
 
 .greeting {
+  top: 0;
   padding-top: 28vh;
   margin-left: 4%;
   position: absolute;
@@ -313,6 +314,7 @@ html {
 
 .fade-in.show {
   opacity: 1;
+  top: 0;
   position: fixed;
   width: 100%;
   display: flex;

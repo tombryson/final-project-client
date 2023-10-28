@@ -22,9 +22,6 @@ function Home() {
       <div className="greeting">
         <h1 className="greeting-welcome">{message}</h1>
       </div>
-      <div className="carousel__container">
-        {showCarousel && <CarouselHome />}
-      </div>
     </>
   );
 }

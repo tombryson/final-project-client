@@ -12,17 +12,19 @@ import SeatMap from './components/SeatMap.js';
 import SiteHead from './components/SiteHead.js';
 import WelcomePage from './components/WelcomePage.js';
 import TestComponent from './components/TestComponent.js';
+import CarouselComponent from './components/CarouselComponent.js';
+import CarouselHome from './components/CarouselHome.js';
 
-const AppWrapper = () => (
+const AppWrapper = ({ children }) => (
   <div className="app-container">
     <div className="scroll-section">
       <SiteHead />
+      <Home />
+      <CarouselComponent />
       <Outlet />
-      <Home page={'Welcome'} />
       <NavBar />
     </div>
     <WelcomePage />
-    {/* <TestComponent /> */}
   </div>
 );
 
@@ -36,8 +38,8 @@ root.render(
         <Route path="profile" element={<Profile />} />
         <Route path="book" element={<Book />} />
         <Route path="mytrips" element={<MyTrips />} />
-        <Route path="*" element={<></>} />
         <Route path="flights/:id" element={<SeatMap />} />
+        <Route path="*" element={<></>} />
       </Route>
     </Routes>
   </BrowserRouter>,
