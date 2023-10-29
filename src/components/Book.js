@@ -94,68 +94,70 @@ const Book = () => {
 
   return (
     <>
-      <div className={`fade-in ${isVisible ? 'show' : ''}`}>
-        <form className="form__container" onSubmit={_handleSubmit}>
-          <div className="form__search">
-            <div id="input-group">
-              <div className="input-group-prepend">
-                <div className="input-group-text">
-                  <img
-                    src={departure}
-                    id="flight-icons"
-                    alt="plane taking off"
-                    width="30px"
-                  ></img>
-                  Departing
+      <div className="carousel__container">
+        <div className={`fade-in ${isVisible ? 'show' : ''}`}>
+          <form className="form__container" onSubmit={_handleSubmit}>
+            <div className="form__search">
+              <div id="input-group">
+                <div className="input-group-prepend">
+                  <div className="input-group-text">
+                    <img
+                      src={departure}
+                      id="flight-icons"
+                      alt="plane taking off"
+                      width="30px"
+                    ></img>
+                    Departing
+                  </div>
                 </div>
+                <input
+                  type="text"
+                  maxLength={3}
+                  className="form-control"
+                  id="form-control"
+                  required
+                  onChange={_handleFrom}
+                  value={fromField}
+                  placeholder="eg. MEL"
+                />
               </div>
-              <input
-                type="text"
-                maxLength={3}
-                className="form-control"
-                id="form-control"
-                required
-                onChange={_handleFrom}
-                value={fromField}
-                placeholder="eg. MEL"
-              />
-            </div>
-            <div id="input-group">
-              <div className="input-group-prepend">
-                <div className="input-group-text">
-                  <img
-                    src={arrival}
-                    id="flight-icons"
-                    alt="plane landing"
-                    width="30px"
-                  ></img>
-                  Arriving
+              <div id="input-group">
+                <div className="input-group-prepend">
+                  <div className="input-group-text">
+                    <img
+                      src={arrival}
+                      id="flight-icons"
+                      alt="plane landing"
+                      width="30px"
+                    ></img>
+                    Arriving
+                  </div>
                 </div>
+                <input
+                  type="text"
+                  maxLength={3}
+                  className="form-control"
+                  id="form-control"
+                  required
+                  onChange={_handleTo}
+                  value={toField}
+                  placeholder="eg. SYD"
+                />
               </div>
-              <input
-                type="text"
-                maxLength={3}
-                className="form-control"
-                id="form-control"
-                required
-                onChange={_handleTo}
-                value={toField}
-                placeholder="eg. SYD"
-              />
             </div>
-          </div>
-          <button
-            type="submit"
-            className="btn btn-secondary mb-2 button__search--booking"
-            id="btn"
-          >
-            {' '}
-            Search
-          </button>
-        </form>
-        {hasSearched && getItems(flights)}
-        {flight}
-        {message}
+            <button
+              type="submit"
+              className="btn btn-secondary mb-2 button__search--booking"
+              id="btn"
+            >
+              {' '}
+              Search
+            </button>
+          </form>
+          {hasSearched && getItems(flights)}
+          {flight}
+          {message}
+        </div>
       </div>
     </>
   );

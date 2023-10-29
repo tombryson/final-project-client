@@ -5,7 +5,7 @@ import buttonStyles from './buttonStyles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
-const SiteHead = () => {
+const SiteHead = ({ toggleAuth, authState }) => {
   const navigate = useNavigate();
   const currentUserId = sessionStorage.getItem('currentUserId');
   const [directions, setDirections] = useState({});
@@ -64,6 +64,7 @@ const SiteHead = () => {
             className={`nav-button ${directions['home']}`}
             onMouseOver={(e) => handleMouseEnter(e, 'home')}
             onMouseOut={(e) => handleMouseLeave(e, 'home')}
+            onClick={authState ? toggleAuth : null}
           >
             Home
           </button>
@@ -80,6 +81,7 @@ const SiteHead = () => {
               className={`nav-button ${directions['sign-in']}`}
               onMouseOver={(e) => handleMouseEnter(e, 'sign-in')}
               onMouseOut={(e) => handleMouseLeave(e, 'sign-in')}
+              onClick={authState ? toggleAuth : null}
             >
               Book
             </button>
@@ -94,15 +96,28 @@ const SiteHead = () => {
             Contact
           </button>
         </Link>
-        <Link className="header-button profile-img" to="auth">
-          <button
-            className={`nav-button ${directions['O']}`}
-            onMouseOver={(e) => handleMouseEnter(e, 'O')}
-            onMouseOut={(e) => handleMouseLeave(e, 'O')}
-          >
-            <FontAwesomeIcon icon={faUser} />
-          </button>
-        </Link>
+        {currentUserId ? (
+          <Link className="header-button profile-img" to="auth">
+            <button
+              className={`nav-button ${directions['O']}`}
+              onMouseOver={(e) => handleMouseEnter(e, 'O')}
+              onMouseOut={(e) => handleMouseLeave(e, 'O')}
+            >
+              <FontAwesomeIcon icon={faUser} />
+            </button>
+          </Link>
+        ) : (
+          <div className="header-button profile-img">
+            <button
+              className={`nav-button ${directions['O']}`}
+              onMouseOver={(e) => handleMouseEnter(e, 'O')}
+              onMouseOut={(e) => handleMouseLeave(e, 'O')}
+              onClick={toggleAuth}
+            >
+              Sign in
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
