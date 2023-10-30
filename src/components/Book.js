@@ -94,7 +94,7 @@ const Book = () => {
 
   return (
     <>
-      <div className="carousel__container">
+      <div className="book__container">
         <div className={`fade-in ${isVisible ? 'show' : ''}`}>
           <form className="form__container" onSubmit={_handleSubmit}>
             <div className="form__search">

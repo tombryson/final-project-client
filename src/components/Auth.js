@@ -56,12 +56,15 @@ function Auth() {
     }
   };
   return (
-    <div className={`auth-form fade-in ${isVisible ? 'show' : ''}`}>
-      <div className="auth">
-        <Header handleFormSwitch={handleFormSwitch} />
-        <div className="auth-container">{renderForm()}</div>
+    <>
+      <div className="screen-dim"></div>
+      <div className={`auth-form fade-in ${isVisible ? 'show' : ''}`}>
+        <div className="auth">
+          <Header handleFormSwitch={handleFormSwitch} />
+          <div className="auth-container">{renderForm()}</div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
