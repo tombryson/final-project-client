@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import departure from '../images/book-icon.png';
 import arrival from '../images/icon-arrival.png';
+import AusLandscape from '../images/australian_landscape.jpg';
 import './App2.css';
 
 const Book = () => {
@@ -94,8 +95,8 @@ const Book = () => {
 
   return (
     <>
-      <div className="book__container">
-        <div className={`fade-in ${isVisible ? 'show' : ''}`}>
+      <div className="book_background">
+        <div className="booking-container">
           <form className="form__container" onSubmit={_handleSubmit}>
             <div className="form__search">
               <div id="input-group">

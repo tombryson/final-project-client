@@ -72,8 +72,26 @@ const SiteHead = ({ toggleAuth, authState }) => {
 
         {currentUserId ? (
           <>
-            <button>Sign Out</button>
-            <button>My Trips</button>
+            <Link className="header-button" to="book">
+              <button
+                className={`nav-button ${directions['sign-in']}`}
+                onMouseOver={(e) => handleMouseEnter(e, 'sign-in')}
+                onMouseOut={(e) => handleMouseLeave(e, 'sign-in')}
+                onClick={authState ? toggleAuth : null}
+              >
+                Book
+              </button>
+            </Link>
+            <Link className="header-button" to="mytrips">
+              <button
+                className={`nav-button ${directions['mybookings']}`}
+                onMouseOver={(e) => handleMouseEnter(e, 'mybookings')}
+                onMouseOut={(e) => handleMouseLeave(e, 'mybookings')}
+                onClick={authState ? toggleAuth : null}
+              >
+                My Flights
+              </button>
+            </Link>
           </>
         ) : (
           <Link className="header-button" to="book">
