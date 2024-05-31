@@ -3,16 +3,22 @@
   background-color: transparent;
   padding: 0.4rem;
   width: 100%;
-  color: aliceblue;
+  color: #f6fbfe;
   font-weight: 300;
   height: 100%;
   font-family: inherit;
   filter: drop-shadow(0px -4px 3px#1616167a) opacity(0.96);
-  text-shadow: 0px 0px 5px #5e5555;
-  font-size: 1.5rem;
-  background-image: linear-gradient(180deg, #ad211a 90%, #ee5a5ad4 98% 8px, #404040 116% 3px);
+  text-shadow: 0px 0px 2px #595050;
+  font-size: clamp(1.2rem, calc(0.2rem + 1.05vw + 0.6vh), 1.8rem);
+  background-image: linear-gradient(
+    180deg,
+    #ad211a 93%,
+    hsl(348deg 71% 22% / 97%) 98% 8px,
+    #404040 116% 3px
+  );
   position: relative;
   overflow: hidden;
+  text-wrap: nowrap;
 }
 
 .header-button {
@@ -21,9 +27,9 @@
   color: aliceblue;
   height: 100%;
 }
-  
+
 .nav-button::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   width: 0;
@@ -31,15 +37,15 @@
   background: #eceaeaed;
   transition: width 0.3s;
 }
-  
+
 .nav-button.left-to-right::before {
   left: 0;
 }
-  
+
 .nav-button.right-to-left::before {
   right: 0;
 }
-  
+
 .nav-button:hover::before {
   width: 100%;
 }
@@ -51,9 +57,9 @@
 #leftmost-button {
   border-radius: 16px 3px 0px 80px/14px 0px 0px 120px;
 }
-  
+
 .nav-button:active {
-  box-shadow: inset #14141436 -1px 1px 8px 4px;
+  box-shadow: inset #14141422 -1px 1px 5px 2px;
 }
 
 .nav-button:active::before {
@@ -61,5 +67,5 @@
 }
 
 .profile-img {
-  width: 66%;
+  width: 72%;
 }
