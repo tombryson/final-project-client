@@ -10,15 +10,17 @@ const WelcomePage = () => {
           Flight Specials Available <strong>Now</strong>
         </h1>
         <p>
-          Hundreds of unique opportunities for flights across the globe.
+          <em>Hundreds</em> of unique opportunities for flights across the
+          globe.
+          <br />
           Available only at Burning Airlines.
         </p>
         <p>
           <strong>Book your next holiday, blazingly fast!</strong>
         </p>
         <div>
-          <Link to="book">
-            <button className="p-2 rounded w-4">Book now</button>
+          <Link to="book" className="booknow-link">
+            <button className="p-2 rounded w-4 btn-book-home">Book now</button>
           </Link>
         </div>
       </div>

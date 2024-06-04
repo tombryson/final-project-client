@@ -232,7 +232,7 @@ html {
   border-bottom-style: ridge;
   display: flex;
   justify-content: space-between;
-  min-height: 6rem;
+  min-height: 5.4rem;
 }
 
 .button-container {
@@ -469,14 +469,17 @@ a > .icon-text > span {
 
 input {
   padding: 4px 6px;
-  margin: 0.2rem 0px !important;
+  margin: 0.1rem 0px !important;
   border: #595959 1px solid;
   border-radius: 4px;
   width: 100%;
 }
 
+.input-group-text {
+  display: block !important;
+}
+
 #input-group {
-  border: solid black;
   border-radius: 10px;
   width: 100%;
 }
@@ -524,13 +527,8 @@ input {
 }
 
 .form__search {
-  background-color: #d7dcefe0;
-  border-radius: 10px;
   flex-direction: row;
   display: flex;
-  flex-wrap: no-wrap;
-  align-content: center;
-  align-items: stretch;
 }
 
 @media (width <= 650px) {
@@ -661,14 +659,16 @@ ul {
       rgb(128 199 215) 90%
     );
   background-color: #f0ffff73;
-  background-image: url('../images/australian_landscape.jpg');
+  /* background-image: url('../images/australian_landscape.jpg'); */
+
   object-fit: cover;
   background-position-x: right;
   background-position-y: center;
   position: fixed;
   width: 100%;
   width: -webkit-fill-available;
-  filter: saturate(0.7) opacity(0.9);
+  filter: saturate(0.9) opacity(0.9);
+  border-radius: 0% 60% 60% 60% / 15% 0% 0% 20%;
 }
 
 .booking-container {
@@ -677,5 +677,5 @@ ul {
 
 .form__container {
   margin: 0 auto;
-  width: 90%;
+  width: 85%;
 }

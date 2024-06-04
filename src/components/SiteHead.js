@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../images/BA-transp.png';
-import { Outlet, useNavigate, Link } from 'react-router-dom';
+import { Outlet, useNavigate, Link, useLocation } from 'react-router-dom';
 import buttonStyles from './buttonStyles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const SiteHead = ({ toggleAuth, authState }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const currentUserId = sessionStorage.getItem('currentUserId');
+
   const [directions, setDirections] = useState({});
 
   const handleMouseEnter = (e, id) => {
@@ -60,6 +62,7 @@ const SiteHead = ({ toggleAuth, authState }) => {
       <div className="button-container">
         <Link className="header-button" to="/">
           <button
+            style={{ fontWeight: `${location.pathname === '/' ? 500 : 300}` }}
             id="leftmost-button"
             className={`nav-button ${directions['home']}`}
             onMouseOver={(e) => handleMouseEnter(e, 'home')}
@@ -74,6 +77,9 @@ const SiteHead = ({ toggleAuth, authState }) => {
           <>
             <Link className="header-button" to="book">
               <button
+                style={{
+                  fontWeight: `${location.pathname === 'book' ? 500 : 300}`,
+                }}
                 className={`nav-button ${directions['sign-in']}`}
                 onMouseOver={(e) => handleMouseEnter(e, 'sign-in')}
                 onMouseOut={(e) => handleMouseLeave(e, 'sign-in')}
@@ -96,6 +102,10 @@ const SiteHead = ({ toggleAuth, authState }) => {
         ) : (
           <Link className="header-button" to="book">
             <button
+              style={{
+                fontWeight: `${location.pathname === 'book' ? 500 : 300}`,
+              }}
+              id="book"
               className={`nav-button ${directions['sign-in']}`}
               onMouseOver={(e) => handleMouseEnter(e, 'sign-in')}
               onMouseOut={(e) => handleMouseLeave(e, 'sign-in')}
