@@ -43,6 +43,29 @@
   min-width: 6.4rem;
 }
 
+.greeting-opaque > h1::before {
+  content: '\2708';
+  font-size: smaller;
+  font-weight: 200;
+  color: #f7f1f1;
+  padding: 0.2vw;
+  /* position: absolute; */
+  top: 6rem;
+  animation: initial;
+  transform: translateY(-50%);
+  animation-play-state: running;
+  /* animation: moveAirplane 5s linear infinite; */
+}
+
+@keyframes moveAirplane {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
 .greeting-opaque {
   filter: drop-shadow(2px 2px 4px black) opacity(1);
 }
@@ -292,7 +315,6 @@ a > .icon-text > span {
 
 .nav-icon:hover {
   border-radius: 50%;
-  /* box-shadow: 0 0 0px 4px #54545485; */
   transition: box-shadow 0.3s linear;
   filter: contrast(0.5);
 }
@@ -528,7 +550,6 @@ input {
   padding: 0 2px;
   visibility: hidden;
   top: -1px;
-  /* transition: top 0.2s, font-size 0.2s; */
 }
 
 #emailInput {
@@ -581,7 +602,7 @@ input {
 }
 
 @media (width > 650px) {
-  .p-3 {
+  .pad-3 {
     padding: 3rem !important;
   }
 }
@@ -590,7 +611,7 @@ input {
   display: block;
 }
 
-.p-3 {
+.pad-3 {
   padding: 1rem;
 }
 
@@ -697,8 +718,8 @@ ul {
   width: 85%;
   min-width: 160px;
   height: 65vh;
-  border: solid 1px #e1e1e1de;
-  border-radius: 6% 3% 3% 14% / 50% 15% 15% 180%;
+  border: solid 2px #e1e1e1de;
+  border-radius: 0.8rem 0.8rem 0.8rem 0.8rem / 1rem 1rem 1rem 1rem;
   background-color: #04080e;
   box-shadow: 0px 0px 5px 1px #242424;
   padding: min(2rem, 4vw);
