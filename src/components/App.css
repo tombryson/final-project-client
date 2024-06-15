@@ -170,6 +170,7 @@ html {
   flex-wrap: nowrap;
   flex-direction: row;
   align-content: center;
+  min-width: 220px;
 }
 
 .auth-form {
@@ -562,12 +563,6 @@ input {
   .button-container {
     visibility: hidden;
   }
-}
-
-#btn {
-  color: #000;
-  background-color: #e9ecef;
-  border-color: #2f83c9;
 }
 
 .search-flight {

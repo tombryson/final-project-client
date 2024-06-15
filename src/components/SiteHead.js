@@ -62,7 +62,6 @@ const SiteHead = ({ toggleAuth, authState }) => {
       <div className="button-container">
         <Link className="header-button" to="/">
           <button
-            style={{ fontWeight: `${location.pathname === '/' ? 500 : 300}` }}
             id="leftmost-button"
             className={`nav-button ${directions['home']}`}
             onMouseOver={(e) => handleMouseEnter(e, 'home')}
@@ -77,9 +76,6 @@ const SiteHead = ({ toggleAuth, authState }) => {
           <>
             <Link className="header-button" to="book">
               <button
-                style={{
-                  fontWeight: `${location.pathname === 'book' ? 500 : 300}`,
-                }}
                 className={`nav-button ${directions['sign-in']}`}
                 onMouseOver={(e) => handleMouseEnter(e, 'sign-in')}
                 onMouseOut={(e) => handleMouseLeave(e, 'sign-in')}
@@ -102,9 +98,6 @@ const SiteHead = ({ toggleAuth, authState }) => {
         ) : (
           <Link className="header-button" to="book">
             <button
-              style={{
-                fontWeight: `${location.pathname === 'book' ? 500 : 300}`,
-              }}
               id="book"
               className={`nav-button ${directions['sign-in']}`}
               onMouseOver={(e) => handleMouseEnter(e, 'sign-in')}

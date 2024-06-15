@@ -6,6 +6,7 @@ import departure from '../images/book-icon.png';
 import arrival from '../images/icon-arrival.png';
 import AusLandscape from '../images/australian_landscape.jpg';
 import './App2.css';
+import './buttonStyles.css';
 
 const Book = () => {
   const [from, setFrom] = useState('');
@@ -148,7 +149,7 @@ const Book = () => {
             </div>
             <button
               type="submit"
-              className="btn btn-secondary mb-2 button__search--booking"
+              className="btn btn-secondary mb-2 button__search--booking btn-book-home"
               id="btn"
             >
               {' '}
