@@ -5,7 +5,7 @@ import boraBora from '../images/boraBora.jpg';
 const WelcomePage = () => {
   return (
     <div className="home-content header-section scroll-section">
-      <div className="home-text p-5 object-center">
+      <div className="home-text p-3 object-center">
         <h1>
           Flight Specials Available <strong>Now</strong>
         </h1>
