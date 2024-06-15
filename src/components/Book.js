@@ -147,14 +147,12 @@ const Book = () => {
                 />
               </div>
             </div>
-            <button
-              type="submit"
-              className="btn btn-secondary mb-2 button__search--booking btn-book-home"
-              id="btn"
-            >
-              {' '}
-              Search
-            </button>
+            <div className="container__search">
+              <button type="submit" className="button__search--booking">
+                {' '}
+                Search
+              </button>
+            </div>
           </form>
           {hasSearched && getItems(flights)}
           {flight}
