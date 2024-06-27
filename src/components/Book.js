@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import departure from '../images/book-icon.png';
 import arrival from '../images/icon-arrival.png';
-import AusLandscape from '../images/australian_landscape.jpg';
+import VideoBackground from './videoBackground.jsx';
 import './App2.css';
 import './buttonStyles.css';
 
@@ -97,6 +97,9 @@ const Book = () => {
   return (
     <>
       <div className="book_background">
+        <div className="video-container">
+          <VideoBackground />
+        </div>
         <div className="booking-container">
           <form className="form__container" onSubmit={_handleSubmit}>
             <div className="form__search">
