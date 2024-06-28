@@ -5,21 +5,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import departure from '../images/book-icon.png';
 import arrival from '../images/icon-arrival.png';
 import VideoBackground from './videoBackground.jsx';
+import APIFlightTable from './FlightTable.js';
 import './App2.css';
 import './buttonStyles.css';
 
 const Book = () => {
-  const [from, setFrom] = useState('');
-  const [to, setTo] = useState('');
-  const [flights, setFlights] = useState([{}]);
-  const [fromField, setFromField] = useState('');
-  const [toField, setToField] = useState('');
+  const [AirportDeparture, setAirportDeparture] = useState('MEL');
+  const [AirportArrival, setAirportArrival] = useState('SYD');
+  const [CarrierCode, setCarrierCode] = useState('QF');
+  const [DepartureDate, setDepartureDate] = useState('2024-06-30');
+  const [ArrivalDate, setArrivalDate] = useState('2024-06-30');
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [hasSearched, setHasSearched] = useState(false);
-
-  // let currentUserId = sessionStorage.getItem('currentUserId');
 
   const handleOnClick = (i) => {
     selectedItem === null ? setSelectedItem(i) : setSelectedItem(null);
@@ -34,17 +33,35 @@ const Book = () => {
     setIsVisible(true);
   }, []);
 
-  const siteURL = 'http://localhost:3000/';
+
 
   const _handleSubmit = async (event) => {
     event.preventDefault();
+
+    const apiURL = (`https://flight-info-api.p.rapidapi.com/schedules?version=v2&DepartureDateTime=${DepartureDate}&ArrivalDateTime=${ArrivalDate}&CarrierCode=${CarrierCode}&DepartureAirport=${AirportDeparture}&ArrivalAirport=${AirportArrival}&FlightType=Scheduled&CodeType=IATA&ServiceType=Passenger`)
+
+    const flightData = {
+      flightNumber,
+      departureAirport,
+      arrivalAirport,
+      departureTime,
+      arrivalTime,
+    };
+
     try {
-      axios.get(`${siteURL}/search/${from}/${to}.json`).then((response) => {
-        setFlights(response.data);
-        setHasSearched(true);
+      const response = await fetch('http://localhost:3000/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ apiURL }),
       });
+
+      const data = await response.json();
+      setMessage(`Success: ${JSON.stringify(data)}`);
+
     } catch (error) {
-      console.log(error);
+      setMessage(`Error: ${error.toString()}`);
     }
   };
 
@@ -151,13 +168,15 @@ const Book = () => {
               </div>
             </div>
             <div className="container__search">
-              <button type="submit" className="button__search--booking">
+              <button type="submit" onClick={} className="button__search--booking">
                 {' '}
                 Search
               </button>
             </div>
           </form>
           {hasSearched && getItems(flights)}
+          <h1>Flight Information</h1>
+          <APIFlightTable />
           {flight}
           {message}
         </div>
