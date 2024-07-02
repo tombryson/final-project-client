@@ -5,111 +5,131 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import departure from '../images/book-icon.png';
 import arrival from '../images/icon-arrival.png';
 import VideoBackground from './videoBackground.jsx';
-import APIFlightTable from './FlightTable.js';
+import ApiFlightTable from './ApiFlightTable.js';
 import './App2.css';
 import './buttonStyles.css';
 
 const Book = () => {
-  const [AirportDeparture, setAirportDeparture] = useState('MEL');
-  const [AirportArrival, setAirportArrival] = useState('SYD');
-  const [CarrierCode, setCarrierCode] = useState('QF');
-  const [DepartureDate, setDepartureDate] = useState('2024-06-30');
-  const [ArrivalDate, setArrivalDate] = useState('2024-06-30');
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [hasSearched, setHasSearched] = useState(false);
-
-  const handleOnClick = (i) => {
-    selectedItem === null ? setSelectedItem(i) : setSelectedItem(null);
-  };
+  const [flights, setFlights] = useState([]);
+  const [flightTableVisible, setFlightTableVisible] = useState(false);
 
   const duration = 800;
   const delay = 100;
   const animStr = (i) =>
     `fadeIn ${duration}ms ease-out ${delay * i}ms forwards`;
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
+  const [formData, setFormData] = useState({
+    departureDate: '2024-06-30',
+    arrivalDate: '2024-06-30',
+    carrierCode: 'QF',
+    airportDeparture: 'MEL',
+    airportArrival: 'SYD',
+  });
 
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleOnClick = (i) => {
+    selectedItem === null ? setSelectedItem(i) : setSelectedItem(null);
+  };
 
   const _handleSubmit = async (event) => {
     event.preventDefault();
 
-    const apiURL = (`https://flight-info-api.p.rapidapi.com/schedules?version=v2&DepartureDateTime=${DepartureDate}&ArrivalDateTime=${ArrivalDate}&CarrierCode=${CarrierCode}&DepartureAirport=${AirportDeparture}&ArrivalAirport=${AirportArrival}&FlightType=Scheduled&CodeType=IATA&ServiceType=Passenger`)
+    const {
+      departureDate,
+      arrivalDate,
+      carrierCode,
+      airportDeparture,
+      airportArrival,
+    } = formData;
 
-    const flightData = {
-      flightNumber,
-      departureAirport,
-      arrivalAirport,
-      departureTime,
-      arrivalTime,
-    };
+    const apiURL = `https://flight-info-api.p.rapidapi.com/schedules?version=v2&DepartureDateTime=${departureDate}&ArrivalDateTime=${arrivalDate}&CarrierCode=${carrierCode}&DepartureAirport=${airportDeparture}&ArrivalAirport=${airportArrival}&FlightType=Scheduled&CodeType=IATA&ServiceType=Passenger`;
 
+    setFlightTableVisible(true);
+    console.log(flightTableVisible);
+
+    // try {
+    //   const response = await fetch('http://localhost:3000/flights/submit', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ apiURL }),
+    //   });
+
+    //   const data = await response.json();
+    // } catch (error) {
+    //   setMessage(`Error: ${error.toString()}`);
+    // }
     try {
-      const response = await fetch('http://localhost:3000/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ apiURL }),
-      });
+      const response = await fetch('./data.json');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
 
-      const data = await response.json();
-      setMessage(`Success: ${JSON.stringify(data)}`);
-
+      const JSONdata = await response.json();
+      setFlights(JSONdata.data);
+      setFlightTableVisible(true);
     } catch (error) {
-      setMessage(`Error: ${error.toString()}`);
+      console.error('Error fetching flight data:', error);
     }
   };
 
-  const _handleTo = (form) => {
-    const result = form.target.value.replace(/[^a-z]/gi, '').toUpperCase();
-    setToField(result);
-    setTo(result);
-  };
+  /////////////////////
 
-  const _handleFrom = (form) => {
-    const result = form.target.value.replace(/[^a-z]/gi, '').toUpperCase();
-    setFromField(result);
-    setFrom(result);
-  };
+  // const _handleTo = (form) => {
+  //   const result = form.target.value.replace(/[^a-z]/gi, '').toUpperCase();
+  //   setToField(result);
+  //   setTo(result);
+  // };
 
-  const flight = flights.map((item) => {
-    return item.flight_id !== undefined ? (
-      <FlightTable key={item.flight_id} flights={item} />
-    ) : (
-      []
-    );
-  });
+  // const _handleFrom = (form) => {
+  //   const result = form.target.value.replace(/[^a-z]/gi, '').toUpperCase();
+  //   setFromField(result);
+  //   setFrom(result);
+  // };
 
-  const getItems = (flights) => {
-    return flights.length === 0 ||
-      (flights.length === 1 && Object.keys(flights[0]).length === 0) ? (
-      <p className="no-flight">
-        Sorry, there are no flights available to your selected cities
-      </p>
-    ) : (
-      <tbody className="list-group">
-        {flights.map((flight, i) => (
-          <tr
-            key={i}
-            style={{ animation: animStr(i) }}
-            className={
-              i === selectedItem ? 'list-group-item active' : 'list-group-item'
-            }
-            onClick={() => handleOnClick(i)}
-          >
-            <td>{flight.from}</td>
-            <td>{flight.to}</td>
-            <td>{flight.date}</td>
-          </tr>
-        ))}
-      </tbody>
-    );
-  };
+  // const flight = flights.map((item) => {
+  //   return item.flight_id !== undefined ? (
+  //     <FlightTable key={item.flight_id} flights={item} />
+  //   ) : (
+  //     []
+  //   );
+  // });
+
+  // const getItems = (flights) => {
+  //   return flights.length === 0 ||
+  //     (flights.length === 1 && Object.keys(flights[0]).length === 0) ? (
+  //     <p className="no-flight">
+  //       Sorry, there are no flights available to your selected cities
+  //     </p>
+  //   ) : (
+  //     <tbody className="list-group">
+  //       {flights.map((flight, i) => (
+  //         <tr
+  //           key={i}
+  //           style={{ animation: animStr(i) }}
+  //           className={
+  //             i === selectedItem ? 'list-group-item active' : 'list-group-item'
+  //           }
+  //           onClick={() => handleOnClick(i)}
+  //         >
+  //           <td>{flight.from}</td>
+  //           <td>{flight.to}</td>
+  //           <td>{flight.date}</td>
+  //         </tr>
+  //       ))}
+  //     </tbody>
+  //   );
+  // };
 
   return (
     <>
@@ -138,9 +158,8 @@ const Book = () => {
                   className="form-control"
                   id="form-control"
                   required
-                  onChange={_handleFrom}
-                  value={fromField}
-                  placeholder="eg. MEL"
+                  onChange={handleChange}
+                  placeholder="Airport eg. MEL"
                 />
               </div>
               <div id="input-group">
@@ -161,23 +180,23 @@ const Book = () => {
                   className="form-control"
                   id="form-control"
                   required
-                  onChange={_handleTo}
-                  value={toField}
-                  placeholder="eg. SYD"
+                  onChange={handleChange}
+                  placeholder="Airport eg. SYD"
                 />
               </div>
             </div>
             <div className="container__search">
-              <button type="submit" onClick={} className="button__search--booking">
+              <button
+                type="submit"
+                onClick={_handleSubmit}
+                className="button__search--booking"
+              >
                 {' '}
                 Search
               </button>
             </div>
+            {flightTableVisible && <ApiFlightTable flights={flights} />}
           </form>
-          {hasSearched && getItems(flights)}
-          <h1>Flight Information</h1>
-          <APIFlightTable />
-          {flight}
           {message}
         </div>
       </div>

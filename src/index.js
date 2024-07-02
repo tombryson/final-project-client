@@ -45,6 +45,12 @@ const AppWrapper = ({ children }) => {
         {location.pathname !== '/book' && <CarouselHome />}
         <Outlet />
         <NavBar />
+        <div className="deals-callout-container">
+          <h2 className="test-font">
+            Check out our latest <span className="deals"> deals </span>
+            <span className="arrow">&#x2935;</span>
+          </h2>
+        </div>
       </div>
       {location.pathname !== '/book' && <WelcomePage />}
     </div>

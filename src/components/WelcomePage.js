@@ -20,7 +20,9 @@ const WelcomePage = () => {
         </p>
         <div>
           <Link to="book" className="booknow-link">
-            <button className="p-2 rounded w-4 btn-book-home">Book now</button>
+            <button className="p-2 rounded w-4 btn-book-home animate">
+              Book now
+            </button>
           </Link>
         </div>
       </div>

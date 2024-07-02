@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import CarouselHome from './CarouselHome.js';
 
 function Home(authVisible) {
   const location = useLocation();
@@ -15,10 +14,6 @@ function Home(authVisible) {
     message = 'Where to?';
   } else if (location.pathname === '/mytrips') {
     message = 'My Trips';
-  }
-
-  if (authVisible) {
-    console.log('auth is visible');
   }
 
   return (
