@@ -103,9 +103,6 @@ const NavBar = () => {
           )}
         </ul>
       </div>
-      <h2 className="test-font">
-        Check out our latest deals <span className="arrow">&#x2935;</span>
-      </h2>
     </div>
   );
 };

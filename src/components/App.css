@@ -16,17 +16,16 @@
   margin-left: -1vh;
 }
 
-.test-font {
+.deals-callout {
   display: inline-block;
   position: relative;
   font-family: 'Caveat', cursive;
   font-weight: 500;
   font-style: normal;
-  font-size: 42px;
-  background-color: #ad111b;
-  padding: 0px 2rem 12rem 6rem;
-  color: #fffefe;
-  transform: rotateZ(355deg) scaleY(1.2);
+  font-size: 41px;
+  padding: 0px 3rem 11rem 6rem;
+  color: #bc2222fa;
+  transform: rotateZ(355deg) scaleY(1.2) skewX(4deg);
 }
 
 .arrow {
@@ -39,7 +38,7 @@
 }
 
 .deals {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-decoration-thickness: 4px;
   text-underline-position: from-font;
 }
@@ -637,6 +636,9 @@ input {
   }
   .form__search {
     flex-wrap: wrap;
+  }
+  .deals-callout {
+    visibility: hidden;
   }
 }
 

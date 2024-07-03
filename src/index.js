@@ -20,6 +20,7 @@ import WelcomePage from './components/WelcomePage.js';
 import TestComponent from './components/TestComponent.js';
 import CarouselComponent from './components/CarouselComponent.js';
 import CarouselHome from './components/CarouselHome.js';
+import DealsCallout from './components/DealsCallout.js';
 
 const AppWrapper = ({ children }) => {
   const [authVisible, setAuthVisible] = useState(false);
@@ -45,12 +46,7 @@ const AppWrapper = ({ children }) => {
         {location.pathname !== '/book' && <CarouselHome />}
         <Outlet />
         <NavBar />
-        <div className="deals-callout-container">
-          <h2 className="test-font">
-            Check out our latest <span className="deals"> deals </span>
-            <span className="arrow">&#x2935;</span>
-          </h2>
-        </div>
+        {location.pathname === '/' && <DealsCallout />}
       </div>
       {location.pathname !== '/book' && <WelcomePage />}
     </div>
