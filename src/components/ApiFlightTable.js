@@ -16,11 +16,20 @@ const ApiFlightTable = ({ flights }) => {
     return airlineImages[code] || 'path/to/default-image.png';
   };
 
+  const duration = 500;
+  const delay = 80;
+  const animStr = (i) =>
+    `fadeIn ${duration}ms ease-out ${delay * i}ms forwards`;
+
   return (
     <table>
       <tbody>
         {flights.map((flight, index) => (
-          <tr className="returned-flights" key={index}>
+          <tr
+            className="returned-flights"
+            key={index}
+            style={{ animation: animStr(index) }}
+          >
             <td>
               <img
                 // src={getAirlineImage(flight.carrier.iata)}
