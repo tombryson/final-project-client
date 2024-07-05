@@ -191,8 +191,8 @@
     },
     {
       "carrier": {
-        "iata": "QF",
-        "icao": "QFA"
+        "iata": "ANZ",
+        "icao": "ANZ"
       },
       "serviceSuffix": "",
       "flightNumber": 418,
