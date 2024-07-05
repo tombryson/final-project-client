@@ -1,19 +1,23 @@
 import { faCropSimple } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState } from 'react';
 import qantas from '../images/qantas.jpeg';
+import jetstar from '../images/jetstar.png';
+import unknown from '../images/unknown-carrier.png';
 import moment from 'moment';
 
 const ApiFlightTable = ({ flights }) => {
-  const airlineImages = {
-    QF: { qantas },
-  };
-
   function convertTo12HourFormat(time24) {
     return moment(time24, 'HH:mm').format('h:mm A');
   }
 
   const getAirlineImage = (code) => {
-    return airlineImages[code] || 'path/to/default-image.png';
+    const airlineImages = {
+      QF: qantas,
+      JQ: jetstar,
+    };
+
+    const image = airlineImages[code] || unknown;
+    return image;
   };
 
   const duration = 500;
@@ -32,8 +36,8 @@ const ApiFlightTable = ({ flights }) => {
           >
             <td>
               <img
-                // src={getAirlineImage(flight.carrier.iata)}
-                src={qantas}
+                src={getAirlineImage(flight.carrier.iata)}
+                // src={qantas}
                 alt={flight.carrier.iata}
                 width="50"
                 height="50"

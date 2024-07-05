@@ -54,7 +54,6 @@ const Book = () => {
     const apiURL = `https://flight-info-api.p.rapidapi.com/schedules?version=v2&DepartureDateTime=${departureDate}&ArrivalDateTime=${arrivalDate}&CarrierCode=${carrierCode}&DepartureAirport=${airportDeparture}&ArrivalAirport=${airportArrival}&FlightType=Scheduled&CodeType=IATA&ServiceType=Passenger`;
 
     setFlightTableVisible(true);
-    console.log(flightTableVisible);
 
     // try {
     //   const response = await fetch('http://localhost:3000/flights/submit', {
@@ -105,31 +104,31 @@ const Book = () => {
   //   );
   // });
 
-  // const getItems = (flights) => {
-  //   return flights.length === 0 ||
-  //     (flights.length === 1 && Object.keys(flights[0]).length === 0) ? (
-  //     <p className="no-flight">
-  //       Sorry, there are no flights available to your selected cities
-  //     </p>
-  //   ) : (
-  //     <tbody className="list-group">
-  //       {flights.map((flight, i) => (
-  //         <tr
-  //           key={i}
-  //           style={{ animation: animStr(i) }}
-  //           className={
-  //             i === selectedItem ? 'list-group-item active' : 'list-group-item'
-  //           }
-  //           onClick={() => handleOnClick(i)}
-  //         >
-  //           <td>{flight.from}</td>
-  //           <td>{flight.to}</td>
-  //           <td>{flight.date}</td>
-  //         </tr>
-  //       ))}
-  //     </tbody>
-  //   );
-  // };
+  const getItems = (flights) => {
+    return flights.length === 0 ||
+      (flights.length === 1 && Object.keys(flights[0]).length === 0) ? (
+      <p className="no-flight">
+        Sorry, there are no flights available to your selected cities
+      </p>
+    ) : (
+      <tbody className="list-group">
+        {flights.map((flight, i) => (
+          <tr
+            key={i}
+            style={{ animation: animStr(i) }}
+            className={
+              i === selectedItem ? 'list-group-item active' : 'list-group-item'
+            }
+            onClick={() => handleOnClick(i)}
+          >
+            <td>{flight.from}</td>
+            <td>{flight.to}</td>
+            <td>{flight.date}</td>
+          </tr>
+        ))}
+      </tbody>
+    );
+  };
 
   return (
     <>
@@ -204,16 +203,16 @@ const Book = () => {
   );
 };
 
-const FlightTable = (props) => {
-  const path = `/flights/${props.flights.id}`;
-  return (
-    <div className="searched-flight">
-      <Link to={path} state={{}} className="flights">
-        Flight: from {props.flights.from} to {props.flights.to} departing on{' '}
-        {props.flights.date}
-      </Link>
-    </div>
-  );
-};
+// const FlightTable = (props) => {
+//   const path = `/flights/${props.flights.id}`;
+//   return (
+//     <div className="searched-flight">
+//       <Link to={path} state={{}} className="flights">
+//         Flight: from {props.flights.from} to {props.flights.to} departing on{' '}
+//         {props.flights.date}
+//       </Link>
+//     </div>
+//   );
+// };
 
 export default Book;
