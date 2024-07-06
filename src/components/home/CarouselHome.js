@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import plane5 from '../images/plane-img5.png';
-import plane3 from '../images/plane4.jpg';
-import plane2 from '../images/plane-img2.png';
+import plane5 from '../../images/plane-img5.png';
+import plane3 from '../../images/plane4.jpg';
+import plane2 from '../../images/plane-img2.png';
 import { Carousel } from 'react-bootstrap';
 
 export default function CarouselHome() {

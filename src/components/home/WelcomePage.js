@@ -1,6 +1,6 @@
 import { React } from 'react';
 import { Link } from 'react-router-dom';
-import boraBora from '../images/boraBora.jpg';
+import boraBora from '../../images/boraBora.jpg';
 
 const WelcomePage = () => {
   return (

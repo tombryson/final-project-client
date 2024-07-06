@@ -1,9 +1,9 @@
 import { faCropSimple } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState } from 'react';
-import qantas from '../images/qantas.jpeg';
-import jetstar from '../images/jetstar.png';
-import airnewzealand from '../images/airnewzealand.png';
-import unknown from '../images/unknown-carrier.png';
+import qantas from '../../images/qantas.jpeg';
+import jetstar from '../../images/jetstar.png';
+import airnewzealand from '../../images/airnewzealand.png';
+import unknown from '../../images/unknown-carrier.png';
 import moment from 'moment';
 
 const ApiFlightTable = ({ flights }) => {
