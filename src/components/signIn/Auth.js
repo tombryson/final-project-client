@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import Header from './Header.js';
+import './../App.css';
+import Header from '../Header.js';
 import SignUpForm from './SignUpForm.js';
 import LoginForm from './LoginForm.js';
 import { useNavigate } from 'react-router-dom';

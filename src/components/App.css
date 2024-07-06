@@ -806,7 +806,7 @@ tr.returned-flights:active {
 
 @keyframes fadeIn {
   to {
-    opacity: 1; /* End visible */
+    opacity: 1;
   }
 }
 

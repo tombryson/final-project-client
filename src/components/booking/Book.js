@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import departure from '../../images/book-icon.png';
 import arrival from '../../images/icon-arrival.png';
-import VideoBackground from '../videoBackground.jsx';
+import VideoBackground from './videoBackground.jsx';
 import ApiFlightTable from './ApiFlightTable.js';
 import '../App2.css';
 import '../buttonStyles.css';

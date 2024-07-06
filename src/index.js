@@ -8,7 +8,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 import './components/index.css';
-import Auth from './components/Auth.js';
+import Auth from './components/signIn/Auth.js';
 import Home from './components/home/Home.js';
 import Profile from './components/Profile.js';
 import Book from './components/booking/Book.js';
@@ -20,7 +20,7 @@ import WelcomePage from './components/home/WelcomePage.js';
 import TestComponent from './components/TestComponent.js';
 import CarouselComponent from './components/home/CarouselComponent.js';
 import CarouselHome from './components/home/CarouselHome.js';
-import DealsCallout from './components/DealsCallout.js';
+import DealsCallout from './components/home/DealsCallout.js';
 
 const AppWrapper = ({ children }) => {
   const [authVisible, setAuthVisible] = useState(false);
