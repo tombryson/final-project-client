@@ -7,7 +7,7 @@ export const backgroundStyles = {
   QF: `linear-gradient(8deg, transparent 15px, #08090a 46px), 
          linear-gradient(#cccccc 45%, #f6bbbb9c 26%, #830808f7 70%)`,
   JQ: `linear-gradient(8deg, transparent 15px, rgb(8, 9, 10) 46px), 
-        linear-gradient(rgb(204, 204, 204) 45%, rgba(246, 187, 187, 0.61) 26%, rgb(229 79 15 / 80%) 70%)`,
+        linear-gradient(rgb(204, 204, 204) 45%, rgba(246, 187, 187, 0.61) 26%, rgb(229 79 15 / 74%) 70%)`,
   ANZ: `linear-gradient(8deg, transparent 15px, rgb(8, 9, 10) 46px), linear-gradient(rgb(204, 204, 204) 45%, 
         rgba(246, 187, 187, 0.61) 26%, rgb(161 161 161 / 80%) 70%)`,
   default: `linear-gradient(8deg, transparent 15px, #08090a 46px), 
@@ -15,7 +15,7 @@ export const backgroundStyles = {
 };
 
 export const backgroundColors = {
-  QF: '#080808',
+  QF: 'rgb(254 255 255)',
   JQ: '#131314',
   ANZ: '#feffff',
   default: 'white',
@@ -26,4 +26,11 @@ export const airlineImages = {
   JQ: jetstar,
   ANZ: airnewzealand,
   default: unknown,
+};
+
+export const borderImages = {
+  QF: 'linear-gradient(6deg, #5f1919 50%, transparent 45%, black 5px) 2',
+  JQ: 'linear-gradient(6deg, rgb(153 65 27 / 77%) 50%, transparent 45%, black 5px) 2',
+  ANZ: 'linear-gradient(6deg, rgb(64 63 63) 50%, transparent 45%, black 5px) 2',
+  default: 'linear-gradient(6deg, #5f1919 50%, transparent 45%, black 5px) 2',
 };

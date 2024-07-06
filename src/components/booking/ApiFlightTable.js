@@ -3,6 +3,7 @@ import {
   backgroundStyles,
   backgroundColors,
   airlineImages,
+  borderImages,
 } from './AirlineStyles.js';
 import React, { useEffect, useState } from 'react';
 import moment from 'moment';
@@ -18,6 +19,7 @@ const ApiFlightTable = ({ flights }) => {
     backgroundColors[code] || backgroundColors.default;
   const getAirlineImage = (code) =>
     airlineImages[code] || airlineImages.default;
+  const getBorderImage = (code) => borderImages[code] || borderImages.default;
 
   const duration = 500;
   const delay = 80;
@@ -34,6 +36,7 @@ const ApiFlightTable = ({ flights }) => {
             style={{
               animation: animStr(index),
               backgroundImage: getBackgroundStyle(flight.carrier.iata),
+              borderImage: getBorderImage(flight.carrier.iata),
             }}
           >
             <td>

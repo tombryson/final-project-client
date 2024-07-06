@@ -781,15 +781,14 @@ ul {
 
 .returned-flights {
   opacity: 0;
-  border: solid 2px;
-  border-image: linear-gradient(11deg, #5f1919 50%, transparent 45%, black 5px)
-    2;
+  border: solid 1.5px;
+  border-image: linear-gradient(6deg, #5f1919 50%, transparent 45%, black 5px) 2;
   border-radius: 5% 2% 2% 5% / 35% 10% 10% 35%;
   display: inline-flex;
   background-image: linear-gradient(8deg, transparent 15px, #08090a 46px),
     linear-gradient(#cccccc 45%, #f6bbbb9c 26%, #830808f7 70%);
   margin: 2px 0px;
-  box-shadow: inset 2.5px 0px 1.5px 0px whitesmoke;
+  box-shadow: inset 2px 0px 1px 0px #efefefed;
   align-items: center;
   padding: 0 2rem 0 0;
 }
@@ -814,12 +813,17 @@ tr td {
   padding: 10px;
 }
 
+th {
+  color: #efefef;
+}
+
 td img {
   border-radius: 50%;
   border: 1.5px solid #1a1b1b;
   margin: 0.2rem;
   background-color: aliceblue;
   box-shadow: 0.8px 0.8px 5px 1px #000000e0;
+  padding: 4px;
 }
 
 .test {
