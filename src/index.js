@@ -43,12 +43,12 @@ const AppWrapper = ({ children }) => {
         >
           <Auth />
         </div>
-        {location.pathname !== '/book' && <CarouselHome />}
+        {location.pathname === '/' && <CarouselHome />}
         <Outlet />
         <NavBar />
         {location.pathname === '/' && <DealsCallout />}
       </div>
-      {location.pathname !== '/book' && <WelcomePage />}
+      {location.pathname === '/' && <WelcomePage />}
     </div>
   );
 };

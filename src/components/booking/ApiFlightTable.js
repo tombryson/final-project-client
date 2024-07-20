@@ -27,11 +27,23 @@ const ApiFlightTable = ({ flights }) => {
   const animStr = (i) =>
     `fadeIn ${duration}ms ease-out ${delay * i}ms forwards`;
 
+  // const FlightTable = (props) => {
+  //   const path = `/flights/${props.flights.id}`;
+  //   return (
+  //     <div className="searched-flight">
+  //       <Link to={path} state={{}} className="flights">
+  //         Flight: from {props.flights.from} to {props.flights.to} departing on{' '}
+  //         {props.flights.date}
+  //       </Link>
+  //     </div>
+  //   );
+  // };
+
   return (
     <table>
       <tbody>
         {flights.map((flight, index) => (
-          <Link to={`flights/${flight.flightNumber}`}>
+          <Link to={`/flights/${flight.flightNumber}`}>
             <tr
               className="returned-flights"
               key={index}
@@ -71,6 +83,11 @@ const ApiFlightTable = ({ flights }) => {
               </div>
               <td>est. duration</td>
               <th>{Math.round((flight.elapsedTime * 100) / 60) / 100}h</th>
+              <td>
+                <Link to={`/flights/${flight.flightNumber}`}>
+                  Select Flight
+                </Link>
+              </td>
             </tr>
           </Link>
         ))}
