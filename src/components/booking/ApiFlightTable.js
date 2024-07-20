@@ -6,6 +6,7 @@ import {
   borderImages,
 } from './AirlineStyles.js';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
 
 const ApiFlightTable = ({ flights }) => {
@@ -30,46 +31,48 @@ const ApiFlightTable = ({ flights }) => {
     <table>
       <tbody>
         {flights.map((flight, index) => (
-          <tr
-            className="returned-flights"
-            key={index}
-            style={{
-              animation: animStr(index),
-              backgroundImage: getBackgroundStyle(flight.carrier.iata),
-              borderImage: getBorderImage(flight.carrier.iata),
-            }}
-          >
-            <td>
-              <img
-                src={getAirlineImage(flight.carrier.iata)}
-                alt={flight.carrier.iata}
-                width="50"
-                height="50"
-                style={{
-                  backgroundColor: getBackgroundImage(flight.carrier.iata),
-                }}
-              />
-            </td>
-            <th>Flight</th>
-            <td>{flight.flightNumber}</td>
-            <div className="test">
-              <div style={{ height: 30 + 'px' }}>
-                <td>Departing</td>
-                <th>{flight.departure.airport.iata}</th>
+          <Link to={`flights/${flight.flightNumber}`}>
+            <tr
+              className="returned-flights"
+              key={index}
+              style={{
+                animation: animStr(index),
+                backgroundImage: getBackgroundStyle(flight.carrier.iata),
+                borderImage: getBorderImage(flight.carrier.iata),
+              }}
+            >
+              <td>
+                <img
+                  src={getAirlineImage(flight.carrier.iata)}
+                  alt={flight.carrier.iata}
+                  width="50"
+                  height="50"
+                  style={{
+                    backgroundColor: getBackgroundImage(flight.carrier.iata),
+                  }}
+                />
+              </td>
+              <th>Flight</th>
+              <td>{flight.flightNumber}</td>
+              <div className="test">
+                <div style={{ height: 30 + 'px' }}>
+                  <td>Departing</td>
+                  <th>{flight.departure.airport.iata}</th>
+                </div>
+                <div>
+                  <td>Arriving</td>
+                  <th>{flight.arrival.airport.iata}</th>
+                </div>
               </div>
-              <div>
-                <td>Arriving</td>
-                <th>{flight.arrival.airport.iata}</th>
+              <div className="test">
+                <th>{convertTo12HourFormat(flight.departure.time.local)}</th>
+                <td>&#x2192;</td>
+                <th>{convertTo12HourFormat(flight.arrival.time.local)}</th>
               </div>
-            </div>
-            <div className="test">
-              <th>{convertTo12HourFormat(flight.departure.time.local)}</th>
-              <td>&#x2192;</td>
-              <th>{convertTo12HourFormat(flight.arrival.time.local)}</th>
-            </div>
-            <td>est. duration</td>
-            <th>{Math.round((flight.elapsedTime * 100) / 60) / 100}h</th>
-          </tr>
+              <td>est. duration</td>
+              <th>{Math.round((flight.elapsedTime * 100) / 60) / 100}h</th>
+            </tr>
+          </Link>
         ))}
       </tbody>
     </table>

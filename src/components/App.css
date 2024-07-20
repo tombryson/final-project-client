@@ -850,3 +850,7 @@ td img {
   overflow: hidden;
   z-index: -1;
 }
+
+td {
+  color: white;
+}
