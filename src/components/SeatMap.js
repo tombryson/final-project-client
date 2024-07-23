@@ -40,7 +40,7 @@ const SeatMap = (props) => {
 
   const Seat = ({ col, row }) => {
     const seatString = 'ABCDEF';
-    const name = seatString[col] + row;
+    const name = row + seatString[col];
     const flight_id = flightData.id;
     const user_id = sessionStorage.getItem('currentUserId');
     return (
@@ -65,7 +65,7 @@ const SeatMap = (props) => {
             for (let y = 0; y < cols; y++) {
               seatArr.push(<Seat col={y} row={x} />);
             }
-            seatArr.push(<br />);
+            // seatArr.push(<br />);
           }
           return seatArr;
         })()}

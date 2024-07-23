@@ -321,10 +321,13 @@ html {
 }
 
 .seats {
-  width: 40px;
-  height: 40px;
-  border-radius: 140px 140px 150px 150px/120px 120px 56px 56px;
+  font-variant: all-small-caps;
+  width: 46px;
+  height: 46px;
+  border-radius: 240px 240px 50px 50px / 120px 120px 86px 86px;
   transition: 0.1s ease;
+  margin: 4px;
+  padding: 25px;
 }
 
 .seats:hover {
@@ -332,9 +335,19 @@ html {
 }
 
 .seat-container {
-  margin-top: 100px;
-  margin-bottom: 200px;
   text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  background-color: grey;
+  border-radius: 70% 70% 0% 0% / 400% 400% 80% 80%;
+  display: grid;
+  grid-template-rows:
+    repeat(6, auto) 120px repeat(6, auto) 120px repeat(6, auto)
+    120px repeat(6, auto);
+  grid-template-columns: repeat(2, 0fr) 100px repeat(3, 0fr);
+  column-gap: 0px;
+  row-gap: 0px;
+  justify-content: center;
 }
 
 .icon-text,
