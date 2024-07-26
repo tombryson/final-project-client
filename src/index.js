@@ -14,7 +14,7 @@ import Profile from './components/Profile.js';
 import Book from './components/booking/Book.js';
 import MyTrips from './components/MyTrips.js';
 import NavBar from './components/NavBar.js';
-import SeatMap from './components/SeatMap.js';
+import SeatMap from './components/flight/SeatMap.js';
 import SiteHead from './components/SiteHead.js';
 import WelcomePage from './components/home/WelcomePage.js';
 import TestComponent from './components/TestComponent.js';

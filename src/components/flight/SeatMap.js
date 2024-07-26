@@ -55,6 +55,8 @@ const SeatMap = (props) => {
   };
 
   const seats = () => {
+    console.log(`FlightData: ${JSON.stringify(flightData)}`);
+    console.log(`PlaneData: ${JSON.stringify(planeData)}`);
     let rows = planeData.rows;
     let cols = planeData.cols;
     return (
@@ -65,7 +67,6 @@ const SeatMap = (props) => {
             for (let y = 0; y < cols; y++) {
               seatArr.push(<Seat col={y} row={x} />);
             }
-            // seatArr.push(<br />);
           }
           return seatArr;
         })()}

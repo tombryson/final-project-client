@@ -8,6 +8,7 @@ import {
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
+import hashSum from 'hash-sum';
 
 const ApiFlightTable = ({ flights }) => {
   function convertTo12HourFormat(time24) {
@@ -21,6 +22,10 @@ const ApiFlightTable = ({ flights }) => {
   const getAirlineImage = (code) =>
     airlineImages[code] || airlineImages.default;
   const getBorderImage = (code) => borderImages[code] || borderImages.default;
+
+  function flightNumberToHash(flightNumber) {
+    return hashSum(flightNumber).slice(0, 8);
+  }
 
   const duration = 500;
   const delay = 80;
@@ -43,7 +48,7 @@ const ApiFlightTable = ({ flights }) => {
     <table>
       <tbody>
         {flights.map((flight, index) => (
-          <Link to={`/flights/${flight.flightNumber}`}>
+          <Link to={`/flights/${flightNumberToHash(flight.flightNumber)}`}>
             <tr
               className="returned-flights"
               key={index}
@@ -84,7 +89,9 @@ const ApiFlightTable = ({ flights }) => {
               <td>est. duration</td>
               <th>{Math.round((flight.elapsedTime * 100) / 60) / 100}h</th>
               <td>
-                <Link to={`/flights/${flight.flightNumber}`}>
+                <Link
+                  to={`/flights/${flightNumberToHash(flight.flightNumber)}`}
+                >
                   Select Flight
                 </Link>
               </td>
