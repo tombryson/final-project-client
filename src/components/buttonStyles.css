@@ -78,7 +78,7 @@
   bottom: 0;
   width: 0;
   height: 1.5px;
-  background: #eceaeaed;
+  background: #dad9d9e3;
   transition: width 0.2s;
 }
 
@@ -107,9 +107,10 @@
 }
 
 .nav-button:active::before {
-  background: hsl(42deg 56% 62% / 85%) 2px;
+  background: hsl(42deg 38% 62% / 94%) 2px;
 }
 
 .profile-img {
   width: 72%;
+  padding-right: 2px;
 }

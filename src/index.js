@@ -62,7 +62,6 @@ root.render(
         <Route path="book" element={<Book />} />
         <Route path="mytrips" element={<MyTrips />} />
         <Route path="/book/flights/:id" element={<SeatMap />} />
-        <Route path="/book/flights/40" element={<SeatMap />} />
         <Route path="auth" element={<Auth />} />
         <Route path="*" element={<></>} />
       </Route>

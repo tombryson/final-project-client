@@ -3,10 +3,10 @@ import { useLocation } from 'react-router-dom';
 
 function Home(authVisible) {
   const location = useLocation();
-  const showCarousel = location.pathname !== '/book';
+  const showCarousel = location.pathname === '/';
   let message = 'Welcome';
 
-  if (location.pathname === '/auth') {
+  if (location.pathname === '/auth' || location.pathname === '/') {
     message = 'Welcome';
   } else if (location.pathname === '/profile') {
     message = 'My Profile';
@@ -14,6 +14,8 @@ function Home(authVisible) {
     message = 'Where to?';
   } else if (location.pathname === '/mytrips') {
     message = 'My Trips';
+  } else {
+    message = '';
   }
 
   return (
