@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const SeatMap = (props) => {
+const SeatMap = () => {
   // eslint-disable-next-line no-unused-vars
   const [seat, setSeat] = useState('');
   const [flightData, setFlightData] = useState([]);
@@ -11,6 +11,19 @@ const SeatMap = (props) => {
   const location = useLocation();
 
   const siteURL = 'http://localhost:3000/';
+
+  const flight = location.state?.flight; // Access the state
+
+  useEffect(() => {
+    if (flight) {
+      console.log(`Flight: ${flight.flightNumber}`);
+      setFlightData(flight);
+      setPlaneData({
+        rows: 64,
+        cols: 6,
+      });
+    }
+  }, [flight]);
 
   const _handleOnClick = (seat) => {
     setSeat(seat);
@@ -29,14 +42,22 @@ const SeatMap = (props) => {
       });
   };
 
-  useEffect(() => {
-    if (flightData.length === 0)
-      axios.get(`${siteURL}${location.pathname}`).then((response) => {
-        setFlightData(response.data[1]);
-        setPlaneData(response.data[0]);
-      });
-    // eslint-disable-next-line
-  }, [flightData]);
+  // useEffect(() => {
+  //   if (flightData.length === 0) {
+  //     axios.get(`${siteURL}${location.pathname}`).then((response) => {
+  //       setFlightData(response.data[1]);
+  //       setPlaneData(response.data[0]);
+  //     });
+  //   } else {
+  //     console.log(`flight: ${flight.flightNumber}`);
+  //     setFlightData(flight);
+  //     setPlaneData({
+  //       cols: 6,
+  //       rows: 40,
+  //     });
+  //   }
+  //   // eslint-disable-next-line
+  // }, [flight]);
 
   const Seat = ({ col, row }) => {
     const seatString = 'ABCDEF';
@@ -55,8 +76,6 @@ const SeatMap = (props) => {
   };
 
   const seats = () => {
-    console.log(`FlightData: ${JSON.stringify(flightData)}`);
-    console.log(`PlaneData: ${JSON.stringify(planeData)}`);
     let rows = planeData.rows;
     let cols = planeData.cols;
     return (
@@ -77,7 +96,11 @@ const SeatMap = (props) => {
   return (
     <>
       <h1 className="my-trips"> Seat Map </h1>
-      <p className="flight-model">{planeData.model}</p>
+      <div className="flight-model">
+        <p>{String(location.state.flight.carrier.iata)}</p>
+        <p>{String(location.state.flight.flightNumber)}</p>
+        <p>{String(location.state.flight.departure.airport.iata)}</p>
+      </div>
       {seats()};
     </>
   );

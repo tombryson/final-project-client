@@ -17,7 +17,6 @@ import NavBar from './components/NavBar.js';
 import SeatMap from './components/flight/SeatMap.js';
 import SiteHead from './components/SiteHead.js';
 import WelcomePage from './components/home/WelcomePage.js';
-import TestComponent from './components/TestComponent.js';
 import CarouselComponent from './components/home/CarouselComponent.js';
 import CarouselHome from './components/home/CarouselHome.js';
 import DealsCallout from './components/home/DealsCallout.js';
@@ -62,7 +61,8 @@ root.render(
         <Route path="profile" element={<Profile />} />
         <Route path="book" element={<Book />} />
         <Route path="mytrips" element={<MyTrips />} />
-        <Route path="flights/:id" element={<SeatMap />} />
+        <Route path="/book/flights/:id" element={<SeatMap />} />
+        <Route path="/book/flights/40" element={<SeatMap />} />
         <Route path="auth" element={<Auth />} />
         <Route path="*" element={<></>} />
       </Route>

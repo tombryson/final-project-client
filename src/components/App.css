@@ -273,10 +273,9 @@ html {
 }
 
 .flight-model {
-  display: inline-block;
+  display: block;
   position: absolute;
-  margin: 22%;
-  color: white;
+  color: black;
   font-size: 30px;
 }
 
