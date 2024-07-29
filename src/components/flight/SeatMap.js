@@ -19,7 +19,7 @@ const SeatMap = () => {
       console.log(`Flight: ${flight.flightNumber}`);
       setFlightData(flight);
       setPlaneData({
-        rows: 64,
+        rows: 28,
         cols: 6,
       });
     }

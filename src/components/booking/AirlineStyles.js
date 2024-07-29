@@ -29,8 +29,8 @@ export const airlineImages = {
 };
 
 export const borderImages = {
-  QF: 'linear-gradient(6deg, #5f1919 50%, transparent 45%, black 5px) 2',
-  JQ: 'linear-gradient(6deg, rgb(153 65 27 / 77%) 50%, transparent 45%, black 5px) 2',
-  ANZ: 'linear-gradient(6deg, rgb(64 63 63) 50%, transparent 45%, black 5px) 2',
-  default: 'linear-gradient(6deg, #5f1919 50%, transparent 45%, black 5px) 2',
+  QF: 'linear-gradient(6deg, #5f1919 47%, transparent 45%, black 5px) 2',
+  JQ: 'linear-gradient(6deg, rgb(153 65 27 / 77%) 47%, transparent 45%, black 5px) 2',
+  ANZ: 'linear-gradient(6deg, rgb(64 63 63) 47%, transparent 45%, black 5px) 2',
+  default: 'linear-gradient(6deg, #5f1919 47%, transparent 45%, black 5px) 2',
 };

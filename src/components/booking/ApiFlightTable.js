@@ -102,8 +102,11 @@ const ApiFlightTable = ({ flights }) => {
             <td>est. duration</td>
             <th>{formatElapsedTime(flight.elapsedTime)}</th>
             <td>
-              <button onClick={() => handleFlightSelect(flight)}>
-                Select Flight
+              <button
+                className="booking-select-flight"
+                onClick={() => handleFlightSelect(flight)}
+              >
+                Select flight
               </button>
             </td>
           </tr>
