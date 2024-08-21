@@ -16,7 +16,6 @@ const SeatMap = () => {
 
   useEffect(() => {
     if (flight) {
-      console.log(`Flight: ${flight.flightNumber}`);
       setFlightData(flight);
       setPlaneData({
         rows: 28,
@@ -96,12 +95,16 @@ const SeatMap = () => {
   return (
     <>
       <h1 className="my-trips"> Seat Map </h1>
-      <div className="flight-model">
-        <p>{String(location.state.flight.carrier.iata)}</p>
-        <p>{String(location.state.flight.flightNumber)}</p>
-        <p>{String(location.state.flight.departure.airport.iata)}</p>
+      <div className="seat-map-container">
+        <div className="flight-data-container">
+          <div className="flight-data">
+            <p>{String(location.state.flight.carrier.iata)}</p>
+            <p>{String(location.state.flight.flightNumber)}</p>
+            <p>{String(location.state.flight.departure.airport.iata)}</p>
+          </div>
+        </div>
+        {seats()}
       </div>
-      {seats()};
     </>
   );
 };
