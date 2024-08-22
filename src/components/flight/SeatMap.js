@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { airlineNames } from '../booking/AirlineStyles.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SeatMap = () => {
@@ -98,8 +99,8 @@ const SeatMap = () => {
       <div className="seat-map-container">
         <div className="flight-data-container">
           <div className="flight-data">
-            <p>{String(location.state.flight.carrier.iata)}</p>
-            <p>{String(location.state.flight.flightNumber)}</p>
+            <p>{airlineNames[String(location.state.flight.carrier.iata)]}</p>
+            <p>Flight {String(location.state.flight.flightNumber)}</p>
             <p>{String(location.state.flight.departure.airport.iata)}</p>
           </div>
         </div>

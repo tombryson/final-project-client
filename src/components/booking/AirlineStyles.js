@@ -28,6 +28,13 @@ export const airlineImages = {
   default: unknown,
 };
 
+export const airlineNames = {
+  QF: 'Qantas',
+  JQ: 'Jetstar',
+  ANZ: 'Airnewzealand',
+  default: 'Unknown',
+};
+
 export const borderImages = {
   QF: 'linear-gradient(6deg, #5f1919 47%, transparent 45%, black 5px) 2',
   JQ: 'linear-gradient(6deg, rgb(153 65 27 / 77%) 47%, transparent 45%, black 5px) 2',
