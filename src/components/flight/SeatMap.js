@@ -7,10 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const SeatMap = () => {
   // eslint-disable-next-line no-unused-vars
   const [seat, setSeat] = useState('');
+  const [isClicked, setIsClicked] = useState(false);
   const [flightData, setFlightData] = useState([]);
   const [planeData, setPlaneData] = useState([]);
   const location = useLocation();
-
   const siteURL = 'http://localhost:3000/';
 
   const flight = location.state?.flight; // Access the state
@@ -27,6 +27,9 @@ const SeatMap = () => {
 
   const _handleOnClick = (seat) => {
     setSeat(seat);
+    setIsClicked(true);
+    console.log(`seat clicked ${JSON.stringify(seat)}`);
+
     axios
       .post(`${siteURL}/bookings/`, {
         booking: {
@@ -59,16 +62,24 @@ const SeatMap = () => {
   //   // eslint-disable-next-line
   // }, [flight]);
 
-  const Seat = ({ col, row }) => {
+  const Seat = ({ col, row, onSeatClick }) => {
     const seatString = 'ABCDEF';
     const name = row + seatString[col];
     const flight_id = flightData.id;
     const user_id = sessionStorage.getItem('currentUserId');
+
     return (
       <button
         id={name}
-        onClick={() => _handleOnClick({ col, row, user_id, flight_id, name })}
+        onClick={() =>
+          _handleOnClick({ col, row, user_id, flight_id, name }, onSeatClick)
+        }
         className="seats"
+        style={{
+          backgroundColor:
+            name === seat.name ? 'hsl(0 90% 39% / 1)' : 'revert-layer',
+          filter: name === seat.name ? 'drop-shadow(0px 0px 2px gold)' : 'none',
+        }}
       >
         {name}
       </button>
@@ -78,6 +89,7 @@ const SeatMap = () => {
   const seats = () => {
     let rows = planeData.rows;
     let cols = planeData.cols;
+
     return (
       <div className="seat-container">
         {(() => {
@@ -99,9 +111,20 @@ const SeatMap = () => {
       <div className="seat-map-container">
         <div className="flight-data-container">
           <div className="flight-data">
-            <p>{airlineNames[String(location.state.flight.carrier.iata)]}</p>
-            <p>Flight {String(location.state.flight.flightNumber)}</p>
+            <p>
+              <strong>
+                {airlineNames[String(location.state.flight.carrier.iata)]}
+              </strong>
+            </p>
+            <p>
+              <strong>Flight</strong>{' '}
+              {String(location.state.flight.flightNumber)}
+            </p>
             <p>{String(location.state.flight.departure.airport.iata)}</p>
+            <p>
+              Seat:
+              {isClicked ? ` ${String(seat.name)}` : ''}
+            </p>
           </div>
         </div>
         {seats()}
