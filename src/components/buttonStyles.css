@@ -12,7 +12,7 @@
   font-size: clamp(1.2rem, calc(0.25rem + 1.05vw + 0.6vh), 1.8rem);
   background-image: linear-gradient(
     180deg,
-    hsl(359 85% 38% / 1) 92%,
+    hsl(359 85% 38% / 1) 93%,
     hsl(357deg 80% 16% / 86%) 99% 6px,
     #404040 116% 7px
   );

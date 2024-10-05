@@ -20,9 +20,11 @@ import WelcomePage from './components/home/WelcomePage.js';
 import CarouselComponent from './components/home/CarouselComponent.js';
 import CarouselHome from './components/home/CarouselHome.js';
 import DealsCallout from './components/home/DealsCallout.js';
+import { ScrollSnapProvider, useScrollSnap } from './context/ScrollSnapContext.js';
 
 const AppWrapper = ({ children }) => {
   const [authVisible, setAuthVisible] = useState(false);
+  const { isScrollSnapEnabled } = useScrollSnap();
   const location = useLocation();
 
   const toggleAuthVisible = () => {
@@ -30,8 +32,8 @@ const AppWrapper = ({ children }) => {
   };
 
   return (
-    <div className="app-container">
-      <div className="scroll-section">
+    <div className={`app-container ${isScrollSnapEnabled ? 'scroll-snap-enabled' : ''}`}>
+      <div className={isScrollSnapEnabled ? 'scroll-section' : ''}>
         <SiteHead toggleAuth={toggleAuthVisible} authState={authVisible} />
         <Home />
         <div
@@ -55,6 +57,7 @@ const AppWrapper = ({ children }) => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+  <ScrollSnapProvider>
     <Routes>
       <Route path="/" element={<AppWrapper />}>
         <Route index element={<></>} />
@@ -66,5 +69,6 @@ root.render(
         <Route path="*" element={<></>} />
       </Route>
     </Routes>
+    </ScrollSnapProvider>
   </BrowserRouter>,
 );

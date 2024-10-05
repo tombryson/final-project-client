@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useScrollSnap } from '../../context/ScrollSnapContext.js';
 
 function Home(authVisible) {
   const location = useLocation();
   const showCarousel = location.pathname === '/';
+  const { setIsScrollSnapEnabled } = useScrollSnap();
   let message = '';
   let showBanner = false;
+
+  useEffect(() => {
+    setIsScrollSnapEnabled(location.pathname === '/');
+  }, [location.pathname, setIsScrollSnapEnabled]);
 
   if (location.pathname === '/auth' || location.pathname === '/') {
     message = 'Welcome';

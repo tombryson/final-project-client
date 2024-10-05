@@ -13,7 +13,7 @@ const SeatMap = () => {
   const location = useLocation();
   const siteURL = 'http://localhost:3000/';
 
-  const flight = location.state?.flight; // Access the state
+  const flight = location.state?.flight;
 
   useEffect(() => {
     if (flight) {
@@ -74,12 +74,12 @@ const SeatMap = () => {
         onClick={() =>
           _handleOnClick({ col, row, user_id, flight_id, name }, onSeatClick)
         }
-        className="seats"
-        style={{
-          backgroundColor:
-            name === seat.name ? 'hsl(0 90% 39% / 1)' : 'revert-layer',
-          filter: name === seat.name ? 'drop-shadow(0px 0px 2px gold)' : 'none',
-        }}
+        // className="seats"
+        // style={{
+        //   backgroundColor:
+        //     name === seat.name ? 'hsl(0 90% 39% / 1)' : 'revert-layer'
+        // }}
+        className={`${name === seat.name ? 'selected-seat' : 'seats'}`}
       >
         {name}
       </button>
@@ -107,8 +107,21 @@ const SeatMap = () => {
 
   return (
     <>
-      <h1 className="my-trips"> Seat Map </h1>
+      <h1 className="my-trips"> Choose your seats </h1>
       <div className="seat-map-container">
+      <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 200 200"
+          className="plane-svg"
+        >
+  <rect x="90" y="30" width="20" height="100" fill="grey"></rect>
+  <path d="M45,100 Q60,40 75,110 Q60,120 45,110 Z" fill="grey"></path>
+  <path d="M125,100 Q140,40 155,110 Q140,120 125,110 Z" fill="grey"></path>
+  <polygon points="90,60 30,100 30,120 90,100" fill="darkgrey"></polygon>
+  <polygon points="110,60 170,100 170,120 110,100" fill="darkgrey"></polygon>
+  <line x1="90" y1="80" x2="30" y2="110" stroke="#888" stroke-width="2"></line>
+  <line x1="110" y1="80" x2="170" y2="110" stroke="#888" stroke-width="2"></line>
+</svg>
         <div className="flight-data-container">
           <div className="flight-data">
             <p>
