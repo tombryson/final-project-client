@@ -49,6 +49,7 @@
   bottom: 0;
   right: 0;
   padding: 8px;
+  border: solid black 0.5px;
   background: #c81313;
   transition: opacity 0.2s ease-in-out;
   opacity: 0;
@@ -62,7 +63,7 @@
 .booknow-link {
   display: grid;
   text-decoration: none;
-  padding-top: 10px;
+  padding-top: 6px;
 }
 
 .header-button {

@@ -248,6 +248,7 @@ html {
   flex-direction: row;
   align-content: center;
   min-width: 220px;
+  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
 }
 
 .auth-form {
@@ -675,7 +676,7 @@ input {
 
 @media (width > 650px) {
   .pad-3 {
-    padding: 3rem !important;
+    padding: calc(4rem + 3vw) !important;
   }
 }
 
