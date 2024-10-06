@@ -111,7 +111,7 @@ const SeatMap = () => {
       <div className="seat-map-container">
       <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 200 200"
+          viewBox="0 0 200 120"
           className="plane-svg"
         >
   <rect x="90" y="30" width="20" height="100" fill="grey"></rect>
