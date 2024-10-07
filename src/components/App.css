@@ -287,7 +287,7 @@ html {
 }
 
 .flight-data-container {
-  padding: 2rem;
+  padding: 3rem;
   height: -moz-fit-content;
   height: fit-content;
   max-height: 24rem;
@@ -296,13 +296,35 @@ html {
 
 .flight-data {
   font-size: calc(0.9rem + 0.9vw);
-  padding: 4rem;
-  border: solid #994646 1px;
+  border: solid #522525 1px;
   border-radius: 6px;
   position: fixed;
-  color: #000000;
+  color: white;
   background-color: #b50a0a;
-  filter: drop-shadow(2px 4px 4px black);
+  filter: drop-shadow(2px 3px 3px rgb(58, 58, 58));
+}
+
+.seat-data {
+ color: black;
+}
+
+.flight-info {
+  padding: 0.1rem;
+  display: block;
+}
+
+.seat-confirm-button {
+  background-color: inherit;
+  color: white;
+  padding: 1rem;
+  border: none;
+  font-size: 0.8rem;
+}
+
+.seat-info {
+  background-color: #17151f; /* Black background for seat info */
+  color: white;
+  padding: 1rem;
 }
 
 .header {

@@ -14,6 +14,7 @@ const SeatMap = () => {
   const siteURL = 'http://localhost:3000/';
 
   const flight = location.state?.flight;
+  console.log(`flight ${JSON.stringify(flight)}`)
 
   useEffect(() => {
     if (flight) {
@@ -109,35 +110,45 @@ const SeatMap = () => {
     <>
       <h1 className="my-trips"> Choose your seats </h1>
       <div className="seat-map-container">
-      <svg
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 200 120"
           className="plane-svg"
         >
-  <rect x="90" y="30" width="20" height="100" fill="grey"></rect>
-  <path d="M45,100 Q60,40 75,110 Q60,120 45,110 Z" fill="grey"></path>
-  <path d="M125,100 Q140,40 155,110 Q140,120 125,110 Z" fill="grey"></path>
-  <polygon points="90,60 30,100 30,120 90,100" fill="darkgrey"></polygon>
-  <polygon points="110,60 170,100 170,120 110,100" fill="darkgrey"></polygon>
-  <line x1="90" y1="80" x2="30" y2="110" stroke="#888" stroke-width="2"></line>
-  <line x1="110" y1="80" x2="170" y2="110" stroke="#888" stroke-width="2"></line>
-</svg>
+          <rect x="90" y="30" width="20" height="100" fill="grey"></rect>
+          <path d="M45,100 Q60,40 75,110 Q60,120 45,110 Z" fill="grey"></path>
+          <path d="M125,100 Q140,40 155,110 Q140,120 125,110 Z" fill="grey"></path>
+          <polygon points="90,60 30,100 30,120 90,100" fill="darkgrey"></polygon>
+          <polygon points="110,60 170,100 170,120 110,100" fill="darkgrey"></polygon>
+          <line x1="90" y1="80" x2="30" y2="110" stroke="#888" stroke-width="2"></line>
+          <line x1="110" y1="80" x2="170" y2="110" stroke="#888" stroke-width="2"></line>
+        </svg>
         <div className="flight-data-container">
           <div className="flight-data">
-            <p>
-              <strong>
-                {airlineNames[String(location.state.flight.carrier.iata)]}
-              </strong>
-            </p>
-            <p>
-              <strong>Flight</strong>{' '}
-              {String(location.state.flight.flightNumber)}
-            </p>
-            <p>{String(location.state.flight.departure.airport.iata)}</p>
-            <p>
-              Seat:
-              {isClicked ? ` ${String(seat.name)}` : ''}
-            </p>
+            <table className="flight-data-table">
+              <tbody>
+                <tr className="flight-info">
+                  <td colSpan="2">
+                    <th>
+                    {airlineNames[String(location.state.flight.carrier.iata)]} Flight {String(location.state.flight.flightNumber)}
+                    </th>
+                  </td>
+                </tr>
+                <tr className="flight-info">
+                  <td colSpan="2">
+                    {String(location.state.flight.departure.airport.iata)} to {String(location.state.flight.arrival.airport.iata)}
+                  </td>
+                </tr>
+                <tr className="seat-info">
+                  <td>{`Seat:     `}
+                  {isClicked ? String(seat.name) : <i style={{fontSize: '1rem'}}>Unselected</i>}</td>
+                </tr>
+                <tr>{isClicked ? 
+                  <tr><button className='seat-confirm-button'>Select Seat</button></tr>
+                : null}
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
         {seats()}
