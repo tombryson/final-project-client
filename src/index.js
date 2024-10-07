@@ -15,6 +15,7 @@ import Book from './components/booking/Book.js';
 import MyTrips from './components/MyTrips.js';
 import NavBar from './components/NavBar.js';
 import SeatMap from './components/flight/SeatMap.js';
+import Contact from './components/contact/contact.js';
 import SiteHead from './components/SiteHead.js';
 import WelcomePage from './components/home/WelcomePage.js';
 import Confirmation from './components/confirmation/confirmation.js';
@@ -64,6 +65,7 @@ root.render(
         <Route path="profile" element={<Profile />} />
         <Route path="book" element={<Book />} />
         <Route path="mytrips" element={<MyTrips />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="/book/flights/:id/confirmation" element={<Confirmation />} />
         <Route path="/book/flights/:id" element={<SeatMap />} />
         <Route path="auth" element={<Auth />} />

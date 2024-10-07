@@ -108,7 +108,7 @@ const SiteHead = ({ toggleAuth, authState }) => {
             </button>
           </Link>
         )}
-        <Link className="header-button" to="/">
+        <Link className="header-button" to="contact">
           <button
             className={`nav-button ${directions['contact']}`}
             onMouseOver={(e) => handleMouseEnter(e, 'contact')}
