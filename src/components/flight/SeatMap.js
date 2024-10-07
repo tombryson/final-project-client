@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { airlineNames } from '../booking/AirlineStyles.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,8 +14,8 @@ const SeatMap = () => {
   const siteURL = 'http://localhost:3000/';
 
   const flight = location.state?.flight;
-  console.log(`flight ${JSON.stringify(flight)}`)
-
+  const navigate = useNavigate();
+  
   useEffect(() => {
     if (flight) {
       setFlightData(flight);
@@ -26,10 +26,9 @@ const SeatMap = () => {
     }
   }, [flight]);
 
-  const _handleOnClick = (seat) => {
+  const _handleOnSeatClick = (seat) => {
     setSeat(seat);
     setIsClicked(true);
-    console.log(`seat clicked ${JSON.stringify(seat)}`);
 
     axios
       .post(`${siteURL}/bookings/`, {
@@ -46,22 +45,10 @@ const SeatMap = () => {
       });
   };
 
-  // useEffect(() => {
-  //   if (flightData.length === 0) {
-  //     axios.get(`${siteURL}${location.pathname}`).then((response) => {
-  //       setFlightData(response.data[1]);
-  //       setPlaneData(response.data[0]);
-  //     });
-  //   } else {
-  //     console.log(`flight: ${flight.flightNumber}`);
-  //     setFlightData(flight);
-  //     setPlaneData({
-  //       cols: 6,
-  //       rows: 40,
-  //     });
-  //   }
-  //   // eslint-disable-next-line
-  // }, [flight]);
+  const _handleOnConfirmClick = () => {
+    console.log('confirm clicked');
+    navigate(`/book/flights/${flightData.id}/confirmation`);
+  }
 
   const Seat = ({ col, row, onSeatClick }) => {
     const seatString = 'ABCDEF';
@@ -73,13 +60,8 @@ const SeatMap = () => {
       <button
         id={name}
         onClick={() =>
-          _handleOnClick({ col, row, user_id, flight_id, name }, onSeatClick)
+          _handleOnSeatClick({ col, row, user_id, flight_id, name }, onSeatClick)
         }
-        // className="seats"
-        // style={{
-        //   backgroundColor:
-        //     name === seat.name ? 'hsl(0 90% 39% / 1)' : 'revert-layer'
-        // }}
         className={`${name === seat.name ? 'selected-seat' : 'seats'}`}
       >
         {name}
@@ -144,7 +126,7 @@ const SeatMap = () => {
                   {isClicked ? String(seat.name) : <i style={{fontSize: '1rem'}}>Unselected</i>}</td>
                 </tr>
                 <tr>{isClicked ? 
-                  <tr><button className='seat-confirm-button'>Select Seat</button></tr>
+                  <tr><button className='seat-confirm-button' onClick={_handleOnConfirmClick}>Select Seat</button></tr>
                 : null}
                 </tr>
               </tbody>
