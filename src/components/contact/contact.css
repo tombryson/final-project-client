@@ -1,0 +1,38 @@
+.contact-container {
+    margin-top: max(6rem, 18vh);
+    padding: 2rem;
+    outline: 2px red solid;
+}
+
+.contact-button-container {
+    outline: 2px green solid;
+    padding: 2rem;
+    min-width: 16rem;
+    text-align: center;
+}
+
+.email-form {
+    outline: 2px blue solid;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-form > h2 {
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.email-form > form > button {
+    margin-top: 0.6rem;
+    padding: 0.2rem;
+    border-radius: 6px;
+    background-color: crimson;
+    color: white;
+}
+
+.message-box {
+    display: grid;
+}
