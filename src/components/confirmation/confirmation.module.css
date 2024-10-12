@@ -1,0 +1,5 @@
+.confirmation-container {
+    margin-top: max(6rem, 18vh);
+    padding: 4rem;
+    outline: red 2px solid;
+}

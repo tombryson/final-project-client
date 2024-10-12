@@ -869,10 +869,8 @@ ul {
 }
 
 .form__container table {
-  text-align: center;
-  color: white;
   margin: 4vw 0vw;
-  display: grid;
+  margin-inline: auto;
   font-weight: 100;
 }
 
@@ -885,14 +883,15 @@ ul {
 
 .returned-flights {
   opacity: 0;
-  border: solid 1.5px;
-  border-image: linear-gradient(6deg, #5f1919 50%, transparent 45%, black 5px) 2;
+  /* border: solid 1.5px; */
+  /* border-image: linear-gradient(6deg, #5f1919 50%, transparent 45%, black 5px) 2; */
   border-radius: 5% 2% 2% 5% / 35% 10% 10% 35%;
-  display: inline-flex;
+  border-radius: 0% 2% 2% 0% / 35% 10% 10% 35%;
+  /* display: inline-table; */
   background-image: linear-gradient(8deg, transparent 15px, #08090a 46px),
     linear-gradient(#cccccc 45%, #f6bbbb9c 26%, #830808f7 70%);
   margin: 2px 0px;
-  box-shadow: inset 2px 0px 1px 0px #efefefed;
+  box-shadow: inset 0.6px 0px 1px 0px #efefefed;
   align-items: center;
   padding: 0 2rem 0 0;
 }
@@ -905,6 +904,11 @@ tr.returned-flights:hover {
 tr.returned-flights:active {
   box-shadow: inset 2.5px 0px 1.5px 0px whitesmoke,
     inset 2.5px -3px 2px 1px #3c3c3c99;
+}
+
+.table-data-container {
+  display: inline-flex;
+  align-items: center;
 }
 
 @keyframes fadeIn {
@@ -930,8 +934,15 @@ td img {
   padding: 4px;
 }
 
-.test {
+.data-groupings {
   padding: 0px 1.5rem 0px 0;
+}
+
+.extra-info {
+  color: #f1f1f1;
+  background-color: transparent;
+  border: none;
+  padding: 0.4rem;
 }
 
 .background-video {

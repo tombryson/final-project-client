@@ -12,7 +12,6 @@ const SeatMap = () => {
   const [planeData, setPlaneData] = useState([]);
   const location = useLocation();
   const siteURL = 'http://localhost:3000/';
-
   const flight = location.state?.flight;
   const navigate = useNavigate();
   
@@ -46,7 +45,6 @@ const SeatMap = () => {
   };
 
   const _handleOnConfirmClick = () => {
-    console.log('confirm clicked');
     navigate(`/book/flights/${flightData.id}/confirmation`);
   }
 

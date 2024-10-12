@@ -9,8 +9,12 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import moment from 'moment';
 import hashSum from 'hash-sum';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareCaretDown } from '@fortawesome/free-solid-svg-icons';
+
 
 const ApiFlightTable = ({ flights }) => {
+  const [infoOpen, setInfoOpen] = useState({});
   const navigate = useNavigate();
 
   function convertTo12HourFormat(time24) {
@@ -22,6 +26,13 @@ const ApiFlightTable = ({ flights }) => {
     const minutes = elapsedTime % 60;
     return `${hours}h ${minutes}m`;
   };
+
+  const _openInfo = (flightNumber) => {
+    setInfoOpen(prevState => ({
+      ...prevState,
+      [flightNumber]: !prevState[flightNumber],
+    }));
+  }
 
   const getBackgroundStyle = (code) =>
     backgroundStyles[code] || backgroundStyles.default;
@@ -46,22 +57,11 @@ const ApiFlightTable = ({ flights }) => {
   const animStr = (i) =>
     `fadeIn ${duration}ms ease-out ${delay * i}ms forwards`;
 
-  // const FlightTable = (props) => {
-  //   const path = `/flights/${props.flights.id}`;
-  //   return (
-  //     <div className="searched-flight">
-  //       <Link to={path} state={{}} className="flights">
-  //         Flight: from {props.flights.from} to {props.flights.to} departing on{' '}
-  //         {props.flights.date}
-  //       </Link>
-  //     </div>
-  //   );
-  // };
-
   return (
     <table>
       <tbody>
         {flights.map((flight, index) => (
+          <React.Fragment key={index}>
           <tr
             className="returned-flights"
             key={index}
@@ -69,9 +69,11 @@ const ApiFlightTable = ({ flights }) => {
               animation: animStr(index),
               backgroundImage: getBackgroundStyle(flight.carrier.iata),
               borderImage: getBorderImage(flight.carrier.iata),
+              paddingBottom: infoOpen[flight.flightNumber] ? "12px" : "0px",
             }}
           >
-            <td>
+            <tr className='table-data-container'>
+            <td colSpan={6}>
               <img
                 src={getAirlineImage(flight.carrier.iata)}
                 alt={flight.carrier.iata}
@@ -84,7 +86,7 @@ const ApiFlightTable = ({ flights }) => {
             </td>
             <th>Flight</th>
             <td>{flight.flightNumber}</td>
-            <div className="test">
+            <div className="data-groupings">
               <div style={{ height: 30 + 'px' }}>
                 <td>Departing</td>
                 <th>{flight.departure.airport.iata}</th>
@@ -94,7 +96,7 @@ const ApiFlightTable = ({ flights }) => {
                 <th>{flight.arrival.airport.iata}</th>
               </div>
             </div>
-            <div className="test">
+            <div className="data-groupings">
               <th>{convertTo12HourFormat(flight.departure.time.local)}</th>
               <td>&#x2192;</td>
               <th>{convertTo12HourFormat(flight.arrival.time.local)}</th>
@@ -109,7 +111,28 @@ const ApiFlightTable = ({ flights }) => {
                 Select flight
               </button>
             </td>
+            <button className='extra-info' onClick={() => _openInfo(flight.flightNumber)}>
+              <FontAwesomeIcon icon={faSquareCaretDown} />
+            </button>
+            </tr>
+            {infoOpen[flight.flightNumber] && (
+              <tr>
+                <td colSpan="12">
+                  <div>
+                    <p>
+                      !ipsum
+
+                    </p>
+                    </div>
+                  <div>
+                    <p>Additional information about flight {flight.flightNumber}.</p>
+                    {/* Add more details or styling as needed */}
+                  </div>
+                </td>
+                </tr>
+          )}
           </tr>
+          </React.Fragment>
         ))}
       </tbody>
     </table>
