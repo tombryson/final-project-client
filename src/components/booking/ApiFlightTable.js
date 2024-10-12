@@ -72,7 +72,7 @@ const ApiFlightTable = ({ flights }) => {
               paddingBottom: infoOpen[flight.flightNumber] ? "12px" : "0px",
             }}
           >
-            <tr className='table-data-container'>
+            <tr className='table-data-container extra-info-row open'>
             <td colSpan={6}>
               <img
                 src={getAirlineImage(flight.carrier.iata)}
@@ -117,17 +117,9 @@ const ApiFlightTable = ({ flights }) => {
             </tr>
             {infoOpen[flight.flightNumber] && (
               <tr>
-                <td colSpan="12">
-                  <div>
-                    <p>
-                      !ipsum
-
-                    </p>
-                    </div>
-                  <div>
+                <td colSpan="12">                  
                     <p>Additional information about flight {flight.flightNumber}.</p>
                     {/* Add more details or styling as needed */}
-                  </div>
                 </td>
                 </tr>
           )}

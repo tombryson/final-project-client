@@ -310,7 +310,6 @@ html {
 
 .flight-info {
   padding: 0.1rem;
-  display: block;
 }
 
 .seat-confirm-button {
@@ -943,6 +942,17 @@ td img {
   background-color: transparent;
   border: none;
   padding: 0.4rem;
+}
+
+/* Add this to your App.css */
+.extra-info-row {
+  overflow: hidden; /* Prevents content from overflowing */
+  transition: height 0.3s ease; /* Smooth transition for height */
+  height: 0; /* Start with height 0 */
+}
+
+.extra-info-row.open {
+  height: auto; /* Allow height to expand when open */
 }
 
 .background-video {
