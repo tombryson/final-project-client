@@ -13,7 +13,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { format, parseISO } from 'date-fns';
 
-
 const ApiFlightTable = ({ flights }) => {
   const [infoOpen, setInfoOpen] = useState({});
   const navigate = useNavigate();
@@ -113,8 +112,7 @@ const ApiFlightTable = ({ flights }) => {
                 </td>
               </tr>
             </div>
-            <td>est. duration</td>
-            <th>{formatElapsedTime(flight.elapsedTime)}</th>
+            <th>from {` $${flight.price}`}</th>
             <td>
               <button
                 className="booking-select-flight"

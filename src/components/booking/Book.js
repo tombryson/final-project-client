@@ -55,19 +55,6 @@ const Book = () => {
 
     setFlightTableVisible(true);
 
-    // try {
-    //   const response = await fetch('http://localhost:3000/flights/submit', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ apiURL }),
-    //   });
-
-    //   const data = await response.json();
-    // } catch (error) {
-    //   setMessage(`Error: ${error.toString()}`);
-    // }
     try {
       const response = await fetch('./data.json');
       if (!response.ok) {
@@ -75,34 +62,38 @@ const Book = () => {
       }
 
       const JSONdata = await response.json();
-      setFlights(JSONdata.data);
+      const flightData = JSONdata.data; // Assuming this contains the flight information
+  
+      // Now, send a request to the backend to get pricing data
+      const pricingResponse = await fetch('http://localhost:3000/flights/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(flightData), // Send the flight data to the backend
+      });
+  
+      if (!pricingResponse.ok) {
+        throw new Error('Failed to fetch pricing data');
+      }
+  
+      const pricingData = await pricingResponse.json();
+      console.log(pricingData);
+  
+      // Combine flight data with pricing data
+      const flightsWithPricing = flightData.map((flight, index) => ({
+        ...flight,
+        price: pricingData[index]?.price || 'N/A', // Assuming pricingData is an array
+      }));
+  
+      setFlights(flightsWithPricing);
       setFlightTableVisible(true);
     } catch (error) {
       console.error('Error fetching flight data:', error);
     }
-  };
+  }
 
   /////////////////////
-
-  // const _handleTo = (form) => {
-  //   const result = form.target.value.replace(/[^a-z]/gi, '').toUpperCase();
-  //   setToField(result);
-  //   setTo(result);
-  // };
-
-  // const _handleFrom = (form) => {
-  //   const result = form.target.value.replace(/[^a-z]/gi, '').toUpperCase();
-  //   setFromField(result);
-  //   setFrom(result);
-  // };
-
-  // const flight = flights.map((item) => {
-  //   return item.flight_id !== undefined ? (
-  //     <FlightTable key={item.flight_id} flights={item} />
-  //   ) : (
-  //     []
-  //   );
-  // });
 
   const getItems = (flights) => {
     return flights.length === 0 ||
@@ -202,17 +193,5 @@ const Book = () => {
     </>
   );
 };
-
-// const FlightTable = (props) => {
-//   const path = `/flights/${props.flights.id}`;
-//   return (
-//     <div className="searched-flight">
-//       <Link to={path} state={{}} className="flights">
-//         Flight: from {props.flights.from} to {props.flights.to} departing on{' '}
-//         {props.flights.date}
-//       </Link>
-//     </div>
-//   );
-// };
 
 export default Book;
