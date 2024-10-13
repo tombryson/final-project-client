@@ -885,8 +885,8 @@ ul {
   /* border: solid 1.5px; */
   /* border-image: linear-gradient(6deg, #5f1919 50%, transparent 45%, black 5px) 2; */
   border-radius: 5% 2% 2% 5% / 35% 10% 10% 35%;
-  border-radius: 0% 2% 2% 0% / 35% 10% 10% 35%;
-  /* display: inline-table; */
+  border-radius: 2% 2% 2% 2% / 35% 10% 10% 35%;
+  display: block;
   background-image: linear-gradient(8deg, transparent 15px, #08090a 46px),
     linear-gradient(#cccccc 45%, #f6bbbb9c 26%, #830808f7 70%);
   margin: 2px 0px;
@@ -937,22 +937,16 @@ td img {
   padding: 0px 1.5rem 0px 0;
 }
 
+.date-of-flight {
+  padding: 0px;
+  font-size: small;
+}
+
 .extra-info {
   color: #f1f1f1;
   background-color: transparent;
   border: none;
   padding: 0.4rem;
-}
-
-/* Add this to your App.css */
-.extra-info-row {
-  overflow: hidden; /* Prevents content from overflowing */
-  transition: height 0.3s ease; /* Smooth transition for height */
-  height: 0; /* Start with height 0 */
-}
-
-.extra-info-row.open {
-  height: auto; /* Allow height to expand when open */
 }
 
 .background-video {

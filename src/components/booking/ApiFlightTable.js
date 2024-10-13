@@ -11,6 +11,7 @@ import moment from 'moment';
 import hashSum from 'hash-sum';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { format, parseISO } from 'date-fns';
 
 
 const ApiFlightTable = ({ flights }) => {
@@ -97,9 +98,20 @@ const ApiFlightTable = ({ flights }) => {
               </div>
             </div>
             <div className="data-groupings">
-              <th>{convertTo12HourFormat(flight.departure.time.local)}</th>
-              <td>&#x2192;</td>
-              <th>{convertTo12HourFormat(flight.arrival.time.local)}</th>
+              <tr style={{whiteSpace:"nowrap"}}>
+                <th>{convertTo12HourFormat(flight.departure.time.local)}</th>
+                <td>&#x2192;</td>
+                <th>{convertTo12HourFormat(flight.arrival.time.local)}</th>
+              </tr>
+              <tr>
+                <td className='date-of-flight'>
+                {format(parseISO(flight.departure.date.local), "do MMMM")}
+                </td>
+                <td></td>
+                <td className='date-of-flight'>
+                {format(parseISO(flight.arrival.date.local), "do MMMM")}
+                </td>
+              </tr>
             </div>
             <td>est. duration</td>
             <th>{formatElapsedTime(flight.elapsedTime)}</th>
@@ -111,15 +123,15 @@ const ApiFlightTable = ({ flights }) => {
                 Select flight
               </button>
             </td>
-            <button className='extra-info' onClick={() => _openInfo(flight.flightNumber)}>
+            <button type="button" className='extra-info' onClick={() => _openInfo(flight.flightNumber)}>
               <FontAwesomeIcon icon={faSquareCaretDown} />
             </button>
             </tr>
             {infoOpen[flight.flightNumber] && (
               <tr>
-                <td colSpan="12">                  
-                    <p>Additional information about flight {flight.flightNumber}.</p>
-                    {/* Add more details or styling as needed */}
+                <td colSpan="12"> est. duration</td>
+            <th>{formatElapsedTime(flight.elapsedTime)}</th>
+            <td>
                 </td>
                 </tr>
           )}
