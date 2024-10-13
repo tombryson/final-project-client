@@ -9,7 +9,7 @@
   font-family: inherit;
   filter: drop-shadow(0px -4px 3px#1616167a) opacity(0.96);
   text-shadow: 0px 0px 2px #2f2b2b;
-  font-size: clamp(1.2rem, calc(0.25rem + 1.05vw + 0.6vh), 1.8rem);
+  font-size: clamp(1.2rem, calc(0.25rem + 1.05vw + 0.6vh), 1.6rem);
   background-image: linear-gradient(
     180deg,
     hsl(359 85% 38% / 1) 93%,

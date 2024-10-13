@@ -139,7 +139,7 @@
   }
 
   .header {
-    max-height: 10.5vh;
+    max-height: 10vh;
   }
 }
 
@@ -850,7 +850,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  height: 82vh;
   overflow-y: auto; /* Ensures the container can scroll */
 }
 
@@ -906,6 +906,7 @@ tr.returned-flights:active {
 
 .table-data-container {
   display: inline-flex;
+  padding: clamp(0.1rem, 0.1vh + 0.2vw, 0.6rem);
   align-items: center;
 }
 
@@ -932,8 +933,16 @@ td img {
   padding: 4px;
 }
 
-.data-groupings {
-  padding: 0px 1.5rem 0px 0;
+.flight-destination-groupings {
+  padding: 0px 2.5rem 0px 0;
+}
+
+.flight-time-groupings {
+  min-width: 13rem;
+}
+
+.flight-prices {
+  color: #efad14;
 }
 
 .date-of-flight {
@@ -975,11 +984,11 @@ td {
 
 .booking-select-flight {
   line-height: inherit;
-  background-color: rgb(22, 22, 22);
-  border: solid 2px grey;
+  background-color: rgb(19 19 19);
+  border: solid 1px grey;
   font-size: 0.9rem;
   color: white;
-  border-radius: 20px;
+  border-radius: 18px;
   padding: 6px 18px;
   margin: 2px 0px 0px 10px;
 }

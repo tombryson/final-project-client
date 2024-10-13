@@ -123,6 +123,11 @@ const SeatMap = () => {
                   <td>{`Seat:     `}
                   {isClicked ? String(seat.name) : <i style={{fontSize: '1rem'}}>Unselected</i>}</td>
                 </tr>
+                <tr className="flight-info">
+                  <td colSpan="2">
+                  ${flight.price}
+                  </td>
+                </tr>
                 <tr>{isClicked ? 
                   <tr><button className='seat-confirm-button' onClick={_handleOnConfirmClick}>Select Seat</button></tr>
                 : null}

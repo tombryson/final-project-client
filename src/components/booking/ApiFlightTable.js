@@ -69,7 +69,7 @@ const ApiFlightTable = ({ flights }) => {
               animation: animStr(index),
               backgroundImage: getBackgroundStyle(flight.carrier.iata),
               borderImage: getBorderImage(flight.carrier.iata),
-              paddingBottom: infoOpen[flight.flightNumber] ? "12px" : "0px",
+              paddingBottom: infoOpen[flight.flightNumber] ? "12px" : "3px",
             }}
           >
             <tr className='table-data-container extra-info-row open'>
@@ -86,7 +86,7 @@ const ApiFlightTable = ({ flights }) => {
             </td>
             <th>Flight</th>
             <td>{flight.flightNumber}</td>
-            <div className="data-groupings">
+            <div className="flight-destination-groupings">
               <div style={{ height: 30 + 'px' }}>
                 <td>Departing</td>
                 <th>{flight.departure.airport.iata}</th>
@@ -96,7 +96,7 @@ const ApiFlightTable = ({ flights }) => {
                 <th>{flight.arrival.airport.iata}</th>
               </div>
             </div>
-            <div className="data-groupings">
+            <div className="flight-time-groupings">
               <tr style={{whiteSpace:"nowrap"}}>
                 <th>{convertTo12HourFormat(flight.departure.time.local)}</th>
                 <td>&#x2192;</td>
@@ -112,7 +112,7 @@ const ApiFlightTable = ({ flights }) => {
                 </td>
               </tr>
             </div>
-            <th>from {` $${flight.price}`}</th>
+            <th className='flight-prices'><span style={{color: "white", fontSize: "small"}}>from</span> {` $${flight.price}`}</th>
             <td>
               <button
                 className="booking-select-flight"
@@ -129,8 +129,6 @@ const ApiFlightTable = ({ flights }) => {
               <tr>
                 <td colSpan="12"> est. duration</td>
             <th>{formatElapsedTime(flight.elapsedTime)}</th>
-            <td>
-                </td>
                 </tr>
           )}
           </tr>
