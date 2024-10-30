@@ -129,7 +129,7 @@ const SeatMap = () => {
                   </td>
                 </tr>
                 <tr>{isClicked ? 
-                  <tr><button className='seat-confirm-button' onClick={_handleOnConfirmClick}>Select Seat</button></tr>
+                  <tr><button className='seat-confirm-button' onClick={_handleOnConfirmClick}>Select Seat 	&#x1F525;</button></tr>
                 : null}
                 </tr>
               </tbody>

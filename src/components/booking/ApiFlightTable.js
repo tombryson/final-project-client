@@ -12,6 +12,7 @@ import hashSum from 'hash-sum';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { format, parseISO } from 'date-fns';
+import { height } from '@fortawesome/free-solid-svg-icons/fa0';
 
 const ApiFlightTable = ({ flights }) => {
   const [infoOpen, setInfoOpen] = useState({});
@@ -121,14 +122,25 @@ const ApiFlightTable = ({ flights }) => {
                 Select flight
               </button>
             </td>
-            <button type="button" className='extra-info' onClick={() => _openInfo(flight.flightNumber)}>
+            <button type="button" className='extra-info-button' onClick={() => _openInfo(flight.flightNumber)}>
               <FontAwesomeIcon icon={faSquareCaretDown} />
             </button>
             </tr>
             {infoOpen[flight.flightNumber] && (
-              <tr>
+              <tr className='extra-info-border'>
+                <td className='extra-flight-details'>
                 <td colSpan="12"> est. duration</td>
-            <th>{formatElapsedTime(flight.elapsedTime)}</th>
+                <th>{formatElapsedTime(flight.elapsedTime)}</th>
+            </td>
+            <th>
+              <td className='extra-flight-svg'>
+              <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" aria-hidden="true" class="icon-module_icon__B4xp9 icon-module_size-300__BfBMR icon-module_color-brand__FKpvJ"><path fill="currentColor" fill-rule="evenodd" d="M20.126 6.259h-4.875V4.586a.83.83 0 0 0-.813-.836H9.563a.83.83 0 0 0-.814.836V6.26H3.874A1.654 1.654 0 0 0 2.25 7.93v10.875a1.654 1.654 0 0 0 1.624 1.673h16.252a1.654 1.654 0 0 0 1.624-1.669V7.935a1.654 1.654 0 0 0-1.624-1.672zM9.968 5.213a.416.416 0 0 1 .408-.42h3.248c.228.004.41.191.409.42v1.046H9.968zM7.125 18.81H5.5V7.935h1.624zm11.374 0h-1.624V7.935H18.5z" clip-rule="evenodd"></path>
+              </svg>
+              </td>
+              </th>
+              <td>
+              20kg
+              </td>
                 </tr>
           )}
           </tr>
