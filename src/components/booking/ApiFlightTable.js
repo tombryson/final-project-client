@@ -19,7 +19,7 @@ const ApiFlightTable = ({ flights }) => {
   const navigate = useNavigate();
 
   function convertTo12HourFormat(time24) {
-    return moment(time24, 'HH:mm').format('h:mm A');
+    return moment(time24, 'HH:mm').format('h:mm a');
   }
 
   const formatElapsedTime = (elapsedTime) => {
@@ -70,7 +70,7 @@ const ApiFlightTable = ({ flights }) => {
               animation: animStr(index),
               backgroundImage: getBackgroundStyle(flight.carrier.iata),
               borderImage: getBorderImage(flight.carrier.iata),
-              paddingBottom: infoOpen[flight.flightNumber] ? "12px" : "3px",
+              paddingBottom: infoOpen[flight.flightNumber] ? "0px" : "3px",
             }}
           >
             <tr className='table-data-container extra-info-row open'>
@@ -86,7 +86,10 @@ const ApiFlightTable = ({ flights }) => {
               />
             </td>
             <th>Flight</th>
-            <td>{flight.flightNumber}</td>
+            <td 
+            style={{width: "56px"}}
+            >
+              {flight.flightNumber}</td>
             <div className="flight-destination-groupings">
               <div style={{ height: 30 + 'px' }}>
                 <td>Departing</td>
@@ -99,9 +102,9 @@ const ApiFlightTable = ({ flights }) => {
             </div>
             <div className="flight-time-groupings">
               <tr style={{whiteSpace:"nowrap"}}>
-                <th>{convertTo12HourFormat(flight.departure.time.local)}</th>
+                <th className='flight-times'>{convertTo12HourFormat(flight.departure.time.local)}</th>
                 <td>&#x2192;</td>
-                <th>{convertTo12HourFormat(flight.arrival.time.local)}</th>
+                <th className='flight-times'>{convertTo12HourFormat(flight.arrival.time.local)}</th>
               </tr>
               <tr>
                 <td className='date-of-flight'>
@@ -114,7 +117,9 @@ const ApiFlightTable = ({ flights }) => {
               </tr>
             </div>
             <th className='flight-prices'><span style={{color: "white", fontSize: "small"}}>from</span> {` $${flight.price}`}</th>
-            <td>
+            <td  
+              style={{padding: "1.6rem 0.4rem 1.6rem 1.4rem"}}
+              >
               <button
                 className="booking-select-flight"
                 onClick={() => handleFlightSelect(flight)}
@@ -122,9 +127,11 @@ const ApiFlightTable = ({ flights }) => {
                 Select flight
               </button>
             </td>
-            <button type="button" className='extra-info-button' onClick={() => _openInfo(flight.flightNumber)}>
-              <FontAwesomeIcon icon={faSquareCaretDown} />
-            </button>
+            <td style={{width: "2.5rem", display: "flex", justifyContent: "center"}}>
+              <button type="button" className='extra-info-button' onClick={() => _openInfo(flight.flightNumber)}>
+                <FontAwesomeIcon icon={faSquareCaretDown} />
+              </button>
+            </td>
             </tr>
             {infoOpen[flight.flightNumber] && (
               <tr className='extra-info-border'>

@@ -93,20 +93,6 @@
   min-width: 6.4rem;
 }
 
-.greeting-opaque > h1::before {
-  content: '\2708';
-  font-size: smaller;
-  font-weight: 200;
-  color: #f7f1f1;
-  padding: 0.2vw;
-  /* position: absolute; */
-  top: 6rem;
-  animation: initial;
-  transform: translateY(-50%);
-  animation-play-state: running;
-  /* animation: moveAirplane 5s linear infinite; */
-}
-
 @keyframes moveAirplane {
   0% {
     left: 0;
@@ -551,12 +537,11 @@ a > .icon-text > span {
 
 .button__search--booking {
   font-weight: 600;
-  margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: 0.1rem;
   padding: 0.6rem;
   border-radius: 6px;
   color: white;
-  border: none;
+  border: #444444 1px solid;
   width: -webkit-fill-available;
   background-color: hsl(359 85% 38% / 1);
 }
@@ -884,30 +869,29 @@ ul {
   opacity: 0;
   /* border: solid 1.5px; */
   /* border-image: linear-gradient(6deg, #5f1919 50%, transparent 45%, black 5px) 2; */
-  border-radius: 5% 2% 2% 5% / 35% 10% 10% 35%;
-  border-radius: 3% 1% 1% 3% / 26% 10% 10% 26%;
+  border-radius: 1.8rem 1rem 1rem 1.6rem / 30% 10% 10% 36%;
   display: block;
   background-image: linear-gradient(8deg, transparent 15px, #08090a 46px),
     linear-gradient(#cccccc 45%, #f6bbbb9c 26%, #830808f7 70%);
-  margin: 2px 0px;
+  margin: 0.3rem 0px;
   box-shadow: inset 0.6px 0px 1px 0px #cececeed;
   align-items: center;
-  padding: 0 2rem 0 0;
+  padding: 0 1.2rem 0 0.2rem;
 }
 
 tr.returned-flights:hover {
-  box-shadow: inset 1.4px 0px 1.4px 0.4px #c9c9c9f2, inset 1.8px -1.8px 3px 1.8px #aaaaaa99;
-}
-
-tr.returned-flights:active {
-  box-shadow: inset 2.5px 0px 1.5px 0px whitesmoke,
-    inset 2.5px -3px 2px 1px #3c3c3c99;
+  box-shadow: inset 1.2px 0px 1px 0px #c9c9c9d6, inset 0.5px 0.2px 1.2px 0.5px #aaaaaa78;
 }
 
 .table-data-container {
   display: inline-flex;
-  padding: clamp(0.1rem, 0.1vh + 0.2vw, 0.6rem);
+  padding: clamp(0.1rem, 0.1vh + 0.3vw, 0.8rem);
   align-items: center;
+}
+
+.flight-times {
+  font-weight: 300;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @keyframes fadeIn {
@@ -934,15 +918,18 @@ td img {
 }
 
 .flight-destination-groupings {
+  text-align: -webkit-right;
   padding: 0px 2.5rem 0px 0;
 }
 
 .flight-time-groupings {
-  min-width: 13rem;
+  min-width: 12.2rem;
 }
 
 .flight-prices {
   color: #efad14;
+  padding: 0 0rem 0 0.3rem;
+  width: 86px;
 }
 
 .date-of-flight {
@@ -954,14 +941,14 @@ td img {
   color: #f1f1f1;
   background-color: transparent;
   border: none;
-  padding: 0.4rem;
+  padding: 0rem 0rem 0rem 0.6rem;
 }
 
 .extra-info-border {
   display: flex;
-  width: 104%;
+  width: 102%;
   border-top: #353535e8 dotted 1px;
-  padding-bottom: 0.8rem  ;
+  padding: 0.2rem 0rem 1rem 0rem;
 }
 
 .extra-flight-details {
@@ -1007,7 +994,6 @@ td {
   color: white;
   border-radius: 18px;
   padding: 6px 18px;
-  margin: 2px 0px 0px 10px;
 }
 
 .booking-select-flight:hover {
