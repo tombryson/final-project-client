@@ -23,7 +23,7 @@ function Home(authVisible) {
     message = 'Where to?';
     showBanner = true;
   } else if (location.pathname === '/mytrips') {
-    message = 'My Trips';
+    message = 'My Flights';
     showBanner = true;
   }
 

@@ -91,7 +91,7 @@ const SiteHead = ({ toggleAuth, authState }) => {
                 onMouseOut={(e) => handleMouseLeave(e, 'mybookings')}
                 onClick={authState ? toggleAuth : null}
               >
-                My Flights
+                Flights
               </button>
             </Link>
           </>

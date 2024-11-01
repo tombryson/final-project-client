@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const MyTrips = () => {
+const MyFlights = () => {
   // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useState([]);
   const [trips, setTrips] = useState([]);
@@ -28,12 +28,8 @@ const MyTrips = () => {
   };
 
   const TripsTable = (props) => {
-    console.log(props);
-    console.log(props.trips.cols);
-    console.log(props.trips.rows);
     let seatString = 'ABCDEF';
     let name = seatString[props.trips.cols] + props.trips.rows;
-    console.log(name);
     return (
       <div className="searched-flight">
         Flight: from {props.flight.from} to {props.flight.to}. Seat ID: {name}
@@ -59,4 +55,4 @@ const MyTrips = () => {
   );
 };
 
-export default MyTrips;
+export default MyFlights;

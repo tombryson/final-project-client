@@ -132,16 +132,28 @@ const ApiFlightTable = ({ flights }) => {
                 <td colSpan="12"> est. duration</td>
                 <th>{formatElapsedTime(flight.elapsedTime)}</th>
             </td>
-            <th>
               <td className='extra-flight-svg'>
-              <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" aria-hidden="true" class="icon-module_icon__B4xp9 icon-module_size-300__BfBMR icon-module_color-brand__FKpvJ"><path fill="currentColor" fill-rule="evenodd" d="M20.126 6.259h-4.875V4.586a.83.83 0 0 0-.813-.836H9.563a.83.83 0 0 0-.814.836V6.26H3.874A1.654 1.654 0 0 0 2.25 7.93v10.875a1.654 1.654 0 0 0 1.624 1.673h16.252a1.654 1.654 0 0 0 1.624-1.669V7.935a1.654 1.654 0 0 0-1.624-1.672zM9.968 5.213a.416.416 0 0 1 .408-.42h3.248c.228.004.41.191.409.42v1.046H9.968zM7.125 18.81H5.5V7.935h1.624zm11.374 0h-1.624V7.935H18.5z" clip-rule="evenodd"></path>
-              </svg>
+                <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M20.126 6.259h-4.875V4.586a.83.83 0 0 0-.813-.836H9.563a.83.83 0 0 0-.814.836V6.26H3.874A1.654 1.654 0 0 0 2.25 7.93v10.875a1.654 1.654 0 0 0 1.624 1.673h16.252a1.654 1.654 0 0 0 1.624-1.669V7.935a1.654 1.654 0 0 0-1.624-1.672zM9.968 5.213a.416.416 0 0 1 .408-.42h3.248c.228.004.41.191.409.42v1.046H9.968zM7.125 18.81H5.5V7.935h1.624zm11.374 0h-1.624V7.935H18.5z" clip-rule="evenodd"></path>
+                </svg>
+                </td>
+                <td>
+                20kg
+                </td>
+                <td className='extra-flight-svg'>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M4 9a3 3 0 0 0 3 3v9a1 1 0 1 0 2 0v-9a3 3 0 0 0 3-3V3a1 1 0 1 0-2 0v6H9V3a1 1 0 0 0-2 0v6H6V3a1 1 0 0 0-2 0zm11-4v6a3 3 0 0 0 3 3v7a1 1 0 1 0 2 0V4a2 2 0 0 0-2-2 3 3 0 0 0-3 3" clip-rule="evenodd"></path></svg>
+                </td>
+                <td>
+                  Meals on request
+                </td>
+                <td className='extra-flight-svg'>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" fill-rule="evenodd" d="m16.515 18.991.773 1.566A1 1 0 0 1 16.39 22H8.61a1 1 0 0 1-.897-1.443l.809-1.638a1 1 0 0 1-.58-.694L5.308 6.82a1 1 0 0 1-.026-.236A4.1 4.1 0 0 1 5.119 5.5V4c0-1 .463-2 1.678-2 .67 0 1.215.448 1.215 1l.607 3c0 .344-.21.647-.532.827L9.75 12h5.966a.614.614 0 0 1 .478 1l-.505.627a1 1 0 0 1-.779.373h-4.517l.321 1h6.668a1 1 0 0 1 .894 1.447l-1 2a1 1 0 0 1-.761.544M15.404 19H9.596l-.988 2h7.783z" clip-rule="evenodd"></path>
+                </svg>
               </td>
-              </th>
               <td>
-              20kg
+                Seat selection
               </td>
-                </tr>
+              </tr>
           )}
           </tr>
           </React.Fragment>

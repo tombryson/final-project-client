@@ -12,7 +12,7 @@ import Auth from './components/signIn/Auth.js';
 import Home from './components/home/Home.js';
 import Profile from './components/Profile.js';
 import Book from './components/booking/Book.js';
-import MyTrips from './components/MyTrips.js';
+import MyFlights from './components/MyFlights.js';
 import NavBar from './components/NavBar.js';
 import SeatMap from './components/flight/SeatMap.js';
 import Contact from './components/contact/contact.js';
@@ -64,7 +64,7 @@ root.render(
         <Route index element={<></>} />
         <Route path="profile" element={<Profile />} />
         <Route path="book" element={<Book />} />
-        <Route path="mytrips" element={<MyTrips />} />
+        <Route path="myflights" element={<MyFlights />} />
         <Route path="contact" element={<Contact />} />
         <Route path="/book/flights/:id/confirmation" element={<Confirmation />} />
         <Route path="/book/flights/:id" element={<SeatMap />} />

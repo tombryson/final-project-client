@@ -958,10 +958,10 @@ td img {
 }
 
 .extra-info-border {
-  display: block;
+  display: flex;
   width: 104%;
   border-top: #353535e8 dotted 1px;
-  padding-bottom: 1rem  ;
+  padding-bottom: 0.8rem  ;
 }
 
 .extra-flight-details {
@@ -969,8 +969,6 @@ td img {
 }
 
 .extra-flight-svg {
-  display: flex; 
-  align-items: center;
   color: white;
   width: 2.25rem;
   height: 1.25rem;
