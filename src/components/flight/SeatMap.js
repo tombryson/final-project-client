@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useOutletContext } from 'react-router-dom';
 import axios from 'axios';
 import { airlineNames } from '../booking/AirlineStyles.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SeatMap = () => {
   // eslint-disable-next-line no-unused-vars
+  const { toggleAuth } = useOutletContext();
   const [seat, setSeat] = useState('');
   const [isClicked, setIsClicked] = useState(false);
   const [flightData, setFlightData] = useState([]);
@@ -13,6 +14,7 @@ const SeatMap = () => {
   const location = useLocation();
   const siteURL = 'http://localhost:3000/';
   const flight = location.state?.flight;
+  const currentUserId = sessionStorage.getItem('currentUserId');
   const navigate = useNavigate();
   
   useEffect(() => {
@@ -45,7 +47,11 @@ const SeatMap = () => {
   };
 
   const _handleOnConfirmClick = () => {
-    navigate(`/book/flights/${flightData.id}/confirmation`);
+    if (!currentUserId) {
+      toggleAuth();
+      return;
+    }
+    navigate(`/book/flights/${flightData.id}/confirmation`)
   }
 
   const Seat = ({ col, row, onSeatClick }) => {

@@ -1,20 +1,20 @@
 import { faCropSimple } from '@fortawesome/free-solid-svg-icons';
-import {
-  backgroundStyles,
-  backgroundColors,
-  airlineImages,
-  borderImages,
-} from './AirlineStyles.js';
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import moment from 'moment';
 import hashSum from 'hash-sum';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { format, parseISO } from 'date-fns';
 import { height } from '@fortawesome/free-solid-svg-icons/fa0';
+import {
+  backgroundStyles,
+  backgroundColors,
+  airlineImages,
+  borderImages,
+} from './AirlineStyles.js';
 
-const ApiFlightTable = ({ flights }) => {
+const ApiFlightTable = ({ flights, toggleAuth }) => {
   const [infoOpen, setInfoOpen] = useState({});
   const navigate = useNavigate();
 

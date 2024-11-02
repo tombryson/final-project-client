@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import departure from '../../images/book-icon.png';
 import arrival from '../../images/icon-arrival.png';
@@ -62,15 +61,13 @@ const Book = () => {
       }
 
       const JSONdata = await response.json();
-      const flightData = JSONdata.data; // Assuming this contains the flight information
-  
-      // Now, send a request to the backend to get pricing data
+      const flightData = JSONdata.data;
       const pricingResponse = await fetch('http://localhost:3000/flights/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(flightData), // Send the flight data to the backend
+        body: JSON.stringify(flightData),
       });
   
       if (!pricingResponse.ok) {
@@ -78,12 +75,9 @@ const Book = () => {
       }
   
       const pricingData = await pricingResponse.json();
-      console.log(pricingData);
-  
-      // Combine flight data with pricing data
       const flightsWithPricing = flightData.map((flight, index) => ({
         ...flight,
-        price: pricingData[index]?.price || 'N/A', // Assuming pricingData is an array
+        price: pricingData[index]?.price || 'N/A',
       }));
   
       setFlights(flightsWithPricing);
@@ -92,8 +86,6 @@ const Book = () => {
       console.error('Error fetching flight data:', error);
     }
   }
-
-  /////////////////////
 
   const getItems = (flights) => {
     return flights.length === 0 ||
@@ -185,7 +177,7 @@ const Book = () => {
                 Search
               </button>
             </div>
-            {flightTableVisible && <ApiFlightTable flights={flights} />}
+            {flightTableVisible && <ApiFlightTable flights={flights}/>}
           </form>
           {message}
         </div>

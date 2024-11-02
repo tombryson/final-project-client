@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useOutletContext } from 'react-router-dom'
 import ReactDOM from 'react-dom/client';
 import {
   BrowserRouter,
@@ -46,7 +47,7 @@ const AppWrapper = ({ children }) => {
           <Auth />
         </div>
         {location.pathname === '/' && <CarouselHome />}
-        <Outlet />
+        <Outlet context={{ toggleAuth: toggleAuthVisible }}/>
         <NavBar />
         {location.pathname === '/' && <DealsCallout />}
       </div>
