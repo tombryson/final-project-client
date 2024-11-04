@@ -11,7 +11,6 @@ import {
 import './components/index.css';
 import Auth from './components/signIn/Auth.js';
 import Home from './components/home/Home.js';
-import Profile from './components/Profile.js';
 import Book from './components/booking/Book.js';
 import MyFlights from './components/MyFlights.js';
 import NavBar from './components/NavBar.js';
@@ -22,6 +21,7 @@ import WelcomePage from './components/home/WelcomePage.js';
 import Confirmation from './components/confirmation/confirmation.js';
 import CarouselHome from './components/home/CarouselHome.js';
 import DealsCallout from './components/home/DealsCallout.js';
+import Profile from './components/profile/UserProfile.js';
 import { ScrollSnapProvider, useScrollSnap } from './context/ScrollSnapContext.js';
 
 const AppWrapper = ({ children }) => {
@@ -70,6 +70,7 @@ root.render(
         <Route path="/book/flights/:id/confirmation" element={<Confirmation />} />
         <Route path="/book/flights/:id" element={<SeatMap />} />
         <Route path="auth" element={<Auth />} />
+        <Route path="profile" element={<Profile />} />
         <Route path="*" element={<></>} />
       </Route>
     </Routes>

@@ -118,7 +118,7 @@ const SiteHead = ({ toggleAuth, authState }) => {
           </button>
         </Link>
         {currentUserId ? (
-          <Link className="header-button profile-img" to="auth">
+          <Link className="header-button profile-img" to="profile">
             <button
               className={`nav-button ${directions['O']}`}
               onMouseOver={(e) => handleMouseEnter(e, 'O')}
