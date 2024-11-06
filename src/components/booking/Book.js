@@ -5,6 +5,7 @@ import departure from '../../images/book-icon.png';
 import arrival from '../../images/icon-arrival.png';
 import VideoBackground from './videoBackground.jsx';
 import ApiFlightTable from './ApiFlightTable.js';
+import { throttle } from 'lodash';
 import '../App2.css';
 import '../buttonStyles.css';
 
@@ -39,7 +40,7 @@ const Book = () => {
     selectedItem === null ? setSelectedItem(i) : setSelectedItem(null);
   };
 
-  const _handleSubmit = async (event) => {
+  const _handleSubmit = throttle (async (event) => {
     event.preventDefault();
 
     const {
@@ -51,7 +52,6 @@ const Book = () => {
     } = formData;
 
     const apiURL = `https://flight-info-api.p.rapidapi.com/schedules?version=v2&DepartureDateTime=${departureDate}&ArrivalDateTime=${arrivalDate}&CarrierCode=${carrierCode}&DepartureAirport=${airportDeparture}&ArrivalAirport=${airportArrival}&FlightType=Scheduled&CodeType=IATA&ServiceType=Passenger`;
-
     setFlightTableVisible(true);
 
     try {
@@ -85,7 +85,7 @@ const Book = () => {
     } catch (error) {
       console.error('Error fetching flight data:', error);
     }
-  }
+  },1000)
 
   const getItems = (flights) => {
     return flights.length === 0 ||
