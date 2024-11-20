@@ -1,5 +1,4 @@
-import { faCropSimple } from '@fortawesome/free-solid-svg-icons';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate} from 'react-router-dom';
 import moment from 'moment';
 import hashSum from 'hash-sum';

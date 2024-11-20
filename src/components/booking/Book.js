@@ -15,7 +15,7 @@ const Book = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [flights, setFlights] = useState([]);
   const [flightTableVisible, setFlightTableVisible] = useState(false);
-
+  
   const duration = 800;
   const delay = 100;
   const animStr = (i) =>

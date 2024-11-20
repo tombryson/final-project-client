@@ -11,8 +11,8 @@ const SeatMap = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [flightData, setFlightData] = useState([]);
   const [planeData, setPlaneData] = useState([]);
-  const location = useLocation();
   const siteURL = 'http://localhost:3000/';
+  const location = useLocation();
   const flight = location.state?.flight;
   const currentUserId = sessionStorage.getItem('currentUserId');
   const navigate = useNavigate();
@@ -30,29 +30,18 @@ const SeatMap = () => {
   const _handleOnSeatClick = (seat) => {
     setSeat(seat);
     setIsClicked(true);
-
-    axios
-      .post(`${siteURL}/bookings/`, {
-        booking: {
-          cols: seat.col,
-          flight_id: seat.flight_id,
-          rows: seat.row,
-          user_id: seat.user_id,
-        },
-      })
-      .then((reponse) => {
-        const seatProp = document.getElementById(seat.name);
-        seatProp.style.visibility.setProperty('visibility', 'hidden');
-      });
   };
 
-  const _handleOnConfirmClick = () => {
+  const _handleOnConfirmClick = (seat) => {
     if (!currentUserId) {
       toggleAuth();
       return;
     }
-    navigate(`/book/flights/${flightData.id}/confirmation`)
+    navigate(`/book/flights/${flightData.id}/confirmation`, {
+      state: { flight, seat },
+    })
   }
+
 
   const Seat = ({ col, row, onSeatClick }) => {
     const seatString = 'ABCDEF';
@@ -116,13 +105,13 @@ const SeatMap = () => {
                 <tr className="flight-info">
                   <td colSpan="2">
                     <th>
-                    {airlineNames[String(location.state.flight.carrier.iata)]} Flight {String(location.state.flight.flightNumber)}
+                    {airlineNames[String(flight.carrier.iata)]} Flight {String(flight.flightNumber)}
                     </th>
                   </td>
                 </tr>
                 <tr className="flight-info">
                   <td colSpan="2">
-                    {String(location.state.flight.departure.airport.iata)} to {String(location.state.flight.arrival.airport.iata)}
+                    {String(flight.departure.airport.iata)} to {String(flight.arrival.airport.iata)}
                   </td>
                 </tr>
                 <tr className="seat-info">
@@ -134,8 +123,10 @@ const SeatMap = () => {
                   ${flight.price}
                   </td>
                 </tr>
-                <tr>{isClicked ? 
-                  <tr><button className='seat-confirm-button' onClick={_handleOnConfirmClick}>Select Seat 	&#x1F525;</button></tr>
+                <tr>{isClicked ?
+                  <tr>
+                    <button className='seat-confirm-button' onClick={() => _handleOnConfirmClick(seat)}>Select Seat 	&#x1F525;</button>
+                    </tr>
                 : null}
                 </tr>
               </tbody>

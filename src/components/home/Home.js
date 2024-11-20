@@ -17,7 +17,7 @@ function Home(authVisible) {
     message = 'Welcome';
     showBanner = true;
   } else if (location.pathname === '/profile') {
-    message = 'My Profile';
+    message = 'Profile';
     showBanner = true;
   } else if (location.pathname === '/book') {
     message = 'Where to?';
