@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useOutletContext } from 'react-router-dom';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import departure from '../../images/book-icon.png';
@@ -10,11 +11,13 @@ import '../App2.css';
 import '../buttonStyles.css';
 
 const Book = () => {
+  const { setFontSize } = useOutletContext();
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [flights, setFlights] = useState([]);
   const [flightTableVisible, setFlightTableVisible] = useState(false);
+  const { setIsScrolling } = useOutletContext();
   
   const duration = 800;
   const delay = 100;
@@ -23,6 +26,37 @@ const Book = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  useEffect(() => {
+    setIsVisible(true);
+    setFontSize(4.6);
+
+    const handleScroll = () => {
+      const scrollableElement = document.querySelector('.booking-container');
+      if (scrollableElement) {
+        const scrollY = scrollableElement.scrollTop;
+
+        if (scrollY > 30) {
+          setFontSize(3.1);
+          setIsScrolling(true);
+        } else {
+          setFontSize(4.4);
+          setIsScrolling(false);
+        }
+      }
+    };
+
+    const scrollableElement = document.querySelector('.booking-container');
+    if (scrollableElement) {
+      scrollableElement.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (scrollableElement) {
+        scrollableElement.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, [setFontSize]);
 
   const [formData, setFormData] = useState({
     departureDate: '2024-06-30',
@@ -177,7 +211,7 @@ const Book = () => {
                 Search
               </button>
             </div>
-            {flightTableVisible && <ApiFlightTable flights={flights}/>}
+            {flightTableVisible && <ApiFlightTable flights={flights} setFontSize={setFontSize} />}
           </form>
           {message}
         </div>

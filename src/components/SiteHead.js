@@ -6,11 +6,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const SiteHead = ({ toggleAuth, authState }) => {
+  const [directions, setDirections] = useState({});
   const navigate = useNavigate();
   const location = useLocation();
   const currentUserId = sessionStorage.getItem('currentUserId');
 
-  const [directions, setDirections] = useState({});
+  function scrollToTop () {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    };
 
   const handleMouseEnter = (e, id) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -66,7 +69,12 @@ const SiteHead = ({ toggleAuth, authState }) => {
             className={`nav-button ${directions['home']}`}
             onMouseOver={(e) => handleMouseEnter(e, 'home')}
             onMouseOut={(e) => handleMouseLeave(e, 'home')}
-            onClick={authState ? toggleAuth : null}
+            onClick={() => {
+              if (authState) {
+                toggleAuth();
+              }
+              scrollToTop();
+            }}
           >
             Home
           </button>

@@ -307,7 +307,7 @@ html {
 }
 
 .seat-info {
-  background-color: #17151f; /* Black background for seat info */
+  background-color: #17151f;
   color: white;
   padding: 1rem;
 }
@@ -461,6 +461,10 @@ a > .icon-text > span {
   text-wrap: nowrap;
   filter: drop-shadow(1px 1px 1.2px #0e0e0ec9);
   padding: 1.3rem 1rem 1rem 1.9rem;
+}
+
+.greeting-transition {
+  transition: font-size 0.1s ease-out;
 }
 
 .fade-in {

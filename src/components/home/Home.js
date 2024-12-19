@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useScrollSnap } from '../../context/ScrollSnapContext.js';
 
-function Home(authVisible) {
+function Home({fontSize, isScrolling}) {
   const location = useLocation();
   const showCarousel = location.pathname === '/';
   const { setIsScrollSnapEnabled } = useScrollSnap();
@@ -35,7 +35,11 @@ function Home(authVisible) {
             message === 'Where to?' ? 'greeting greeting-opaque' : 'greeting'
           }
         >
-          <h1 className="greeting-welcome">{message}</h1>
+          <h1 className={`greeting-welcome ${isScrolling ? 'greeting-transition' : ''}`}
+            style={{ fontSize: `${fontSize}rem` }}
+          >
+            {message}
+            </h1>
         </div>
       )}
     </>

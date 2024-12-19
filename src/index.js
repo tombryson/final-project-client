@@ -26,6 +26,8 @@ import { ScrollSnapProvider, useScrollSnap } from './context/ScrollSnapContext.j
 
 const AppWrapper = ({ children }) => {
   const [authVisible, setAuthVisible] = useState(false);
+  const [fontSize, setFontSize] = useState(4.4);
+  const [isScrolling, setIsScrolling] = useState(true);
   const { isScrollSnapEnabled } = useScrollSnap();
   const location = useLocation();
 
@@ -37,7 +39,7 @@ const AppWrapper = ({ children }) => {
     <div className={`app-container ${isScrollSnapEnabled ? 'scroll-snap-enabled' : ''}`}>
       <div className={isScrollSnapEnabled ? 'scroll-section' : ''}>
         <SiteHead toggleAuth={toggleAuthVisible} authState={authVisible} />
-        <Home />
+        <Home fontSize={fontSize} isScrolling={isScrolling}/>
         <div
           style={{
             opacity: authVisible ? 1 : 0,
@@ -47,7 +49,7 @@ const AppWrapper = ({ children }) => {
           <Auth />
         </div>
         {location.pathname === '/' && <CarouselHome />}
-        <Outlet context={{ toggleAuth: toggleAuthVisible }}/>
+        <Outlet context={{ toggleAuth: toggleAuthVisible, setFontSize }}/>
         <NavBar />
         {location.pathname === '/' && <DealsCallout />}
       </div>
