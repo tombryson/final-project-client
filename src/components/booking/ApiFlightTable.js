@@ -58,6 +58,7 @@ const ApiFlightTable = ({ flights, toggleAuth }) => {
     `fadeIn ${duration}ms ease-out ${delay * i}ms forwards`;
 
   return (
+    <div className='booking-search-results'>
     <table>
       <tbody>
         {flights.map((flight, index) => (
@@ -166,6 +167,7 @@ const ApiFlightTable = ({ flights, toggleAuth }) => {
         ))}
       </tbody>
     </table>
+    </div>
   );
 };
 

@@ -550,9 +550,11 @@ a > .icon-text > span {
   background-color: hsl(359 85% 38% / 1);
 }
 
-.container__search {
+.search__container {
   margin: 0 auto;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .button__search--booking:hover {
@@ -685,13 +687,19 @@ input {
   visibility: visible;
 }
 
-.form__search {
+.destination__container {
   flex-direction: row;
   display: flex;
 }
 
+.booking-search-results {
+  margin: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
 @media (width >= 1200px) {
-  .form__search {
+  .destination__container {
     margin-left: 22vw;
   }
 }
@@ -718,7 +726,7 @@ input {
   .button-container {
     visibility: hidden;
   }
-  .form__search {
+  .destination__container {
     flex-wrap: wrap;
   }
   .deals-callout {
@@ -843,7 +851,7 @@ ul {
   overflow-y: auto; /* Ensures the container can scroll */
 }
 
-.form__container {
+.results__container {
   margin: 0 auto;
   width: 85%;
   min-width: 160px;
@@ -856,7 +864,7 @@ ul {
   overflow-y: auto;
 }
 
-.form__container table {
+.destination__container table {
   margin: 4vw 0vw;
   margin-inline: auto;
   font-weight: 100;

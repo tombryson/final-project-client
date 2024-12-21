@@ -9,8 +9,11 @@ import ApiFlightTable from './ApiFlightTable.js';
 import { throttle } from 'lodash';
 import '../App2.css';
 import '../buttonStyles.css';
+import * as RDP from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const Book = () => {
+  const [startDate, setStartDate] = useState(new Date());
   const { setFontSize } = useOutletContext();
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
@@ -18,6 +21,11 @@ const Book = () => {
   const [flights, setFlights] = useState([]);
   const [flightTableVisible, setFlightTableVisible] = useState(false);
   const { setIsScrolling } = useOutletContext();
+
+  const RDPC =
+  (RDP.default?.default || // Handle nested default export
+   RDP.default ||          // Handle default export
+   RDP);  
   
   const duration = 800;
   const delay = 100;
@@ -154,8 +162,9 @@ const Book = () => {
           <VideoBackground />
         </div>
         <div className="booking-container">
-          <form className="form__container" onSubmit={_handleSubmit}>
-            <div className="form__search">
+          <form className="results__container" onSubmit={_handleSubmit}>
+          <div className="search__container">
+            <div className="destination__container">
               <div id="input-group">
                 <div className="input-group-prepend">
                   <div className="input-group-text">
@@ -201,7 +210,41 @@ const Book = () => {
                 />
               </div>
             </div>
-            <div className="container__search">
+            <div className='datepicker__container'>
+            <div className="input-group-text">
+                    <img
+                      src={departure}
+                      id="flight-icons"
+                      alt="plane taking off"
+                      width="30px"
+                    ></img>
+                    Departing Date
+                  </div>
+              <div className="date-picker">
+                <RDPC 
+                  showIcon
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)} 
+                />
+              </div>
+              <div className="input-group-text">
+                    <img
+                      src={arrival}
+                      id="flight-icons"
+                      alt="plane landing"
+                      width="30px"
+                    ></img>
+                    Arriving Date
+                  </div>
+                  <div className="date-picker">
+                <RDPC 
+                  showIcon
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)} 
+                />
+              </div>
+              </div>
+              <div className='search-button__container'>
               <button
                 type="submit"
                 onClick={_handleSubmit}
@@ -210,6 +253,7 @@ const Book = () => {
                 {' '}
                 Search
               </button>
+              </div>
             </div>
             {flightTableVisible && <ApiFlightTable flights={flights} setFontSize={setFontSize} />}
           </form>
