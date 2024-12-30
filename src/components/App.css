@@ -476,7 +476,7 @@ a > .icon-text > span {
   opacity: 1;
   top: 0;
   position: fixed;
-  width: 100%;
+  width: 98%;
   display: flex;
   justify-content: center;
   align-content: space-between;
@@ -497,15 +497,14 @@ a > .icon-text > span {
 }
 
 .ui-button {
-  margin: 0.4rem;
+  margin: 1rem;
   border: none;
-  background-color: #d42f29;
   color: white;
   font-weight: 700;
   padding: 8px;
   font-size: 1rem;
   width: max(65%, 10rem);
-  border-radius: 1.1rem;
+  border-radius: 0.9rem;
 }
 
 .carousel {
@@ -554,7 +553,7 @@ a > .icon-text > span {
   margin: 0 auto;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .button__search--booking:hover {
@@ -565,6 +564,12 @@ a > .icon-text > span {
   .button__search--booking {
     margin-left: 22vw;
   }
+}
+
+.react-datepicker__input-container .react-datepicker__calendar-icon {
+  position: absolute;
+  padding: 0.7rem;
+  box-sizing: content-box;
 }
 
 .buttons-nav {
@@ -614,18 +619,25 @@ a > .icon-text > span {
   flex-direction: column;
   align-items: center;
   min-height: 20rem;
-  padding: 0px 24px;
+  padding: 0px 1rem;
 }
 
 .sign-up {
-  font-size: clamp(2.2rem, 2.2vw, 3rem);
-  font-family: revert;
-  font-weight: 400;
-  padding: 4px 0px 0px 0px;
-  text-align: center;
-  color: #d42f29;
+  /* font-size: clamp(2.2rem, 2.2vw, 3rem); */
+  font-family: 'Satisfy';
+  font-style: normal;
   text-decoration: underline;
-  text-decoration-color: black;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 6px;
+  font-weight: 600;
+  font-size: 3.8rem;
+  text-shadow: 1px 1px 0px #000000;
+  padding: 0.8rem 0rem;
+  text-align: center;
+  color: #d2332e;
+  text-decoration-color: #000000;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 input {
@@ -643,17 +655,20 @@ input {
 #input-group {
   border-radius: 10px;
   width: 100%;
-  padding: 0.5rem;
 }
 
 .field {
   position: relative;
-  border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.46);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
   padding: 4px 12px;
   margin: 5px 0px;
   width: 66%;
   min-width: fit-content;
+}
+
+form:has(.field input:valid:not(:invalid)) button {
+  background-color: #d42f29;
 }
 
 .field input {
@@ -688,8 +703,33 @@ input {
 }
 
 .destination__container {
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
+  min-width: 16rem;
+  width: 50%;
+}
+
+.datepicker__container {
+  min-width: 16rem;
+  width: 50%;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.search-button__container {
+  
+}
+
+.react-datepicker__view-calendar-icon input {
+  padding: 0.375rem 2.15rem;
+}
+
+.react-datepicker__calendar-icon {
+  position: absolute;
+  padding: 0.7rem;
+  box-sizing: content-box;
 }
 
 .booking-search-results {

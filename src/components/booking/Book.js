@@ -244,7 +244,8 @@ const Book = () => {
                 />
               </div>
               </div>
-              <div className='search-button__container'>
+            </div>
+            <div className='search-button__container'>
               <button
                 type="submit"
                 onClick={_handleSubmit}
@@ -254,7 +255,6 @@ const Book = () => {
                 Search
               </button>
               </div>
-            </div>
             {flightTableVisible && <ApiFlightTable flights={flights} setFontSize={setFontSize} />}
           </form>
           {message}

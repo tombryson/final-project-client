@@ -76,7 +76,8 @@ function SignUpForm(props) {
             value={first_name}
             onChange={handleFirstNameChange}
             type="text"
-            placeholder="Enter your First Name"
+            placeholder="first name"
+            required
           />
           <label htmlFor="firstName">First Name</label>
         </div>
@@ -86,7 +87,8 @@ function SignUpForm(props) {
             value={last_name}
             onChange={handleLastNameChange}
             type="text"
-            placeholder="Enter your Last Name"
+            placeholder="last name"
+            required
           />
           <label htmlFor="lastName">Last Name</label>
         </div>
@@ -96,7 +98,7 @@ function SignUpForm(props) {
             value={password}
             onChange={handlePasswordChange}
             type="password"
-            placeholder="Your Password"
+            placeholder="password"
             required
           />
           <label htmlFor="lastName">Password</label>
