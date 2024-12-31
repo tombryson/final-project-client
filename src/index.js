@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useOutletContext } from 'react-router-dom'
+import { useOutletContext } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import {
   BrowserRouter,
@@ -22,7 +22,10 @@ import Confirmation from './components/confirmation/confirmation.js';
 import CarouselHome from './components/home/CarouselHome.js';
 import DealsCallout from './components/home/DealsCallout.js';
 import Profile from './components/profile/UserProfile.js';
-import { ScrollSnapProvider, useScrollSnap } from './context/ScrollSnapContext.js';
+import {
+  ScrollSnapProvider,
+  useScrollSnap,
+} from './context/ScrollSnapContext.js';
 
 const AppWrapper = ({ children }) => {
   const [authVisible, setAuthVisible] = useState(false);
@@ -36,10 +39,14 @@ const AppWrapper = ({ children }) => {
   };
 
   return (
-    <div className={`app-container ${isScrollSnapEnabled ? 'scroll-snap-enabled' : ''}`}>
+    <div
+      className={`app-container ${
+        isScrollSnapEnabled ? 'scroll-snap-enabled' : ''
+      }`}
+    >
       <div className={isScrollSnapEnabled ? 'scroll-section' : ''}>
         <SiteHead toggleAuth={toggleAuthVisible} authState={authVisible} />
-        <Home fontSize={fontSize} isScrolling={isScrolling}/>
+        <Home fontSize={fontSize} isScrolling={isScrolling} />
         <div
           style={{
             opacity: authVisible ? 1 : 0,
@@ -49,7 +56,7 @@ const AppWrapper = ({ children }) => {
           <Auth />
         </div>
         {location.pathname === '/' && <CarouselHome />}
-        <Outlet context={{ toggleAuth: toggleAuthVisible, setFontSize }}/>
+        <Outlet context={{ toggleAuth: toggleAuthVisible, setFontSize }} />
         <NavBar />
         {location.pathname === '/' && <DealsCallout />}
       </div>
@@ -61,21 +68,24 @@ const AppWrapper = ({ children }) => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-  <ScrollSnapProvider>
-    <Routes>
-      <Route path="/" element={<AppWrapper />}>
-        <Route index element={<></>} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="book" element={<Book />} />
-        <Route path="myflights" element={<MyFlights />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="/book/flights/:id/confirmation" element={<Confirmation />} />
-        <Route path="/book/flights/:id" element={<SeatMap />} />
-        <Route path="auth" element={<Auth />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="*" element={<></>} />
-      </Route>
-    </Routes>
+    <ScrollSnapProvider>
+      <Routes>
+        <Route path="/" element={<AppWrapper />}>
+          <Route index element={<></>} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="book" element={<Book />} />
+          <Route path="myflights" element={<MyFlights />} />
+          <Route path="contact" element={<Contact />} />
+          <Route
+            path="/book/flights/:id/confirmation"
+            element={<Confirmation />}
+          />
+          <Route path="/book/flights/:id" element={<SeatMap />} />
+          <Route path="auth" element={<Auth />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="*" element={<></>} />
+        </Route>
+      </Routes>
     </ScrollSnapProvider>
   </BrowserRouter>,
 );
