@@ -9,24 +9,21 @@ import ApiFlightTable from './ApiFlightTable.js';
 import { throttle } from 'lodash';
 import '../App2.css';
 import '../buttonStyles.css';
-import * as RDP from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import * as RDP from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const Book = () => {
-  const [startDate, setStartDate] = useState(new Date());
+  const [departDate, setDepartDate] = useState(new Date());
+  const [arriveDate, setArriveDate] = useState('');
   const { setFontSize } = useOutletContext();
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [flights, setFlights] = useState([]);
   const [flightTableVisible, setFlightTableVisible] = useState(false);
-  const { setIsScrolling } = useOutletContext();
 
-  const RDPC =
-  (RDP.default?.default || // Handle nested default export
-   RDP.default ||          // Handle default export
-   RDP);  
-  
+  const RDPC = RDP.default?.default || RDP.default || RDP;
+
   const duration = 800;
   const delay = 100;
   const animStr = (i) =>
@@ -44,12 +41,10 @@ const Book = () => {
       if (scrollableElement) {
         const scrollY = scrollableElement.scrollTop;
 
-        if (scrollY > 30) {
+        if (scrollY > 30 && window.innerWidth <= 1600) {
           setFontSize(3.1);
-          setIsScrolling(true);
         } else {
           setFontSize(4.4);
-          setIsScrolling(false);
         }
       }
     };
@@ -82,7 +77,7 @@ const Book = () => {
     selectedItem === null ? setSelectedItem(i) : setSelectedItem(null);
   };
 
-  const _handleSubmit = throttle (async (event) => {
+  const _handleSubmit = throttle(async (event) => {
     event.preventDefault();
 
     const {
@@ -104,30 +99,33 @@ const Book = () => {
 
       const JSONdata = await response.json();
       const flightData = JSONdata.data;
-      const pricingResponse = await fetch('http://localhost:3000/flights/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const pricingResponse = await fetch(
+        'http://localhost:3000/flights/submit',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(flightData),
         },
-        body: JSON.stringify(flightData),
-      });
-  
+      );
+
       if (!pricingResponse.ok) {
         throw new Error('Failed to fetch pricing data');
       }
-  
+
       const pricingData = await pricingResponse.json();
       const flightsWithPricing = flightData.map((flight, index) => ({
         ...flight,
         price: pricingData[index]?.price || 'N/A',
       }));
-  
+
       setFlights(flightsWithPricing);
       setFlightTableVisible(true);
     } catch (error) {
       console.error('Error fetching flight data:', error);
     }
-  },1000)
+  }, 1000);
 
   const getItems = (flights) => {
     return flights.length === 0 ||
@@ -163,100 +161,106 @@ const Book = () => {
         </div>
         <div className="booking-container">
           <form className="results__container" onSubmit={_handleSubmit}>
-          <div className="search__container">
-            <div className="destination__container">
-              <div id="input-group">
-                  <div className="input-group-text">
-                    <img
-                      src={departure}
-                      id="flight-icons"
-                      alt="plane taking off"
-                      width="30px"
-                    ></img>
-                    Departing
-                </div>
-                <input
-                  type="text"
-                  maxLength={3}
-                  className="form-control"
-                  id="form-control"
-                  required
-                  onChange={handleChange}
-                  placeholder="Airport eg. MEL"
-                />
-              </div>
-              <div id="input-group">
-                  <div className="input-group-text">
-                    <img
-                      src={arrival}
-                      id="flight-icons"
-                      alt="plane landing"
-                      width="30px"
-                    ></img>
-                    Arriving
+            <div className="booking-margin">
+              <div className="search__container">
+                <div className="destination__container">
+                  <div id="input-group">
+                    <div className="input-group-text">
+                      <img
+                        src={departure}
+                        id="flight-icons"
+                        alt="plane taking off"
+                        width="30px"
+                      ></img>
+                      Departing
+                    </div>
+                    <input
+                      type="text"
+                      maxLength={3}
+                      className="form-control"
+                      id="form-control"
+                      required
+                      onChange={handleChange}
+                      placeholder="Airport code eg. MEL"
+                    />
                   </div>
-                <input
-                  type="text"
-                  maxLength={3}
-                  className="form-control"
-                  id="form-control"
-                  required
-                  onChange={handleChange}
-                  placeholder="Airport eg. SYD"
-                />
+                  <div id="input-group">
+                    <div className="input-group-text">
+                      <img
+                        src={arrival}
+                        id="flight-icons"
+                        alt="plane landing"
+                        width="30px"
+                      ></img>
+                      Arriving
+                    </div>
+                    <input
+                      type="text"
+                      maxLength={3}
+                      className="form-control"
+                      id="form-control"
+                      required
+                      onChange={handleChange}
+                      placeholder="Airport code eg. SYD"
+                    />
+                  </div>
+                </div>
+                <div className="datepicker__container">
+                  <div id="input-group">
+                    <div className="input-group-text">
+                      <img
+                        src={departure}
+                        id="flight-icons"
+                        alt="plane taking off"
+                        width="30px"
+                      ></img>
+                      Departing Date
+                    </div>
+
+                    <div className="date-picker">
+                      <RDPC
+                        showIcon
+                        selected={departDate}
+                        onChange={(date) => setDepartDate(date)}
+                        placeholder="today"
+                      />
+                    </div>
+                  </div>
+                  <div id="input-group">
+                    <div className="input-group-text">
+                      <img
+                        src={arrival}
+                        id="flight-icons"
+                        alt="plane landing"
+                        width="30px"
+                      ></img>
+                      Arriving Date
+                    </div>
+                    <div className="date-picker">
+                      <RDPC
+                        showIcon
+                        selected={arriveDate}
+                        onChange={(date) => setArriveDate(date)}
+                        placeholder="tomorrow"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="search-button__container">
+                <button
+                  type="submit"
+                  onClick={_handleSubmit}
+                  className="button__search--booking"
+                >
+                  {' '}
+                  Search
+                </button>
               </div>
             </div>
-            <div className='datepicker__container'>
-              <div id="input-group">
-                <div className="input-group-text">
-                    <img
-                      src={departure}
-                      id="flight-icons"
-                      alt="plane taking off"
-                      width="30px"
-                    ></img>
-                    Departing Date
-                </div>
-              
-              <div className="date-picker">
-                <RDPC 
-                  showIcon
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)} 
-                />
-              </div>
-              </div>
-              <div id="input-group">
-              <div className="input-group-text">
-                    <img
-                      src={arrival}
-                      id="flight-icons"
-                      alt="plane landing"
-                      width="30px"
-                    ></img>
-                    Arriving Date
-                  </div>
-                  <div className="date-picker">
-                <RDPC 
-                  showIcon
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)} 
-                />
-              </div>
-              </div>
-              </div>
-            </div>
-            <div className='search-button__container'>
-              <button
-                type="submit"
-                onClick={_handleSubmit}
-                className="button__search--booking"
-              >
-                {' '}
-                Search
-              </button>
-              </div>
-            {flightTableVisible && <ApiFlightTable flights={flights} setFontSize={setFontSize} />}
+            {flightTableVisible && (
+              <ApiFlightTable flights={flights} setFontSize={setFontSize} />
+            )}
           </form>
           {message}
         </div>

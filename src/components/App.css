@@ -173,6 +173,10 @@
   margin: 50px;
 }
 
+.form-control {
+  border: #595959 1px solid!important;
+}
+
 .form-info {
   color: black;
   padding-right: 5px;
@@ -560,16 +564,8 @@ a > .icon-text > span {
   background-color: rgb(187, 27, 30);
 }
 
-@media (width >= 1200px) {
-  .button__search--booking {
-    margin-left: 22vw;
-  }
-}
-
 .react-datepicker__input-container .react-datepicker__calendar-icon {
-  position: absolute;
-  padding: 0.7rem;
-  box-sizing: content-box;
+  padding: 0.75rem!important;
 }
 
 .buttons-nav {
@@ -650,6 +646,8 @@ input {
 
 .input-group-text {
   display: block !important;
+  border: 3px ridge #971919db!important;
+  filter: drop-shadow(4px 3px 3px black)!important;
 }
 
 #input-group {
@@ -722,14 +720,12 @@ form:has(.field input:valid:not(:invalid)) button {
   
 }
 
-.react-datepicker__view-calendar-icon input {
-  padding: 0.375rem 2.15rem;
+.booking-margin {
+  margin-left: 0;
 }
 
-.react-datepicker__calendar-icon {
-  position: absolute;
-  padding: 0.7rem;
-  box-sizing: content-box;
+.react-datepicker__view-calendar-icon input {
+  padding: 0.375rem 2.15rem!important;
 }
 
 .booking-search-results {
@@ -739,7 +735,7 @@ form:has(.field input:valid:not(:invalid)) button {
 }
 
 @media (width >= 1200px) {
-  .destination__container {
+  .booking-margin {
     margin-left: 22vw;
   }
 }
