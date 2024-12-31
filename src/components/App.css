@@ -703,7 +703,6 @@ form:has(.field input:valid:not(:invalid)) button {
 }
 
 .destination__container {
-  flex-direction: column;
   display: flex;
   min-width: 16rem;
   width: 50%;
@@ -712,6 +711,7 @@ form:has(.field input:valid:not(:invalid)) button {
 .datepicker__container {
   min-width: 16rem;
   width: 50%;
+  display: flex;
 }
 
 .react-datepicker-wrapper {

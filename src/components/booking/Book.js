@@ -166,7 +166,6 @@ const Book = () => {
           <div className="search__container">
             <div className="destination__container">
               <div id="input-group">
-                <div className="input-group-prepend">
                   <div className="input-group-text">
                     <img
                       src={departure}
@@ -175,7 +174,6 @@ const Book = () => {
                       width="30px"
                     ></img>
                     Departing
-                  </div>
                 </div>
                 <input
                   type="text"
@@ -188,7 +186,6 @@ const Book = () => {
                 />
               </div>
               <div id="input-group">
-                <div className="input-group-prepend">
                   <div className="input-group-text">
                     <img
                       src={arrival}
@@ -198,7 +195,6 @@ const Book = () => {
                     ></img>
                     Arriving
                   </div>
-                </div>
                 <input
                   type="text"
                   maxLength={3}
@@ -211,7 +207,8 @@ const Book = () => {
               </div>
             </div>
             <div className='datepicker__container'>
-            <div className="input-group-text">
+              <div id="input-group">
+                <div className="input-group-text">
                     <img
                       src={departure}
                       id="flight-icons"
@@ -219,7 +216,8 @@ const Book = () => {
                       width="30px"
                     ></img>
                     Departing Date
-                  </div>
+                </div>
+              
               <div className="date-picker">
                 <RDPC 
                   showIcon
@@ -227,6 +225,8 @@ const Book = () => {
                   onChange={(date) => setStartDate(date)} 
                 />
               </div>
+              </div>
+              <div id="input-group">
               <div className="input-group-text">
                     <img
                       src={arrival}
@@ -242,6 +242,7 @@ const Book = () => {
                   selected={startDate}
                   onChange={(date) => setStartDate(date)} 
                 />
+              </div>
               </div>
               </div>
             </div>
