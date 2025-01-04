@@ -214,7 +214,7 @@ const Book = () => {
                         alt="plane taking off"
                         width="30px"
                       ></img>
-                      Departing Date
+                      Departure Date
                     </div>
 
                     <div className="date-picker">
@@ -234,7 +234,7 @@ const Book = () => {
                         alt="plane landing"
                         width="30px"
                       ></img>
-                      Arriving Date
+                      Arrival Date
                     </div>
                     <div className="date-picker">
                       <RDPC
