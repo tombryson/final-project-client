@@ -6,23 +6,35 @@ import departure from '../../images/book-icon.png';
 import arrival from '../../images/icon-arrival.png';
 import VideoBackground from './videoBackground.jsx';
 import ApiFlightTable from './ApiFlightTable.js';
-import { throttle } from 'lodash';
+import { throttle, toUpper } from 'lodash';
 import '../App2.css';
 import '../buttonStyles.css';
 import * as RDP from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { format } from 'date-fns';
 
 const Book = () => {
   const [departDate, setDepartDate] = useState(new Date());
-  const [arriveDate, setArriveDate] = useState('');
+  // const [arriveDate, setArriveDate] = useState(new Date()); // Use for return flights
   const { setFontSize } = useOutletContext();
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [flights, setFlights] = useState([]);
   const [flightTableVisible, setFlightTableVisible] = useState(false);
+  const [formData, setFormData] = useState({
+    departureDate: '2024-06-30',
+    airportDeparture: 'MEL',
+    airportArrival: 'SYD',
+  });
 
   const RDPC = RDP.default?.default || RDP.default || RDP;
+
+  const handleDateChange = (date) => {
+    const formattedDate = format(date, 'yyyy-MM-dd');
+    setFormData({ ...formData, departureDate: formattedDate });
+    setDepartDate(date);
+  };
 
   const duration = 800;
   const delay = 100;
@@ -33,9 +45,9 @@ const Book = () => {
   }, []);
 
   useEffect(() => {
+    // Font size transition
     setIsVisible(true);
     setFontSize(4.6);
-
     const handleScroll = () => {
       const scrollableElement = document.querySelector('.booking-container');
       if (scrollableElement) {
@@ -48,12 +60,10 @@ const Book = () => {
         }
       }
     };
-
     const scrollableElement = document.querySelector('.booking-container');
     if (scrollableElement) {
       scrollableElement.addEventListener('scroll', handleScroll);
     }
-
     return () => {
       if (scrollableElement) {
         scrollableElement.removeEventListener('scroll', handleScroll);
@@ -61,38 +71,37 @@ const Book = () => {
     };
   }, [setFontSize]);
 
-  const [formData, setFormData] = useState({
-    departureDate: '2024-06-30',
-    arrivalDate: '2024-06-30',
-    carrierCode: 'QF',
-    airportDeparture: 'MEL',
-    airportArrival: 'SYD',
-  });
-
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleOnClick = (i) => {
-    selectedItem === null ? setSelectedItem(i) : setSelectedItem(null);
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value.toUpperCase() });
+    console.log(formData);
   };
 
   const _handleSubmit = throttle(async (event) => {
     event.preventDefault();
 
-    const {
-      departureDate,
-      arrivalDate,
-      carrierCode,
-      airportDeparture,
-      airportArrival,
-    } = formData;
+    const { departureDate, airportDeparture, airportArrival } = formData;
 
-    const apiURL = `https://flight-info-api.p.rapidapi.com/schedules?version=v2&DepartureDateTime=${departureDate}&ArrivalDateTime=${arrivalDate}&CarrierCode=${carrierCode}&DepartureAirport=${airportDeparture}&ArrivalAirport=${airportArrival}&FlightType=Scheduled&CodeType=IATA&ServiceType=Passenger`;
+    const apiURL =
+      `https://flight-info-api.p.rapidapi.com/schedules?version=v2&DepartureDateTime=${departureDate}` +
+      // `&ArrivalDateTime=${arrivalDate}` +
+      // `&CarrierCode=${carrierCode}`+
+      `&DepartureAirport=${airportDeparture}` +
+      `&ArrivalAirport=${airportArrival}` +
+      `&FlightType=Scheduled&CodeType=IATA&ServiceType=Passenger`;
     setFlightTableVisible(true);
 
     try {
-      const response = await fetch('./data.json');
+      // const response = await fetch('./data.json'); // Placeholder values
+      console.log(apiURL);
+      const response = await fetch(apiURL, {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
+          'X-RapidAPI-Host': 'flight-info-api.p.rapidapi.com',
+        },
+      });
+
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -127,32 +136,6 @@ const Book = () => {
     }
   }, 1000);
 
-  const getItems = (flights) => {
-    return flights.length === 0 ||
-      (flights.length === 1 && Object.keys(flights[0]).length === 0) ? (
-      <p className="no-flight">
-        Sorry, there are no flights available to your selected cities
-      </p>
-    ) : (
-      <tbody className="list-group">
-        {flights.map((flight, i) => (
-          <tr
-            key={i}
-            style={{ animation: animStr(i) }}
-            className={
-              i === selectedItem ? 'list-group-item active' : 'list-group-item'
-            }
-            onClick={() => handleOnClick(i)}
-          >
-            <td>{flight.from}</td>
-            <td>{flight.to}</td>
-            <td>{flight.date}</td>
-          </tr>
-        ))}
-      </tbody>
-    );
-  };
-
   return (
     <>
       <div className="book_background">
@@ -179,6 +162,7 @@ const Book = () => {
                       maxLength={3}
                       className="form-control"
                       id="form-control"
+                      name="airportDeparture"
                       required
                       onChange={handleChange}
                       placeholder="Airport code eg. MEL"
@@ -199,6 +183,7 @@ const Book = () => {
                       maxLength={3}
                       className="form-control"
                       id="form-control"
+                      name="airportArrival"
                       required
                       onChange={handleChange}
                       placeholder="Airport code eg. SYD"
@@ -216,35 +201,37 @@ const Book = () => {
                       ></img>
                       Departure Date
                     </div>
-
                     <div className="date-picker">
                       <RDPC
                         showIcon
                         selected={departDate}
-                        onChange={(date) => setDepartDate(date)}
+                        name="departureDate"
+                        onChange={handleDateChange}
                         placeholder="today"
+                        dateFormat="dd/MM/yyyy"
                       />
                     </div>
                   </div>
-                  <div id="input-group">
-                    <div className="input-group-text">
-                      <img
-                        src={arrival}
-                        id="flight-icons"
-                        alt="plane landing"
-                        width="30px"
-                      ></img>
-                      Arrival Date
-                    </div>
-                    <div className="date-picker">
-                      <RDPC
-                        showIcon
-                        selected={arriveDate}
-                        onChange={(date) => setArriveDate(date)}
-                        placeholder="tomorrow"
-                      />
-                    </div>
-                  </div>
+                  {/* <div id="input-group">
+                                        <div className="input-group-text">
+                                            <img
+                                                src={arrival}
+                                                id="flight-icons"
+                                                alt="plane landing"
+                                                width="30px"
+                                            ></img>
+                                            Return Date
+                                        </div>
+                                        <div className="date-picker">
+                                            <RDPC
+                                                showIcon
+                                                selected={arriveDate}
+                                                onChange={(date) => setArriveDate(date)}
+                                                placeholder="one-way"
+                                                dateFormat="dd/MM/yyyy"
+                                            />
+                                        </div>
+                                    </div> */}
                 </div>
               </div>
               <div className="search-button__container">
