@@ -569,10 +569,6 @@ a > .icon-text > span {
   padding: 0.75rem !important;
 }
 
-.react-datepicker__input-container {
-  position: inherit !important;
-}
-
 .buttons-nav {
   width: 100%;
   display: flex;
@@ -650,7 +646,9 @@ input {
 }
 
 .input-group-text {
+  z-index: 1;
   display: block !important;
+  position: relative;
   padding: 0.5rem 0.75rem !important;
   font-size: 0.9rem !important;
   font-weight: 500 !important;
@@ -900,7 +898,7 @@ ul {
   background-color: #04080e;
   box-shadow: 0px 0px 5px 1px #242424;
   padding: min(2rem, 4vw);
-  overflow-y: auto;
+  overflow-x: clip;
 }
 
 .destination__container table {

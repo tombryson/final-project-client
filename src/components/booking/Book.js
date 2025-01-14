@@ -85,7 +85,7 @@ const Book = () => {
     const apiURL =
       `https://flight-info-api.p.rapidapi.com/schedules?version=v2&DepartureDateTime=${departureDate}` +
       // `&ArrivalDateTime=${arrivalDate}` +
-      // `&CarrierCode=${carrierCode}`+
+      `&CarrierCode=QF,JQ,ANZ,VA` +
       `&DepartureAirport=${airportDeparture}` +
       `&ArrivalAirport=${airportArrival}` +
       `&FlightType=Scheduled&CodeType=IATA&ServiceType=Passenger`;
@@ -97,7 +97,8 @@ const Book = () => {
       const response = await fetch(apiURL, {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
+          'X-RapidAPI-Key':
+            '1a8e725593mshf808b7e1a19ddeap1be57cjsnf73d6cae43b7',
           'X-RapidAPI-Host': 'flight-info-api.p.rapidapi.com',
         },
       });
