@@ -11,7 +11,7 @@ import '../App2.css';
 import '../buttonStyles.css';
 import * as RDP from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { format } from 'date-fns';
+import { endOfToday, format, isToday, startOfToday } from 'date-fns';
 
 const Book = () => {
   const [departDate, setDepartDate] = useState(new Date());
@@ -23,7 +23,7 @@ const Book = () => {
   const [flights, setFlights] = useState([]);
   const [flightTableVisible, setFlightTableVisible] = useState(false);
   const [formData, setFormData] = useState({
-    departureDate: '2024-06-30',
+    departureDate: format(startOfToday(), 'yyyy-MM-dd'),
     airportDeparture: 'MEL',
     airportArrival: 'SYD',
   });
@@ -44,19 +44,19 @@ const Book = () => {
     setIsVisible(true);
   }, []);
 
+  /// Font size transition
   useEffect(() => {
-    // Font size transition
     setIsVisible(true);
-    setFontSize(4.6);
+    setFontSize(4.3);
     const handleScroll = () => {
       const scrollableElement = document.querySelector('.booking-container');
       if (scrollableElement) {
         const scrollY = scrollableElement.scrollTop;
 
         if (scrollY > 30 && window.innerWidth <= 1600) {
-          setFontSize(3.1);
+          setFontSize(2.9);
         } else {
-          setFontSize(4.4);
+          setFontSize(4.3);
         }
       }
     };
@@ -74,9 +74,9 @@ const Book = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value.toUpperCase() });
-    console.log(formData);
   };
 
+  /// GET request for data
   const _handleSubmit = throttle(async (event) => {
     event.preventDefault();
 
@@ -84,23 +84,28 @@ const Book = () => {
 
     const apiURL =
       `https://flight-info-api.p.rapidapi.com/schedules?version=v2&DepartureDateTime=${departureDate}` +
-      // `&ArrivalDateTime=${arrivalDate}` +
       `&CarrierCode=QF,JQ,ANZ,VA` +
       `&DepartureAirport=${airportDeparture}` +
       `&ArrivalAirport=${airportArrival}` +
       `&FlightType=Scheduled&CodeType=IATA&ServiceType=Passenger`;
+
     setFlightTableVisible(true);
 
     try {
-      // const response = await fetch('./data.json'); // Placeholder values
-      console.log(apiURL);
-      const response = await fetch(apiURL, {
-        method: 'GET',
+      // const response = await fetch('./data2.json'); // Placeholder values
+
+      const response = await fetch('http://localhost:3000/flights/submit', {
+        method: 'POST',
         headers: {
-          'X-RapidAPI-Key':
-            '1a8e725593mshf808b7e1a19ddeap1be57cjsnf73d6cae43b7',
-          'X-RapidAPI-Host': 'flight-info-api.p.rapidapi.com',
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify({
+          flight: {
+            departureDate,
+            airportDeparture,
+            airportArrival,
+          },
+        }),
       });
 
       if (!response.ok) {
@@ -108,29 +113,8 @@ const Book = () => {
       }
 
       const JSONdata = await response.json();
-      const flightData = JSONdata.data;
-      const pricingResponse = await fetch(
-        'http://localhost:3000/flights/submit',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(flightData),
-        },
-      );
-
-      if (!pricingResponse.ok) {
-        throw new Error('Failed to fetch pricing data');
-      }
-
-      const pricingData = await pricingResponse.json();
-      const flightsWithPricing = flightData.map((flight, index) => ({
-        ...flight,
-        price: pricingData[index]?.price || 'N/A',
-      }));
-
-      setFlights(flightsWithPricing);
+      const flightData = JSONdata;
+      setFlights(flightData);
       setFlightTableVisible(true);
     } catch (error) {
       console.error('Error fetching flight data:', error);

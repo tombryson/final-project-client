@@ -1,0 +1,3020 @@
+{
+  "data": [
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 500,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "06:00", "utc": "20:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "07:25", "utc": "21:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 9.4,
+      "aircraftType": { "iata": "320" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "c81741ac85dadf8c4f0bdd4f5c6210f604dabd45549b026077d5e70463701e2d",
+      "statusKey": "7797c161e17bdfb93a3bd96402bd285dac63fb7fc8d5324174bebc6da12f6933"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 402,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "06:00", "utc": "20:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "07:25", "utc": "21:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5402", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1802", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9050", "suffix": "" },
+          { "code": "PG", "serviceNumber": "4581", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4618", "suffix": "" },
+          { "code": "AA", "serviceNumber": "7400", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "e3846e791b1114296fd2c184cc369c4efe1853770aa7de884267af40a6e7a630",
+      "statusKey": "613ef33d2dd062b09e3bd9290ccf14309ee1e1e087dee50004363e9c1f10c423"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 410,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "07:00", "utc": "21:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "08:25", "utc": "22:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5410", "suffix": "" },
+          { "code": "PG", "serviceNumber": "4587", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1810", "suffix": "" },
+          { "code": "LA", "serviceNumber": "4808", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9148", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "559edda651d03e412c79d9e04ed481a233117296ac4436537d24ab7535b665c9",
+      "statusKey": "cf09d6dce4b4529baa3c1e9ef26b9201ed39e8de04e342673b116e692a56cd3e"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 811,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "07:00", "utc": "21:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "08:25", "utc": "22:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6378", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4089", "suffix": "" },
+          { "code": "QR", "serviceNumber": "6327", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6823", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "09d70e02e27cdafd1c1791fa0b23ffa069fc634fb0dfed32e0c62f96e28ef85d",
+      "statusKey": "eee9267fb530ddbba198bc93d9d1cd9b5bd83345c63ab6d6f7208f5fde9b5445"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 502,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "07:30", "utc": "21:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "09:00", "utc": "23:00" }
+      },
+      "elapsedTime": 90,
+      "cargoTonnage": 4.6,
+      "aircraftType": { "iata": "321" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "766eb41ec83152e4071dcb11bf5b94e7fabcb5b6675c8dd8b9417d8a579511c6",
+      "statusKey": "4018a5e39411edde50360e7cd148778149bae241bae4f4d272981e9f777a94f6"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 418,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "08:00", "utc": "22:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "09:25", "utc": "23:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5418", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1818", "suffix": "" },
+          { "code": "AA", "serviceNumber": "7314", "suffix": "" },
+          { "code": "LA", "serviceNumber": "4818", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9052", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "0072159e6e87bcec855b85743b1131d4a24744e4b1cbdc0d2d32acd1510c9d06",
+      "statusKey": "998629ce32ccd4c2a1413f05d5d4a30e35988a94ba24a3e144f25548cd9cb765"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 819,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "08:00", "utc": "22:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "09:25", "utc": "23:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6735", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4097", "suffix": "" },
+          { "code": "NH", "serviceNumber": "6402", "suffix": "" },
+          { "code": "QR", "serviceNumber": "6329", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6811", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "ff98d1cb72a3fff73ff9b8f2e05962df9d715542a7a590ea8f074060b9d02aa0",
+      "statusKey": "325c69a867ccb11c521baf4b37c742b84b33dd86547c1e8c1af537bd6bcb8abe"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 504,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "08:15", "utc": "22:15" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "09:45", "utc": "23:45" }
+      },
+      "elapsedTime": 90,
+      "cargoTonnage": 9.4,
+      "aircraftType": { "iata": "320" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "61d02e980b7aa6b65a2f398ec8e35c51d2ee9bfe6a0665ca2e03fc8e714690c8",
+      "statusKey": "e78430182668fed1f8879c0cc9c60127ed53f8890d15d6587fe183a51d31a61e"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 422,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "08:30", "utc": "22:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "09:55", "utc": "23:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5422", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1822", "suffix": "" },
+          { "code": "AA", "serviceNumber": "7315", "suffix": "" },
+          { "code": "LA", "serviceNumber": "4819", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9192", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "3f154cf9220859ecc63acc6e8fadfadaa491c832e98fe0b3aa4b809f414a2a1d",
+      "statusKey": "db810e4ed18370001931eb0e8c14191d2ada1cfcebd6dd594e8877997048e31f"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 823,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "08:30", "utc": "22:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "09:55", "utc": "23:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6695", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4099", "suffix": "" },
+          { "code": "QR", "serviceNumber": "7153", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6837", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "3d126fb1b41a3aa8c4ea8ba1ddc5c8ed4c4fd685690487c80bfc07cf3fcf1cd3",
+      "statusKey": "c518db82766c1800e8be7c26a25d634b983489c79443f3cd6660c7fc32cfaaf7"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 506,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "08:45", "utc": "22:45" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "10:15", "utc": "00:15" }
+      },
+      "elapsedTime": 90,
+      "cargoTonnage": 9.4,
+      "aircraftType": { "iata": "320" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "2df606277d40b66b46f12201494183c8c76db0aa31c2c6033029213f168139cf",
+      "statusKey": "bbee4c8f4abb34f4fa687f24fff6ffe0449eb416b643e7066f8d457a1ca2dc3f"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 426,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "09:00", "utc": "23:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "10:25", "utc": "00:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5426", "suffix": "" },
+          { "code": "CZ", "serviceNumber": "7556", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1826", "suffix": "" },
+          { "code": "LA", "serviceNumber": "4821", "suffix": "" },
+          { "code": "AA", "serviceNumber": "7318", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9100", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4630", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "b51ec2ce9882307cfbe59aef5fbbca685e938dbc0a23d26ca5ead68730e3809c",
+      "statusKey": "45fcfe5e8ceb91c60a4bb8737216e14a317230e82e21a0fa56bf6203b6dfc66a"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 827,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "09:00", "utc": "23:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "10:25", "utc": "00:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6895", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4101", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6801", "suffix": "" },
+          { "code": "UA", "serviceNumber": "7459", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "09b5346c3998773d64ca65109834dfeaa180d93aaf8b011215018cfe80e6809d",
+      "statusKey": "be6582b9056efb63eed6e6e3df721d135f54cf630817b6566f315fdfad1dc0f6"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 508,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "09:25", "utc": "23:25" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "11:00", "utc": "01:00" }
+      },
+      "elapsedTime": 95,
+      "cargoTonnage": 25.5,
+      "aircraftType": { "iata": "32Q" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "e1efbbbee3cd59363256935f1bea5310eee07a0076c282d62b4b13809b22a472",
+      "statusKey": "501e14b4ac85a89e40f3e5a558552f6d8237c9863f7241f34c9ff103df20df99"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 430,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "09:30", "utc": "23:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "10:55", "utc": "00:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5430", "suffix": "" },
+          { "code": "BA", "serviceNumber": "7442", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1830", "suffix": "" },
+          { "code": "LA", "serviceNumber": "4822", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9141", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4632", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "f80d6db8c0a76eb1985209b63be1c26ae0874ebaed69aed1f05b61d1ec72ceb9",
+      "statusKey": "ff25226189d86fc7e37977bffedc965ea2b4d546f06a55ffb8b3d8ac93490414"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 829,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-29" },
+        "time": { "local": "09:30", "utc": "23:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "10:55", "utc": "00:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6412", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4046", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6841", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "13f09f1e318417a0481831ef323849b780e01fbcb14a2c60ce19e24473e08a45",
+      "statusKey": "a3f435d916e00b69f1fabb997d4fdc59e67774588de2002718fc89de8ad39b98"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 432,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "10:00", "utc": "00:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "11:25", "utc": "01:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5603", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1832", "suffix": "" },
+          { "code": "LA", "serviceNumber": "4823", "suffix": "" },
+          { "code": "UL", "serviceNumber": "3380", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9108", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4633", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "6b05cfd41da6f160147956f7da7493b87b5345b1df222ddc5bed78b6996c5a42",
+      "statusKey": "94cd63e901b95517edcad0b5298bc3d895f7861388164e78ee3c04d5854865d3"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 833,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "10:00", "utc": "00:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "11:25", "utc": "01:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6697", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4103", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6803", "suffix": "" },
+          { "code": "UA", "serviceNumber": "7438", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "e28c28ce5eb38a40c73e700d2d793a983b92d89d5ead4be93bb5e79f97163c0a",
+      "statusKey": "6de3b4e707100e24cd9673dc0ee64dc143dea5afc333795c50b3651938c7da9b"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 510,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "10:30", "utc": "00:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "11:55", "utc": "01:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 9.4,
+      "aircraftType": { "iata": "320" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "b85162fa333c6329edd147d481ae1a460508baf6a74253e4f3b4c913146f360e",
+      "statusKey": "3b8592f52fd9d7eee8fea54c590dcc43c7268511f490bcb01bced2259b87f905"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 436,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "11:00", "utc": "01:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "12:25", "utc": "02:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5436", "suffix": "" },
+          { "code": "BA", "serviceNumber": "7446", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1836", "suffix": "" },
+          { "code": "UL", "serviceNumber": "3388", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9104", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4635", "suffix": "" },
+          { "code": "AA", "serviceNumber": "7320", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "12480102b6ce3f19ae78abc84a002da45d072c5e27e8cecc349de41ae2d65232",
+      "statusKey": "b11ade5e43527a3ad328a06e33086e7ec34ea2bdad715c8373bd3fc264902d51"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 440,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "12:00", "utc": "02:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "13:25", "utc": "03:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5440", "suffix": "" },
+          { "code": "BA", "serviceNumber": "7450", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1840", "suffix": "" },
+          { "code": "AA", "serviceNumber": "7322", "suffix": "" },
+          { "code": "UL", "serviceNumber": "3414", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9147", "suffix": "" },
+          { "code": "MU", "serviceNumber": "4117", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4637", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "9f56efab80c1d055320604b26c35efe85e11214fffc7574d38d3bf3d67bc4c1f",
+      "statusKey": "b1f82b18c7a832584d094c1471351c806dbcea0fe03f18a74dadaa99d404da18"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 841,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "12:00", "utc": "02:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "13:25", "utc": "03:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6699", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4107", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6807", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "4549c21f9d3d7df1c2be79da97eebc69c5ca355573209d9c21bf0ca0f1690b11",
+      "statusKey": "d4820b164360f57e155d851531d7c947ecf5e444084a2e105c96d5f811c2b2c5"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 512,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "12:25", "utc": "02:25" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "13:50", "utc": "03:50" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 4.6,
+      "aircraftType": { "iata": "321" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "46c3664ea3cd06b8dd5a0be22cc1362d8fc1aa6578b4b438408d309c5ea70c0d",
+      "statusKey": "2851d9aa2d20925ee436cf671adf53b5692dc1232d22074ae20c246a313b66c5"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 514,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "12:45", "utc": "02:45" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "14:10", "utc": "04:10" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 9.4,
+      "aircraftType": { "iata": "320" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "c358c07e10fc0cf7ebe8037ee644d88e5c8c0d1db8133ec31ebf0d7b63247057",
+      "statusKey": "48fe7aab2a60801565c90395998a9098c6e579bda6aea0f9959e83853e3d195e"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 444,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "13:00", "utc": "03:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "14:25", "utc": "04:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5444", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1844", "suffix": "" },
+          { "code": "AA", "serviceNumber": "7389", "suffix": "" },
+          { "code": "MU", "serviceNumber": "4121", "suffix": "" },
+          { "code": "CI", "serviceNumber": "9982", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4639", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "f6113476d782c26d709a3abc03e25125fe201ccb6e60bb3259501b193962396a",
+      "statusKey": "b9f24a2f13fac3634fb9fb19ec26d0164acdb074ee3bfe9dd61e69f6b3b405dd"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 845,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "13:00", "utc": "03:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "14:25", "utc": "04:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6712", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4109", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6809", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "e3eef4dd4bab652ba5ea55095cc3e2a6ad99111327685b619fab5d440d9e0032",
+      "statusKey": "1e61dd8229215a2144f55fc7c4d8f99590a3ddbac0e21479f3a850a64e325bec"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 516,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "14:00", "utc": "04:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "15:25", "utc": "05:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 9.4,
+      "aircraftType": { "iata": "320" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "0f1fc2e6064b388d59db29f4794c99d2ed51a37335a063aa240fda36ef6f06d4",
+      "statusKey": "3201f067d99b4226df235fd1180d51bfa7192aa26dbc19b55a94ce2552ab26a1"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 448,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "14:00", "utc": "04:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "15:25", "utc": "05:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5448", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1848", "suffix": "" },
+          { "code": "CI", "serviceNumber": "9996", "suffix": "" },
+          { "code": "AA", "serviceNumber": "7313", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4641", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "ee2e0219cd230dea0dffcb03a9d4923e62402338d9a6011196e9507ac1ea6369",
+      "statusKey": "045a3659205aaa65595ff4f75b06f142b21af477abdf2bcfc47cf05cbd63e128"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 849,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "14:00", "utc": "04:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "15:25", "utc": "05:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6390", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4111", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6819", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "e1980e325115cdad3d0dcf5be8f81f5f0e354d5738bac58e6da403f8e440b53d",
+      "statusKey": "dfdca485eba38dcfcb6d83b480773fea093d4d47e5636518b9fad1617b6e31ac"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 518,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "14:25", "utc": "04:25" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "15:50", "utc": "05:50" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 9.4,
+      "aircraftType": { "iata": "320" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "cb4b417c675e89d1f6ce68d30be4cef404aa4e9ca3886dfc3f1268ead166386b",
+      "statusKey": "92065e3a1d97f5facd2a99e1fbddd43c54359189269c331fe525287db8cf2a5a"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 454,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "15:00", "utc": "05:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "16:25", "utc": "06:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "UL", "serviceNumber": "3418", "suffix": "" },
+          { "code": "EK", "serviceNumber": "5454", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1854", "suffix": "" },
+          { "code": "CI", "serviceNumber": "8694", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4643", "suffix": "" },
+          { "code": "MU", "serviceNumber": "4119", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "e579dba6300e2935fbd125ca68c1f444adb2a64cc12333b0a455d934386f7257",
+      "statusKey": "7cb79760d02cecbc0251e8664868f42826bc3098a39c69f150f133014f648066"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 853,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "15:00", "utc": "05:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "16:25", "utc": "06:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6701", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4113", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6813", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "56c2f7b46ee85bd6d74e6b34f8cd0dd215d1fbacb861a628f12f8821aec106f0",
+      "statusKey": "442789c6cafe00cfa32af94442474c0461e779c5508ef4680f6214adefffbefe"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 520,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "15:25", "utc": "05:25" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "16:50", "utc": "06:50" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 4.6,
+      "aircraftType": { "iata": "321" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "5b4a3f6526f6361e9bd9102d155de21f9f1c1d4f81805b404244c1ffd757a186",
+      "statusKey": "7d599d20f5c44f582814681cee110855072df8805a1b95ae86faa6fd1a0afbc4"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 855,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "15:30", "utc": "05:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "16:55", "utc": "06:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6413", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4047", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6853", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "7f49f96e02705d80b392ed39f61830ed938b08a8d6f542f286f0aea4477a3d4f",
+      "statusKey": "b6d2a3eaf017ebc592fcd94373c91672d07aa0619be6b5e2278c469945cf6f8d"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 462,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "16:00", "utc": "06:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:25", "utc": "07:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "CZ", "serviceNumber": "7558", "suffix": "" },
+          { "code": "EK", "serviceNumber": "5462", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1862", "suffix": "" },
+          { "code": "UL", "serviceNumber": "3413", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9150", "suffix": "" },
+          { "code": "CI", "serviceNumber": "8682", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "c13fa5d06ca1a091037a867877337384f9212afbfb578eb075e5dc5d946751fa",
+      "statusKey": "3385b680e18558b7e4aeead836d8576b6145033707bca4c8ab2f0df95fcdfd60"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 859,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "16:00", "utc": "06:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:25", "utc": "07:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6723", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4115", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6815", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "b0b61b5f1710d8bb319d5edbcc96be33112c6ca2f39443e77e9e0c0838cb5b49",
+      "statusKey": "af50db8f4afca150cd18f68240f67ad588ceb3b9cc386963ca9b7e623c4dbcc6"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 522,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "16:15", "utc": "06:15" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:40", "utc": "07:40" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 9.4,
+      "aircraftType": { "iata": "320" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "8bba8cd6644a526610214f105c8ac6cec8bdebad39da0d90a65eb34d0ae583a0",
+      "statusKey": "a8eedaf018e4777752c7925916fa6d7b3b96a07bc0ae8f4c98cd041c60af9c79"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 464,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "16:15", "utc": "06:15" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:40", "utc": "07:40" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5464", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1864", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9058", "suffix": "" },
+          { "code": "MU", "serviceNumber": "4123", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4647", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "15e60894e97bbffaac6a2324d73ffd9453d45406199dd752143e9a76b7986eab",
+      "statusKey": "b3193ada3471de4dd486f9df89d9057b7b68db5b3c84867d7a02778c68bf7ee4"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 466,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "16:30", "utc": "06:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:55", "utc": "07:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5466", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1866", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9126", "suffix": "" },
+          { "code": "MU", "serviceNumber": "4125", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "59c95749a7669610923866f7ed2ff5ec6d4a6613072c13f3b7325f295b7a53c1",
+      "statusKey": "ff29dd194285988b4cde8a48a4af20188ce8fbafa00be95fc430223b55dc544d"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 863,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "16:30", "utc": "06:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:55", "utc": "07:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6923", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4117", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6833", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "4be031626df81cccc97f7111925b2a49d303a32bdbcb230d8b571e5838349928",
+      "statusKey": "a71db7d78f6023138168387f3457f557ee9ac1378ede25748e72682417121ad9"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 468,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "16:45", "utc": "06:45" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "18:10", "utc": "08:10" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5468", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1868", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4649", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "a2029914e295ec75cb5312b8fcb87bede53eb6f904137fcdb526a3777e817a87",
+      "statusKey": "ad9b8b8f2756e6a3d8cd9aeea246f21cd586bf1ea2149a5a3657c00a09841e3c"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 470,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:00", "utc": "07:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "18:25", "utc": "08:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5654", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1870", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9094", "suffix": "" },
+          { "code": "MU", "serviceNumber": "4127", "suffix": "" },
+          { "code": "CI", "serviceNumber": "8690", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4650", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "9489bf8705071a41445e5067aae553a96ee797b2c947b1dff2fe3ca3a6bb8e1b",
+      "statusKey": "329c668e6380071812f82559e77a5aff79c48b16531ca39a5852ff006132ea9b"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 867,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:00", "utc": "07:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "18:25", "utc": "08:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6915", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4121", "suffix": "" },
+          { "code": "QR", "serviceNumber": "7151", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6817", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "36c417b371b2b3d66b3dd2d4cefe1c9563516c30935af422c093cb014fa5d2c7",
+      "statusKey": "801b70816fdfb76d4264b8f3909ddb1a462e74dd180eb8c8763780779dfcb6b8"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 869,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:10", "utc": "07:10" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "18:35", "utc": "08:35" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6468", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4123", "suffix": "" },
+          { "code": "QR", "serviceNumber": "7205", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6855", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "0bdca3deba82bc0a17d1c9e738f244306e4db126525d852c7d7539919236391d",
+      "statusKey": "d6756a3669ae1ac114bdebb15ddfa405d9753126235cb698dfcfa65d30f830a8"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 472,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:15", "utc": "07:15" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "18:40", "utc": "08:40" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5657", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1872", "suffix": "" },
+          { "code": "AA", "serviceNumber": "7388", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9134", "suffix": "" },
+          { "code": "MU", "serviceNumber": "4129", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4651", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "d30c420c47848ff839a7ce098f24e180c262be434518f9809b2caedb9dd1587a",
+      "statusKey": "62aee685c3ac83ed0feeab7670eade88985f7987557d120dc74305f0c8d1caab"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 474,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:30", "utc": "07:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "18:55", "utc": "08:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5658", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1874", "suffix": "" },
+          { "code": "AA", "serviceNumber": "7393", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9130", "suffix": "" },
+          { "code": "MU", "serviceNumber": "4131", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "6ad6d219ba00e191fc06110c9b257c458c7c980ca18257551b7dd6c1f763e96a",
+      "statusKey": "9e8c95bde3ba5cf5889a22e2a720a5c4b0c589f83407325eefb52771bb57e08b"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 871,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:30", "utc": "07:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "18:55", "utc": "08:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6938", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4125", "suffix": "" },
+          { "code": "QR", "serviceNumber": "7209", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6835", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "533c19ef33feff3ed6ea494f6f7837269c8f99106876db6d8ae1feff6f4f2c0e",
+      "statusKey": "c8d6a7284937d4ecaf25f4ec8c872128c344d0a5a95389fd724fdaf6613c5fcc"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 524,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "17:40", "utc": "07:40" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "19:10", "utc": "09:10" }
+      },
+      "elapsedTime": 90,
+      "cargoTonnage": 9.4,
+      "aircraftType": { "iata": "320" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "ea5089c3035e7f8902b6e83591423161fc3f29517574353f98401ecfe15398de",
+      "statusKey": "4d0e8e230ba691473a3d5382db2ffb982973dfdbd449dc7305b422e8b0b4fee8"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 478,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "18:00", "utc": "08:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "19:25", "utc": "09:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5695", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1878", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9118", "suffix": "" },
+          { "code": "MU", "serviceNumber": "4133", "suffix": "" },
+          { "code": "CI", "serviceNumber": "8688", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4654", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "0f35611977c06bbd7df9bf2a7db379d7caaf54736d44e2c71f5d11370af804cd",
+      "statusKey": "6731134901d262649c2dec9219da297eae0eabf28000e8819fe8518d8af09b15"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 875,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "18:00", "utc": "08:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "19:25", "utc": "09:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6939", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4127", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6831", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "af338b45cbf86879ba92cfd76011aebc7c3ca19b131205d9e6b46cf597e4e564",
+      "statusKey": "ec5e73fab1ebdfa7dfdbbbc92eb0d0a11dec79a839100429c35dda1321a7e6c8"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 877,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "18:15", "utc": "08:15" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "19:40", "utc": "09:40" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6471", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4043", "suffix": "" },
+          { "code": "QR", "serviceNumber": "7211", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6865", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "963eaad53b711ab046f2809e3d5bef0e0b3616a777dec9396f28c3080dbbf77d",
+      "statusKey": "6550dd7dfc692688cae07b5039438181696a59fb463c3896507c1ed46dffafee"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 482,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "18:30", "utc": "08:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "19:55", "utc": "09:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5704", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1882", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9122", "suffix": "" },
+          { "code": "MU", "serviceNumber": "4137", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4656", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "2186154c0cf5a323aba30ec815b4dc12fa80ce2f9d3c0bfa45f39a337c4486fb",
+      "statusKey": "b256847e17146054772131ce637819343960f1a0c51b071c27d388a984286c98"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 879,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "18:30", "utc": "08:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "19:55", "utc": "09:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6949", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4131", "suffix": "" },
+          { "code": "QR", "serviceNumber": "7201", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6829", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "d46ac15833c9a3f7e512e3898343cba3e8e1091732c52cbe5b3119a14d0b3eea",
+      "statusKey": "f85d987df46f3bc50d6e1f706610e0a370270f18ac4d07142a51f6fba4968764"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 486,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "19:00", "utc": "09:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "20:25", "utc": "10:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5716", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1886", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9152", "suffix": "" },
+          { "code": "MU", "serviceNumber": "4139", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "a0b56574848527d9a79bdc32eab399fd061c989b88b51bb99670d929496a039e",
+      "statusKey": "80e3c9b1d2a9a436dbf76bcb34c2ff3e36eee8b41abda9b770e848f11bf9da58"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 883,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "19:00", "utc": "09:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "20:25", "utc": "10:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6958", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4135", "suffix": "" },
+          { "code": "QR", "serviceNumber": "7163", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6857", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "36a2219ca9e48aee19694346580128f28e0d068d8481449d6add6097ab06157a",
+      "statusKey": "ed3b7897928337974f7c2f227a6a9a048fb5453d50e2642335b70c1eee611255"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 528,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "19:15", "utc": "09:15" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "20:40", "utc": "10:40" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 9.4,
+      "aircraftType": { "iata": "320" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "9f169e9ca6d2557f28799f4a2be378adc1a0770d484be74fe1782d503690e624",
+      "statusKey": "280589f2c5465ffacc029d3e52a03714a81506ca4501ed8b3e9f8746b44d6d90"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 887,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "19:30", "utc": "09:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "20:55", "utc": "10:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6960", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4137", "suffix": "" },
+          { "code": "QR", "serviceNumber": "7167", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6825", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "e8701e8e1974866b060b8b90257921ca21daf74136896e1cf9a5b3e4256470e2",
+      "statusKey": "79f020968dc0a571fd1404198f32ccd8b119563bd1c2e1f654fe2297e73c6e81"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 494,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "20:00", "utc": "10:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "21:25", "utc": "11:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "NZ", "serviceNumber": "1894", "suffix": "" },
+          { "code": "EK", "serviceNumber": "5249", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4659", "suffix": "" },
+          { "code": "CX", "serviceNumber": "9195", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "23e6e693e8f4e83d3e67acc7828c1d4bde40091f5efe14ef4cdc5e7f3b825244",
+      "statusKey": "3f7460d33f5c6ef9c50d68e9805458cd749a1398b4c29c56df5e9aa90c630888"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 891,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "20:00", "utc": "10:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "21:25", "utc": "11:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6964", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4139", "suffix": "" },
+          { "code": "QR", "serviceNumber": "7171", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6839", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "19938c8a7678e9947ad8689bac45caf2bf28b34c453713614ba0a967c1061f04",
+      "statusKey": "babce559468c6c44a9b8c14552726f4c1dbdfa61cfd1bd8bf0fa51ded7c9da4a"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 530,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "20:15", "utc": "10:15" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "21:40", "utc": "11:40" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 4.6,
+      "aircraftType": { "iata": "321" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "33ae7b1899a01653992ad46b2e63c4ec143f6d4d88f6e3ddd2b65a6b135af005",
+      "statusKey": "6321a4b6377c93ab188c51205a96012797e387e4d7b551eb89706738c9486e53"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 496,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "20:30", "utc": "10:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "21:55", "utc": "11:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5496", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1896", "suffix": "" },
+          { "code": "6E", "serviceNumber": "4660", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "db84c1e450f9f015e867a886e9ae1cda5f1f4b122bee35651a27566e25a06abc",
+      "statusKey": "ad4a32f19289a2bccbfa5748f967d39f5e63a3c94c2eb40cb68c8d15b4b80393"
+    },
+    {
+      "carrier": { "iata": "VA", "icao": "VOZ" },
+      "serviceSuffix": "",
+      "flightNumber": 895,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "20:30", "utc": "10:30" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "21:55", "utc": "11:55" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EY", "serviceNumber": "6881", "suffix": "" },
+          { "code": "HA", "serviceNumber": "4141", "suffix": "" },
+          { "code": "QR", "serviceNumber": "7203", "suffix": "" },
+          { "code": "SQ", "serviceNumber": "6821", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "e742a5e38fcd343e544a878f82aa42712dea949cfded6f78cb91b6e2337d4987",
+      "statusKey": "e871ca82d80ab4ed889c8652b17467e73d9109ef2e8a69b77f1b7672dd7322d7"
+    },
+    {
+      "carrier": { "iata": "JQ", "icao": "JST" },
+      "serviceSuffix": "",
+      "flightNumber": 532,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "4",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "20:50", "utc": "10:50" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "2",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "22:20", "utc": "12:20" }
+      },
+      "elapsedTime": 90,
+      "cargoTonnage": 4.6,
+      "aircraftType": { "iata": "321" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": []
+      },
+      "scheduleInstanceKey": "5b2a584fd42dd279963f86732efcf73d2d7c3b00029ead53113f34a1c96f3a98",
+      "statusKey": "bbdd152e9358d12a8e755a9e5651a96b80dc6b55def6c484f105761878d8baab"
+    },
+    {
+      "carrier": { "iata": "QF", "icao": "QFA" },
+      "serviceSuffix": "",
+      "flightNumber": 498,
+      "sequenceNumber": 1,
+      "flightType": "Scheduled",
+      "departure": {
+        "airport": { "iata": "MEL", "icao": "YMML" },
+        "terminal": "1",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "21:00", "utc": "11:00" }
+      },
+      "arrival": {
+        "airport": { "iata": "SYD", "icao": "YSSY" },
+        "terminal": "3",
+        "country": { "code": "AU" },
+        "date": { "local": "2024-06-30", "utc": "2024-06-30" },
+        "time": { "local": "22:25", "utc": "12:25" }
+      },
+      "elapsedTime": 85,
+      "cargoTonnage": 8.7,
+      "aircraftType": { "iata": "73H" },
+      "serviceType": { "iata": "J" },
+      "segmentInfo": {
+        "numberOfStops": 0,
+        "intermediateAirports": { "iata": [] }
+      },
+      "distance": {
+        "accumulatedGreatCircleKilometers": 705.39,
+        "accumulatedGreatCircleMiles": 438.31,
+        "accumulatedGreatCircleNauticalMiles": 380.88,
+        "greatCircleKilometers": 705.39,
+        "greatCircleMiles": 438.31,
+        "greatCircleNauticalMiles": 380.88
+      },
+      "codeshare": {
+        "jointOperationAirlineDesignators": [],
+        "marketingFlights": [
+          { "code": "EK", "serviceNumber": "5724", "suffix": "" },
+          { "code": "NZ", "serviceNumber": "1898", "suffix": "" }
+        ]
+      },
+      "scheduleInstanceKey": "2dc4dab47dbd2d3d3667524945cbf25787a12f8cf51cbbe4d4fc13761a7c023a",
+      "statusKey": "db9c259e2d3e1fd9ad1bd2b0d624d4a9673e3bff9243ab5c42c783891e70a33e"
+    }
+  ],
+  "paging": { "limit": 100, "totalCount": 64, "totalPages": 1, "next": "" }
+}
