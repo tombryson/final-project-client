@@ -1,0 +1,11 @@
+.sidebar {
+  display: grid;
+  grid-template-columns: 16rem;
+  justify-items: flex-start;
+  padding-left: 2rem;
+}
+
+.user-profile-page {
+  display: flex;
+  margin-top: max(6rem, 18vh);
+}
