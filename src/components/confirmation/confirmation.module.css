@@ -1,5 +1,21 @@
 .confirmation-container {
-    margin-top: max(6rem, 18vh);
-    padding: 4rem;
-    outline: red 2px solid;
+  margin-top: max(6rem, 18vh);
+  padding: 4rem;
+  outline: red 2px solid;
+}
+
+.confirmation-button {
+  width: 30rem;
+}
+
+button.ui-button {
+  background-color: #d42f29 !important;
+  margin-top: 1rem;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 8px;
+  font-size: 1rem;
+  width: max(65%, 10rem);
+  border-radius: 0.9rem;
 }

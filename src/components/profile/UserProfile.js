@@ -85,11 +85,21 @@ const UserProfile = () => {
           </div>
         </div>
         <div class={styles.sidebar}>
-          <a href="#overview">Overview</a>
-          <a href="#my-flights">My Flights</a>
-          <a href="#preferences">Preferences</a>
-          <a href="#settings">Settings</a>
-          <a href="#logout">Logout</a>
+          <a className="nav-button" href="#overview">
+            Overview
+          </a>
+          <a className="nav-button" href="#my-flights">
+            My Flights
+          </a>
+          <a className="nav-button" href="#preferences">
+            Preferences
+          </a>
+          <a className="nav-button" href="#settings">
+            Settings
+          </a>
+          <a className="nav-button" href="#logout">
+            Logout
+          </a>
         </div>
       </div>
     </>

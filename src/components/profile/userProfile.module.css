@@ -1,11 +1,18 @@
 .sidebar {
   display: grid;
-  grid-template-columns: 16rem;
-  justify-items: flex-start;
-  padding-left: 2rem;
+  width: 100%;
+  max-width: 10rem;
+  grid-template-columns: 10rem;
+  justify-items: end;
+  justify-content: end;
 }
 
 .user-profile-page {
   display: flex;
   margin-top: max(6rem, 18vh);
+}
+
+.content {
+  padding-left: 20rem;
+  width: 100%;
 }

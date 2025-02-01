@@ -983,6 +983,7 @@ td img {
   color: #efad14;
   padding: 0 0rem 0 0.3rem;
   width: 86px;
+  text-align: end;
 }
 
 .date-of-flight {
