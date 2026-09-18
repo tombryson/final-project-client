@@ -15,7 +15,6 @@
 * {
   margin: 0;
   padding: 0;
-  overscroll-behavior: none;
 }
 
 .log-out {
@@ -184,6 +183,7 @@
 }
 
 html {
+  overscroll-behavior: none;
   scroll-snap-type: y mandatory;
 }
 
@@ -1053,4 +1053,94 @@ td {
 .booking-select-flight:hover {
   color: black;
   background-color: whitesmoke;
+}
+
+.my-flights-container,
+.confirmation-fallback {
+  margin: max(7rem, 18vh) auto 10rem;
+  width: 85%;
+}
+
+.my-flights-container .flights {
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  text-align: left;
+}
+
+.my-flights-container {
+  margin-top: calc(max(6rem, 12vh) + 9rem);
+}
+
+.greeting:has(~ .my-flights-container) {
+  padding-top: max(6rem, 12vh);
+}
+
+.my-flights-empty {
+  padding: 2.5rem 1.5rem;
+  border-radius: 0.8rem;
+  background-color: #1c1a21e3;
+  color: white;
+  text-align: center;
+}
+
+.my-flights-icon {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #ddd;
+}
+
+.my-flights-empty h2 {
+  margin-bottom: 0.75rem;
+}
+
+.my-flights-empty p {
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.my-flights-action {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: #ad211a;
+  color: white;
+  text-decoration: none;
+}
+
+.my-flights-action:hover,
+.my-flights-action:focus-visible {
+  background-color: #8f1b16;
+  color: white;
+}
+
+.demo-login {
+  font-size: 0.9rem;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.cancel-booking-modal .modal-content {
+  background-color: #343137;
+  color: white;
+  border: 1px solid #666;
+  border-radius: 0.8rem;
+}
+
+.cancel-booking-modal .modal-header,
+.cancel-booking-modal .modal-footer {
+  border-color: #ffffff26;
+}
+
+.cancel-booking-modal .my-flights-keep {
+  background-color: transparent;
+  border: 1px solid #aaa;
+}
+
+.cancel-booking-modal .my-flights-keep:hover {
+  background-color: #49464c;
+}
+
+.cancel-booking-modal button:disabled {
+  opacity: 0.6;
 }

@@ -1,46 +1,32 @@
+import API_URL from '../../api.js';
 import React, { useState, useEffect } from 'react';
 import './../App.css';
 import Header from '../Header.js';
 import SignUpForm from './SignUpForm.js';
 import LoginForm from './LoginForm.js';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation, useOutletContext } from 'react-router-dom';
 
-function Auth() {
+function Auth({ onLogin }) {
   // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useState({});
-  const [form, setForm] = useState('');
+  const [form, setForm] = useState('login');
   const [isVisible, setIsVisible] = useState(false);
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const context = useOutletContext();
 
-  const siteURL = 'http://localhost:3000/';
+  const siteURL = `${API_URL}/`;
 
   ///Fade In
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  ///Authentication
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      fetch(`${siteURL}/auto_login`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-        .then((resp) => resp.json())
-        .then((data) => {
-          setUser(data);
-        });
-    }
-  }, []);
-
   const handleLogin = (user) => {
     setUser(user);
-    sessionStorage.setItem('currentUserId', user.id.toString());
-    navigate(`/`);
-    window.location.reload();
+    (onLogin || context.onLogin)(user);
+    if (location.pathname === '/auth') navigate('/book');
   };
 
   const handleFormSwitch = (input) => {

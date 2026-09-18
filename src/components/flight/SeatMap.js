@@ -1,20 +1,21 @@
+import API_URL from '../../api.js';
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate, useOutletContext } from 'react-router-dom';
+import { useLocation, useNavigate, useOutletContext, useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { airlineNames } from '../booking/AirlineStyles.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SeatMap = () => {
   // eslint-disable-next-line no-unused-vars
-  const { toggleAuth } = useOutletContext();
+  const { toggleAuth, currentUserId } = useOutletContext();
+  const { id } = useParams();
   const [seat, setSeat] = useState('');
   const [isClicked, setIsClicked] = useState(false);
   const [flightData, setFlightData] = useState([]);
   const [planeData, setPlaneData] = useState([]);
-  const siteURL = 'http://localhost:3000/';
+  const siteURL = `${API_URL}/`;
   const location = useLocation();
   const flight = location.state?.flight;
-  const currentUserId = sessionStorage.getItem('currentUserId');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -37,7 +38,7 @@ const SeatMap = () => {
       toggleAuth();
       return;
     }
-    navigate(`/book/flights/${flightData.id}/confirmation`, {
+    navigate(`/book/flights/${id}/confirmation`, {
       state: { flight, seat },
     });
   };
@@ -74,7 +75,7 @@ const SeatMap = () => {
           const seatArr = [];
           for (let x = 1; x < rows + 1; x++) {
             for (let y = 0; y < cols; y++) {
-              seatArr.push(<Seat col={y} row={x} />);
+              seatArr.push(<Seat key={`${x}-${y}`} col={y} row={x} />);
             }
           }
           return seatArr;
@@ -82,6 +83,10 @@ const SeatMap = () => {
       </div>
     );
   };
+
+  if (!flight) {
+    return <div className="confirmation-fallback"><p>Select a flight before choosing a seat.</p><Link to="/book">Return to search</Link></div>;
+  }
 
   return (
     <>
@@ -112,7 +117,7 @@ const SeatMap = () => {
             x2="30"
             y2="110"
             stroke="#888"
-            stroke-width="2"
+            strokeWidth="2"
           ></line>
           <line
             x1="110"
@@ -120,7 +125,7 @@ const SeatMap = () => {
             x2="170"
             y2="110"
             stroke="#888"
-            stroke-width="2"
+            strokeWidth="2"
           ></line>
         </svg>
         <div className="flight-data-container">

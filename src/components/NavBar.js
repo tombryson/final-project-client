@@ -6,12 +6,11 @@ import myProfile from '../images/profile-icon.png';
 import book2 from '../images/book-icon2.png';
 import textRotations from './textRotations.css';
 
-const NavBar = () => {
+const NavBar = ({ currentUserId, onLogout }) => {
   const navigate = useNavigate();
-  const currentUserId = sessionStorage.getItem('currentUserId');
 
   const logOut = () => {
-    sessionStorage.removeItem('currentUserId');
+    onLogout();
     navigate('/');
   };
 
@@ -69,7 +68,7 @@ const NavBar = () => {
               <li className="nav-bar-icons">
                 <div className="icon-text" id="my-trips">
                   Trips
-                  <Link to="/mytrips">
+                  <Link to="/myflights">
                     <img
                       className="nav-icon"
                       src={myTrips}

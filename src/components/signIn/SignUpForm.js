@@ -1,3 +1,4 @@
+import API_URL from '../../api.js';
 import React, { useState } from 'react';
 
 function SignUpForm(props) {
@@ -6,6 +7,8 @@ function SignUpForm(props) {
   const [last_name, setLast_name] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [admin, setAdmin] = useState(false);
 
   ////////////////////////////////////////////////////////////////////////////
@@ -22,11 +25,14 @@ function SignUpForm(props) {
     setPassword(evt.target.value);
   };
 
-  const siteURL = 'http://localhost:3000/';
+  const siteURL = API_URL;
 
   //////
   const handleSubmit = (evt) => {
     evt.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+    setMessage('');
     fetch(`${siteURL}/users`, {
       method: 'POST',
       headers: {
@@ -41,16 +47,14 @@ function SignUpForm(props) {
         admin,
       }),
     })
-      .then((resp) => resp.json())
-      .then((data) => {
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Unable to sign in.');
         localStorage.setItem('token', data.jwt);
         props.handleLogin(data.user);
-      });
-    setFirst_name('');
-    setLast_name('');
-    setEmail('');
-    setPassword('');
-    setAdmin(false);
+      })
+      .catch((error) => setMessage(error.message))
+      .finally(() => setIsSubmitting(false));
   };
 
   return (
@@ -62,11 +66,11 @@ function SignUpForm(props) {
             id="emailInput"
             value={email}
             onChange={handleEmailChange}
-            type="text"
+            type="email"
             placeholder="yours@example.com"
             required
           />
-          <label id="emailInput" htmlFor="lastName">
+          <label htmlFor="emailInput">
             Email address
           </label>
         </div>
@@ -101,9 +105,10 @@ function SignUpForm(props) {
             placeholder="password"
             required
           />
-          <label htmlFor="lastName">Password</label>
+          <label htmlFor="password">Password</label>
         </div>
-        <button className="ui-button" type="submit">
+        {message && <p role="alert">{message}</p>}
+        <button className="ui-button" type="submit" disabled={isSubmitting}>
           Create Account
         </button>
       </form>

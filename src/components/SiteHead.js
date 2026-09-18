@@ -5,11 +5,10 @@ import buttonStyles from './buttonStyles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
-const SiteHead = ({ toggleAuth, authState }) => {
+const SiteHead = ({ toggleAuth, authState, currentUserId }) => {
   const [directions, setDirections] = useState({});
   const navigate = useNavigate();
   const location = useLocation();
-  const currentUserId = sessionStorage.getItem('currentUserId');
 
   function scrollToTop () {
       window.scrollTo({ top: 0, behavior: 'auto' });
@@ -92,7 +91,7 @@ const SiteHead = ({ toggleAuth, authState }) => {
                 Book
               </button>
             </Link>
-            <Link className="header-button" to="mytrips">
+            <Link className="header-button" to="myflights">
               <button
                 className={`nav-button ${directions['mybookings']}`}
                 onMouseOver={(e) => handleMouseEnter(e, 'mybookings')}

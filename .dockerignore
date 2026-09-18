@@ -3,3 +3,9 @@ Dockerfile
 .dockerignore
 node_modules
 .git
+.env
+.env.*
+!.env.example
+*.log
+coverage
+build

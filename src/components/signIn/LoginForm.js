@@ -1,8 +1,11 @@
+import API_URL from '../../api.js';
 import React, { useState } from 'react';
 
 function LoginForm(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleEmailChange = (evt) => {
     setEmail(evt.target.value);
@@ -12,11 +15,14 @@ function LoginForm(props) {
     setPassword(evt.target.value);
   };
 
-  const siteURL = 'http://localhost:3000/';
+  const siteURL = API_URL;
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    fetch(`${siteURL}/users`, {
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+    setMessage('');
+    fetch(`${siteURL}/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -27,28 +33,33 @@ function LoginForm(props) {
         password,
       }),
     })
-      .then((resp) => resp.json())
-      .then((data) => {
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Unable to sign in.');
         localStorage.setItem('token', data.jwt);
         props.handleLogin(data.user);
-      });
-    setEmail('');
-    setPassword('');
+      })
+      .catch((error) => setMessage(error.message))
+      .finally(() => setIsSubmitting(false));
   };
   return (
     <div className="sign-up-form">
       <h1 className="sign-up">Sign in</h1>
+      <p className="demo-login">
+        Try the demo: <strong>demo@burningairlines.test</strong><br />
+        Password: <strong>demo1234</strong>
+      </p>
       <form className="ui-form" onSubmit={handleSubmit}>
         <div className="field">
           <input
             id="emailInput"
             value={email}
             onChange={handleEmailChange}
-            type="text"
+            type="email"
             placeholder="yours@example.com"
             required
           />
-          <label id="emailInput" htmlFor="emailInput">
+          <label htmlFor="emailInput">
             Email address
           </label>
         </div>
@@ -63,7 +74,8 @@ function LoginForm(props) {
           />
           <label htmlFor="passwordInput">Password</label>
         </div>
-        <button className="ui-button" type="submit">
+        {message && <p role="alert">{message}</p>}
+        <button className="ui-button" type="submit" disabled={isSubmitting}>
           Sign In
         </button>
       </form>
