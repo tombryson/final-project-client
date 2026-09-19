@@ -6,7 +6,7 @@ import SignUpForm from './SignUpForm.js';
 import LoginForm from './LoginForm.js';
 import { useNavigate, useLocation, useOutletContext } from 'react-router-dom';
 
-function Auth({ onLogin }) {
+function Auth({ onLogin, onClose }) {
   // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useState({});
   const [form, setForm] = useState('login');
@@ -48,6 +48,9 @@ function Auth({ onLogin }) {
         <div className="auth">
           <Header handleFormSwitch={handleFormSwitch} />
           <div className="auth-container">{renderForm()}</div>
+          <button className="auth-close" type="button" onClick={() => onClose ? onClose() : navigate('/')}>
+            Close
+          </button>
         </div>
       </div>
     </>

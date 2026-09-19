@@ -162,12 +162,14 @@ const ApiFlightTable = ({ flights, toggleAuth }) => {
                                         {` $${flight.price}`}
                                     </th>
                                     <td
+                                        className="flight-select-cell"
                                         style={{
                                             padding:
                                                 '1.6rem 0.4rem 1.6rem 1.4rem',
                                         }}
                                     >
                                         <button
+                                            type="button"
                                             className="booking-select-flight"
                                             onClick={() =>
                                                 handleFlightSelect(flight)
@@ -177,6 +179,7 @@ const ApiFlightTable = ({ flights, toggleAuth }) => {
                                         </button>
                                     </td>
                                     <td
+                                        className="flight-details-cell"
                                         style={{
                                             width: '2.5rem',
                                             display: 'flex',
@@ -186,6 +189,8 @@ const ApiFlightTable = ({ flights, toggleAuth }) => {
                                         <button
                                             type="button"
                                             className="extra-info-button"
+                                            aria-label="Flight details"
+                                            aria-expanded={!!infoOpen[flight.flightNumber]}
                                             onClick={() =>
                                                 _openInfo(flight.flightNumber)
                                             }

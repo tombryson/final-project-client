@@ -36,6 +36,10 @@ const AppWrapper = ({ children }) => {
   const { isScrollSnapEnabled } = useScrollSnap();
   const location = useLocation();
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [location.pathname]);
+
   const handleLogin = (user) => {
     sessionStorage.setItem('currentUserId', user.id.toString());
     setCurrentUserId(user.id.toString());
@@ -82,7 +86,7 @@ const AppWrapper = ({ children }) => {
       <div className={isScrollSnapEnabled ? 'scroll-section' : ''}>
         <SiteHead toggleAuth={toggleAuthVisible} authState={authVisible} currentUserId={currentUserId} />
         <Home fontSize={fontSize} isScrolling={isScrolling} />
-        {authVisible && location.pathname !== '/auth' && <Auth onLogin={handleLogin} />}
+        {authVisible && location.pathname !== '/auth' && <Auth onLogin={handleLogin} onClose={toggleAuthVisible} />}
         {location.pathname === '/' && <CarouselHome />}
         <Outlet context={{ toggleAuth: toggleAuthVisible, setFontSize, currentUserId, onLogin: handleLogin, onLogout: handleLogout }} />
         <NavBar currentUserId={currentUserId} onLogout={handleLogout} />

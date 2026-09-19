@@ -1144,3 +1144,347 @@ td {
 .cancel-booking-modal button:disabled {
   opacity: 0.6;
 }
+
+.auth-close {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  html,
+  .app-container {
+    scroll-snap-type: none;
+    scroll-padding-top: 5rem;
+    scroll-padding-bottom: 6rem;
+  }
+
+  .app-container {
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+  }
+
+  .header {
+    height: 4.5rem;
+    min-height: 0;
+    z-index: 100;
+    background-color: #f0ffffed;
+  }
+
+  .logo-container {
+    width: 8rem;
+  }
+
+  .title-img {
+    padding: 0.5rem;
+  }
+
+  .button-container,
+  .greeting,
+  .deals-callout-container {
+    display: none;
+  }
+
+  .nav-bar {
+    height: calc(5rem + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+    background-color: azure;
+    z-index: 100;
+  }
+
+  .nav-bar-icons {
+    align-items: center;
+  }
+
+  .scroll-snap-enabled .scroll-section {
+    height: auto;
+    min-height: calc(100svh - 5rem);
+  }
+
+  .carousel-inner {
+    height: calc(100svh - 5rem);
+  }
+
+  .carousel .w-100 {
+    min-width: 0;
+    height: calc(100svh - 5rem);
+    object-fit: cover;
+  }
+
+  .home-content {
+    flex-direction: column;
+    padding-top: 4.5rem;
+  }
+
+  .home-text,
+  .home-image {
+    height: auto;
+    width: 100%;
+  }
+
+  .home-image > img {
+    max-height: 40svh;
+  }
+
+  .screen-dim {
+    inset: 0;
+    z-index: 1000;
+  }
+
+  .auth-form.fade-in.show {
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    margin: 0;
+    padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
+    display: block;
+    overflow-y: auto;
+    z-index: 1050;
+  }
+
+  .auth {
+    width: 100%;
+    max-width: 25rem;
+    min-width: 0;
+    margin: 0 auto;
+  }
+
+  .sign-up-form {
+    min-height: 0;
+    padding-bottom: 1rem;
+  }
+
+  .sign-up {
+    font-size: 2.8rem;
+  }
+
+  .auth-close {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    background-color: #30353a;
+    color: white;
+  }
+
+  .field {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .field input,
+  .search__container input {
+    min-height: 44px;
+    font-size: 16px;
+  }
+
+  .book_background {
+    position: static;
+    min-height: 100svh;
+    padding-top: 5.5rem;
+  }
+
+  .booking-container {
+    height: auto;
+    margin-top: 0;
+    overflow: visible;
+    padding-bottom: 1rem;
+  }
+
+  .results__container {
+    width: calc(100% - 1rem);
+    padding: 0.75rem;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .search__container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .destination__container,
+  .datepicker__container {
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .input-group-text {
+    line-height: 1.5 !important;
+  }
+
+  .booking-search-results {
+    margin: 1rem 0 0;
+  }
+
+  .booking-search-results > table,
+  .booking-search-results > table > tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .returned-flights {
+    padding: 0.5rem;
+    margin: 0.75rem 0;
+    border-radius: 1rem;
+  }
+
+  .table-data-container {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .table-data-container td {
+    padding: 0.25rem;
+  }
+
+  .flight-destination-groupings {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .flight-time-groupings {
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+
+  .flight-time-groupings > tr {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    text-align: center;
+    align-items: center;
+  }
+
+  .flight-prices {
+    width: auto;
+    text-align: left;
+  }
+
+  .table-data-container .flight-select-cell,
+  .table-data-container .flight-details-cell {
+    padding: 0 !important;
+    width: auto !important;
+  }
+
+  .booking-select-flight,
+  .extra-info-button,
+  .seat-confirm-button {
+    min-height: 44px;
+  }
+
+  .extra-info-button {
+    min-width: 44px;
+    padding: 0.5rem;
+  }
+
+  .extra-info-border {
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .extra-info-border td {
+    padding: 0.25rem;
+  }
+
+  .extra-flight-details {
+    width: 100%;
+  }
+
+  .my-trips {
+    margin-top: 5.5rem;
+    padding-left: 1rem;
+  }
+
+  .seat-map-container {
+    display: block;
+    overflow: visible;
+    padding-bottom: 1rem;
+  }
+
+  .plane-svg {
+    display: none;
+  }
+
+  .flight-data-container {
+    position: sticky;
+    top: 4.5rem;
+    z-index: 10;
+    max-width: none;
+    padding: 0.5rem;
+  }
+
+  .flight-data {
+    position: static;
+    padding: 0.5rem;
+  }
+
+  .flight-data-table {
+    width: 100%;
+  }
+
+  .flight-data-table tbody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .flight-data-table tr:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .flight-data-table td {
+    padding: 0.25rem;
+  }
+
+  .flight-data-table .seat-info {
+    padding: 0.25rem;
+  }
+
+  .seat-confirm-button {
+    padding: 0.5rem;
+  }
+
+  .seat-container {
+    width: calc(100% - 1rem);
+    padding: 0.5rem 0.25rem;
+    border-radius: 2rem 2rem 0 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) 12px repeat(3, minmax(0, 1fr));
+    grid-template-rows: none;
+    gap: 4px 2px;
+  }
+
+  .seat-container button:nth-child(6n + 4) {
+    grid-column: 5;
+  }
+
+  .seats,
+  .selected-seat {
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .my-flights-container,
+  .confirmation-fallback {
+    width: calc(100% - 2rem);
+    margin: 5.5rem auto 1rem;
+  }
+
+  .my-flights-container .flights {
+    padding: 1rem;
+    overflow-wrap: anywhere;
+  }
+
+  .cancel-booking-modal .modal-footer {
+    flex-direction: column;
+  }
+
+  .cancel-booking-modal .modal-footer button {
+    width: 100%;
+  }
+}
