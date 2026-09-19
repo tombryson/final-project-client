@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Burning Airlines
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full stack flight booking project built with React, Ruby on Rails and PostgreSQL, using real flight schedule data from the OAG API. This is a handwritten proof-of-concept CRUD project, covering database design, frontend design and UX/UI, backend architecture, and API management.
 
-## Available Scripts
+The frontend and backend are maintained in separate repositories and deployed as separate services. This repository contains the [React client](https://github.com/tombryson/final-project-client); the [Rails API and PostgreSQL data model](https://github.com/tombryson/final-project) live in the backend repository.
 
-In the project directory, you can run:
+The basic user story is simple:
+Search for a flight or sign in, choose a seat and save the booking to your account.
+Bookings appear in My Flights and can also be cancelled.
 
-### `npm start`
+## Design and frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The visual design and custom CSS classes are handcrafted from scratch to create the best user experience and understand the language as thoroughly as possible. Bootstrap styles and a few React Bootstrap components are also used in the current client.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The curved layouts, airline styling, animation and responsive sizing are a big part of this project. Working directly with flexbox, grid, transforms and media queries has been an opportunity to understand how the page actually fits together.
 
-### `npm test`
+Search, results, seat selection and confirmation have their own React components. The seat map generates its buttons from rows and columns, giving each seat a readable label like 12A. Authentication is shared through React Router's outlet context.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## API and backend
 
-### `npm run build`
+Flight schedules come directly from OAG through the Rails backend. The API key stays on the server. Prices are calculated locally using flight duration, carrier, departure time and how close the departure date is.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Saved API responses are included for data mocking. In tests, we substitute mock responses for the HTTP dependency so we can check successful searches, empty results and failures without making live API calls. The running app currently uses OAG; automatic switching between cached and live data depending on the environment is still unfinished.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Passwords are hashed with bcrypt and booking ownership comes from the authenticated user. A signed flight reference connects the search result to the saved booking, so the browser cannot simply submit different flight details.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Entity-relationship model
 
-### `npm run eject`
+```mermaid
+erDiagram
+    USER ||--o{ BOOKING : has
+    FLIGHT ||--o{ BOOKING : has
+    PLANE ||--o{ FLIGHT : operates
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+A booking connects a user to a flight and stores their seat coordinates. Each flight belongs to a plane, which describes its layout. This lets one user book multiple flights and one flight have multiple bookings without repeating the user or flight details on every booking.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Flights retain the provider's schedule key, carrier, flight number, date and airports. The schedule key distinguishes a particular flight instance from a flight number that can repeat on another day.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Foreign keys protect the booking's user and flight relationships. A unique database index on flight, row and column prevents two people booking the same seat, even if both requests arrive together. Seat coordinates are also checked against the plane's dimensions.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Running locally
 
-## Learn More
+Use Ruby 2.7.6, Bundler, PostgreSQL and Node.js/npm. Set `OAG_API_KEY` and, where required, `POSTGRES_PASSWORD` in an untracked backend `.env` file.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+From the backend repository directory, `final-project`:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+bundle install
+bundle exec rails db:create db:migrate
+bundle exec rails server -p 3000
+```
 
-### Code Splitting
+From this frontend repository directory, `final-project-client`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```sh
+npm install
+PORT=3001 npm start
+```
 
-### Analyzing the Bundle Size
+Open http://localhost:3001. Backend tests run with `bundle exec rspec`. Focused frontend checks run with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```sh
+CI=true npm test -- --watchAll=false --runInBand --runTestsByPath src/authSession.test.js src/bookingFlow.test.js src/components/profile/UserProfile.test.js
+```
 
-### Making a Progressive Web App
+## Proof of concept
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is a completed proof of concept to handwrite a CRUD application in Rails and JavaScript. The aim was to understand how the frontend, backend and relational database work together, while building the design and user experience by hand.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The booking flow uses real flight schedules with calculated prices and a simulated aircraft layout. Users can save and cancel bookings, with the database preventing duplicate seat bookings. It demonstrates the application flow without issuing airline tickets or taking payments.
